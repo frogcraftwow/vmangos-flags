@@ -2,10 +2,55 @@ import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';
 import { spellFamilyFlags } from '../data/spellFamilyFlags';
 import { spellAttributes } from '../data/spellAttributes';
-import { spellEffects } from '../data/spellEffects';
-import { auras } from '../data/auras';
-import { creatures } from '../data/creatures';
-import { hpCompare } from '../data/hpCompare';
+import { spellDefines } from '../data/spellDefines';
 import { useProfiles } from '../context/ProfileContext';
-export default function Dashboard(){const {activeProfile}=useProfiles();const overridden=Object.keys(activeProfile.overrides.spellFamilyFlags).length;return <><PageHeader title="Spell & DBC Toolkit" description="A static, GitHub Pages-ready toolkit built from the supplied game/core workbooks and text references. Baseline data is immutable; profile data is a local difference layer." eyebrow="Version 1"/><div className="hero-grid"><div className="panel callout"><span className="badge good">Baseline locked</span><h2>No personal mappings are preloaded</h2><p>The active profile starts with an empty override map. Original class-family assignments stay visible even after you add a custom ability or comment.</p><div className="inline-stats"><b>{overridden}</b> profile override{overridden===1?'':'s'} currently stored</div><Link className="btn primary" to="/spell-family-flags">Open Spell Family Flags</Link></div><div className="stats-grid"><Stat n={spellFamilyFlags.length} l="baseline family flags"/><Stat n={spellAttributes.length} l="Attr0–Attr4 definitions"/><Stat n={spellEffects.length} l="spell effect IDs"/><Stat n={auras.listOfSpellAuras.length+auras.aurasList.length+auras.comparisonRows.length+auras.comparisonRows.length} l="aura reference rows"/><Stat n={creatures.length} l="unused creature records"/><Stat n={hpCompare.length} l="HP comparison rows"/></div></div><div className="tool-grid">{[['Family mappings','Original vs custom mapping, helper-only references, CM0/CM1 mask building.','/spell-family-flags'],['Mask calculators','BigInt decoding/building with original, working, added, removed and XOR masks.','/mask-calculator'],['DBC / IDs','Separate DBC mask domains plus supplied workbook reference tables.','/dbc'],['Profiles','Local autosave, profile switching, JSON import/export and mask presets.','/profiles']].map(([a,b,c])=><Link key={a} className="panel tool-card" to={c}><h3>{a}</h3><p>{b}</p><span>Open →</span></Link>)}</div><div className="panel source-note"><h2>Data policy</h2><p>All supplied XLSX/TXT inputs were extracted at build time. The deployed application does not parse or fetch those source files. Workbook “Vanilla Reforged” assignments are reference/comparison data only and are never installed into the active user profile.</p></div></>}
-function Stat({n,l}:{n:number;l:string}){return <div className="stat"><strong>{n.toLocaleString()}</strong><span>{l}</span></div>}
+
+const tools = [
+  ['Spell Family Flags', '/spell-family-flags'],
+  ['Spell Flags', '/spell-flags'],
+  ['Shapeshift', '/shapeshift'],
+  ['Weapons', '/weapons'],
+  ['Generic Mask', '/mask-calculator'],
+  ['SpellAttributes', '/spell-attributes'],
+  ['SpellAttributesEx', '/spell-attributes-ex'],
+  ['SpellAttributesEx2', '/spell-attributes-ex2'],
+  ['SpellAttributesEx3', '/spell-attributes-ex3'],
+  ['SpellAttributesEx4', '/spell-attributes-ex4'],
+  ['SpellAttributesCustom', '/spell-attributes-custom'],
+  ['SpellAttributesInternal', '/spell-attributes-internal'],
+  ['SpellCategories', '/spell-categories'],
+  ['SpellCategoryFlags', '/spell-category-flags'],
+  ['SpellSpecific', '/spell-specific'],
+  ['Skill Lines', '/skill-lines'],
+  ['Profile Manager', '/profiles'],
+] as const;
+
+export default function Dashboard() {
+  const { activeProfile } = useProfiles();
+  const overrideCount = Object.keys(activeProfile.overrides.spellFamilyFlags).length;
+  const enumCount = [...Object.values(spellAttributes), ...Object.values(spellDefines)].reduce((total, rows) => total + rows.length, 0);
+
+  return <>
+    <PageHeader title="Spell Dev Toolkit" />
+
+    <section className="panel">
+      <div className="mask-results dashboard-results">
+        <Stat label="Profile" value={activeProfile.name} />
+        <Stat label="Family Overrides" value={String(overrideCount)} />
+        <Stat label="Original Family Mappings" value={String(spellFamilyFlags.length)} />
+        <Stat label="Enum Entries" value={String(enumCount)} />
+      </div>
+    </section>
+
+    <section className="panel">
+      <div className="section-head"><h2>Tools</h2></div>
+      <div className="tool-list">
+        {tools.map(([name, path]) => <Link key={path} to={path}>{name}<span>→</span></Link>)}
+      </div>
+    </section>
+  </>;
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return <div><span>{label}</span><strong className="mono">{value}</strong></div>;
+}

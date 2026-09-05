@@ -2,19 +2,40 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import SpellFamilyFlagsPage from './pages/SpellFamilyFlagsPage';
-import SpellAttributesPage from './pages/SpellAttributesPage';
-import SpellDefinesPage from './pages/SpellDefinesPage';
+import SpellAttributePage from './pages/SpellAttributePage';
+import DefineMaskPage from './pages/DefineMaskPage';
+import DefineValuePage from './pages/DefineValuePage';
 import SpellFlagsPage from './pages/SpellFlagsPage';
 import ShapeshiftPage from './pages/ShapeshiftPage';
 import GenericMaskPage from './pages/GenericMaskPage';
-import DbcPage from './pages/DbcPage';
-import SpellEffectsPage from './pages/SpellEffectsPage';
-import AurasPage from './pages/AurasPage';
-import CoordinatesPage from './pages/CoordinatesPage';
-import ClsCalculatorPage from './pages/ClsCalculatorPage';
 import SkillLinesPage from './pages/SkillLinesPage';
 import WeaponsPage from './pages/WeaponsPage';
-import UnusedCreaturesPage from './pages/UnusedCreaturesPage';
-import HpComparePage from './pages/HpComparePage';
 import ProfileManagerPage from './pages/ProfileManagerPage';
-export default function App(){return <Routes><Route element={<Layout/>}><Route path="/" element={<Dashboard/>}/><Route path="/spell-family-flags" element={<SpellFamilyFlagsPage/>}/><Route path="/spell-attributes" element={<SpellAttributesPage/>}/><Route path="/spell-defines" element={<SpellDefinesPage/>}/><Route path="/spell-flags" element={<SpellFlagsPage/>}/><Route path="/shapeshift" element={<ShapeshiftPage/>}/><Route path="/mask-calculator" element={<GenericMaskPage/>}/><Route path="/dbc" element={<DbcPage/>}/><Route path="/spell-effects" element={<SpellEffectsPage/>}/><Route path="/auras" element={<AurasPage/>}/><Route path="/coordinates" element={<CoordinatesPage/>}/><Route path="/cls-calculator" element={<ClsCalculatorPage/>}/><Route path="/skill-lines" element={<SkillLinesPage/>}/><Route path="/weapons" element={<WeaponsPage/>}/><Route path="/unused-creatures" element={<UnusedCreaturesPage/>}/><Route path="/hp-compare" element={<HpComparePage/>}/><Route path="/profiles" element={<ProfileManagerPage/>}/></Route></Routes>}
+
+export default function App() {
+  return <Routes>
+    <Route element={<Layout />}>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/spell-family-flags" element={<SpellFamilyFlagsPage />} />
+
+      <Route path="/spell-attributes" element={<SpellAttributePage enumName="SpellAttributes" />} />
+      <Route path="/spell-attributes-ex" element={<SpellAttributePage enumName="SpellAttributesEx" />} />
+      <Route path="/spell-attributes-ex2" element={<SpellAttributePage enumName="SpellAttributesEx2" />} />
+      <Route path="/spell-attributes-ex3" element={<SpellAttributePage enumName="SpellAttributesEx3" />} />
+      <Route path="/spell-attributes-ex4" element={<SpellAttributePage enumName="SpellAttributesEx4" />} />
+
+      <Route path="/spell-attributes-custom" element={<DefineMaskPage enumName="SpellAttributesCustom" />} />
+      <Route path="/spell-attributes-internal" element={<DefineMaskPage enumName="SpellAttributesInternal" />} />
+      <Route path="/spell-category-flags" element={<DefineMaskPage enumName="SpellCategoryFlags" />} />
+      <Route path="/spell-categories" element={<DefineValuePage enumName="SpellCategories" />} />
+      <Route path="/spell-specific" element={<DefineValuePage enumName="SpellSpecific" />} />
+
+      <Route path="/spell-flags" element={<SpellFlagsPage />} />
+      <Route path="/shapeshift" element={<ShapeshiftPage />} />
+      <Route path="/weapons" element={<WeaponsPage />} />
+      <Route path="/skill-lines" element={<SkillLinesPage />} />
+      <Route path="/mask-calculator" element={<GenericMaskPage />} />
+      <Route path="/profiles" element={<ProfileManagerPage />} />
+    </Route>
+  </Routes>;
+}

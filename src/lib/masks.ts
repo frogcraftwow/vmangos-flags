@@ -26,10 +26,6 @@ export function toHex(mask: bigint, minDigits = 8): string {
   return prefix + abs.toString(16).toUpperCase().padStart(minDigits, '0');
 }
 
-export function splitCm(mask: bigint) {
-  const word = 0xffffffffn;
-  return { cm0: mask & word, cm1: (mask >> 32n) & word };
-}
 
 export function activeBits(mask: bigint, maxBits = 64): number[] {
   const bits: number[] = [];
