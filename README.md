@@ -1,31 +1,40 @@
-# Spell & DBC Toolkit
+# Spell Dev Toolkit
 
-Static React + TypeScript + Vite developer toolkit generated from the supplied spell/DBC workbooks and text files. The deployed application contains hardcoded extracted data and does **not** parse XLSX/TXT files at runtime.
+Static React + TypeScript + Vite toolkit for vMaNGOS spell development. Source XLSX/TXT files are extracted at build time only; the deployed site uses hardcoded TypeScript data.
 
-## Local development
+## Included
+
+- Spell Family Flags with authoritative vMaNGOS `SpellClassMask.h` baseline mappings, editable local profile overrides, presets, and a continuous BigInt mask through visible bit 50.
+- SpellAttributes, SpellAttributesEx, SpellAttributesEx2, SpellAttributesEx3, and SpellAttributesEx4 as separate mask calculators using the enum names from `spelldefines.txt`.
+- Separate calculators/pages for SpellAttributesCustom, SpellAttributesInternal, SpellCategories, SpellCategoryFlags, and SpellSpecific.
+- Spell Flags calculators, with Proc Flags before Proc Flags EX.
+- Shapeshift mask calculator.
+- Weapon subclass mask calculator.
+- Generic BigInt mask calculator.
+- Skill Lines sorted by numeric ID.
+- Local profiles, import/export, autosave, and saved presets.
+- Global search across the included baseline/reference data.
+
+Not included in this version: DBC/ID explorer, coordinates, CLS calculator, spell effects, aura explorers, unused creatures, or HP compare.
+
+## Run
 
 ```bash
 npm install
-npm run dev
+npm run dev -- --host 0.0.0.0
 ```
 
-## Tests / build
+## Test / build
 
 ```bash
 npm test
 npm run build
 ```
 
-## GitHub Pages deployment
-
-The app uses `HashRouter` and Vite `base: './'`, so project-directory GitHub Pages hosting works without route rewrites.
+## Deploy to GitHub Pages
 
 ```bash
 npm run deploy
 ```
 
-`gh-pages` publishes the generated `dist` directory. No GitHub Actions, backend, accounts, database, or cloud sync are required.
-
-## Profile data
-
-Baseline/reference data is immutable in `src/data`. User-created mappings, comments and mask presets are stored in browser `localStorage` per profile. A new installation creates one empty `Default` profile with no custom mappings. Downloaded profile JSON contains only user-owned profile metadata, overrides and presets.
+The app uses `HashRouter` and Vite `base: './'` for GitHub Pages project-directory hosting.
