@@ -444,10 +444,48 @@ input:focus, select:focus, textarea:focus {
 .table-wrap .selected-row td { background: #eaf8ef; }
 .table-wrap .selected-row:nth-child(even) td { background: #eaf8ef; }
 .wide-table table { min-width: 1500px; }
-.family-table table { min-width: 1450px; }
-.family-table input { min-width: 210px; }
-.family-table .definition-cell { min-width: 310px; }
+.family-table table { min-width: 1180px; }
+.family-table .editable-cell { min-width: 300px; }
+.family-table .comment-edit-cell { min-width: 360px; }
+.family-table input { width: 100%; min-width: 0; }
 .bit-cell { font-weight: 800; font-size: 14px; }
+
+.inline-edit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+}
+.inline-edit input {
+  min-height: 34px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  padding: 6px 8px;
+}
+.inline-edit input:hover, .inline-edit input:focus {
+  border-color: #aeb9c1;
+  background: #fff;
+  outline: none;
+}
+.inline-edit input:focus { box-shadow: 0 0 0 2px rgba(0,168,79,.12); }
+.inline-edit input.edited {
+  border-color: #d8b56b;
+  background: #fffaf0;
+}
+.enum-input { font-weight: 700; color: #075d36; }
+.reset-inline {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c7d0d6;
+  border-radius: 2px;
+  background: #fff;
+  color: #66737c;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+}
+.reset-inline:hover { border-color: #8f9ba3; color: #26323a; background: #f5f7f8; }
 .enum { color: #005e35; font-weight: 700; }
 .comment { margin-top: 4px; color: #59666f; line-height: 1.38; max-width: 720px; }
 .secondary-def {

@@ -1,27 +1,19 @@
 import { spellFamilyFlags } from '../data/spellFamilyFlags';
 import { spellAttributes } from '../data/spellAttributes';
-import { spellDefines } from '../data/spellDefines';
 import { skillLines } from '../data/skillLines';
 import { weapons } from '../data/weapons';
 import { shapeshift } from '../data/shapeshift';
 import { spellFlags } from '../data/spellFlags';
+import { creatureImmunities } from '../data/creatures';
 
 export type SearchResult = { title: string; subtitle: string; path: string; kind: string };
 
 const attributeRoutes: Record<keyof typeof spellAttributes, string> = {
-  SpellAttributes: '/spell-attributes',
-  SpellAttributesEx: '/spell-attributes-ex',
-  SpellAttributesEx2: '/spell-attributes-ex2',
-  SpellAttributesEx3: '/spell-attributes-ex3',
-  SpellAttributesEx4: '/spell-attributes-ex4',
-};
-
-const defineRoutes: Record<keyof typeof spellDefines, string> = {
-  SpellAttributesCustom: '/spell-attributes-custom',
-  SpellAttributesInternal: '/spell-attributes-internal',
-  SpellCategories: '/spell-categories',
-  SpellCategoryFlags: '/spell-category-flags',
-  SpellSpecific: '/spell-specific',
+  SpellAttributes: '/spell-flags?group=spell-attributes',
+  SpellAttributesEx: '/spell-flags?group=spell-attributes-ex',
+  SpellAttributesEx2: '/spell-flags?group=spell-attributes-ex2',
+  SpellAttributesEx3: '/spell-flags?group=spell-attributes-ex3',
+  SpellAttributesEx4: '/spell-flags?group=spell-attributes-ex4',
 };
 
 function text(...parts: unknown[]) {
@@ -58,24 +50,17 @@ export function globalSearch(query: string, limit = 80): SearchResult[] {
     }
   }
 
-  for (const [enumName, rows] of Object.entries(spellDefines) as [keyof typeof spellDefines, (typeof spellDefines)[keyof typeof spellDefines]][]) {
-    for (const row of rows) {
-      if (text(enumName, row.name, row.value, row.comment).includes(q)) {
-        add({
-          title: row.name,
-          subtitle: `${enumName} = ${row.value}${row.comment ? ` · ${row.comment}` : ''}`,
-          path: `${defineRoutes[enumName]}?q=${encodeURIComponent(query)}`,
-          kind: enumName,
-        });
-      }
-    }
-  }
-
   for (const group of spellFlags) {
     for (const row of group.flags) {
       if (text(group.name, row.name, row.bitIndex, row.decimal, row.hex).includes(q)) {
         add({ title: row.name, subtitle: `${group.name} · bit ${row.bitIndex}`, path: `/spell-flags?group=${group.key}`, kind: 'Spell flag' });
       }
+    }
+  }
+
+  for (const row of creatureImmunities) {
+    if (text(row.name, row.bitIndex, row.decimal, row.hex).includes(q)) {
+      add({ title: row.name, subtitle: `Creature Immunities · bit ${row.bitIndex}`, path: '/creatures', kind: 'Creature mask' });
     }
   }
 

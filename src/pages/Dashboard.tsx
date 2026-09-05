@@ -2,25 +2,22 @@ import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';
 import { spellFamilyFlags } from '../data/spellFamilyFlags';
 import { spellAttributes } from '../data/spellAttributes';
-import { spellDefines } from '../data/spellDefines';
 import { useProfiles } from '../context/ProfileContext';
 
 const tools = [
+  ['Generic Mask', '/mask-calculator'],
   ['Spell Family Flags', '/spell-family-flags'],
-  ['Spell Flags', '/spell-flags'],
+  ['School Mask', '/spell-flags?group=school-mask'],
+  ['SpellAttributes', '/spell-flags?group=spell-attributes'],
+  ['SpellAttributesEx', '/spell-flags?group=spell-attributes-ex'],
+  ['SpellAttributesEx2', '/spell-flags?group=spell-attributes-ex2'],
+  ['SpellAttributesEx3', '/spell-flags?group=spell-attributes-ex3'],
+  ['SpellAttributesEx4', '/spell-flags?group=spell-attributes-ex4'],
+  ['Proc Flags', '/spell-flags?group=proc-flags'],
+  ['Proc Flags EX', '/spell-flags?group=proc-flags-ex'],
   ['Shapeshift', '/shapeshift'],
   ['Weapons', '/weapons'],
-  ['Generic Mask', '/mask-calculator'],
-  ['SpellAttributes', '/spell-attributes'],
-  ['SpellAttributesEx', '/spell-attributes-ex'],
-  ['SpellAttributesEx2', '/spell-attributes-ex2'],
-  ['SpellAttributesEx3', '/spell-attributes-ex3'],
-  ['SpellAttributesEx4', '/spell-attributes-ex4'],
-  ['SpellAttributesCustom', '/spell-attributes-custom'],
-  ['SpellAttributesInternal', '/spell-attributes-internal'],
-  ['SpellCategories', '/spell-categories'],
-  ['SpellCategoryFlags', '/spell-category-flags'],
-  ['SpellSpecific', '/spell-specific'],
+  ['Creatures', '/creatures'],
   ['Skill Lines', '/skill-lines'],
   ['Profile Manager', '/profiles'],
 ] as const;
@@ -28,7 +25,7 @@ const tools = [
 export default function Dashboard() {
   const { activeProfile } = useProfiles();
   const overrideCount = Object.keys(activeProfile.overrides.spellFamilyFlags).length;
-  const enumCount = [...Object.values(spellAttributes), ...Object.values(spellDefines)].reduce((total, rows) => total + rows.length, 0);
+  const attributeCount = Object.values(spellAttributes).reduce((total, rows) => total + rows.length, 0);
 
   return <>
     <PageHeader title="Spell Dev Toolkit" />
@@ -38,7 +35,7 @@ export default function Dashboard() {
         <Stat label="Profile" value={activeProfile.name} />
         <Stat label="Family Overrides" value={String(overrideCount)} />
         <Stat label="Original Family Mappings" value={String(spellFamilyFlags.length)} />
-        <Stat label="Enum Entries" value={String(enumCount)} />
+        <Stat label="Attribute Flags" value={String(attributeCount)} />
       </div>
     </section>
 

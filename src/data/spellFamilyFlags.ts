@@ -1,6 +1,14 @@
-// Baseline mappings follow the original vMaNGOS SpellClassMask.h / supplied spellclassflags.txt.
-// Workbook helper text may enrich descriptions only; it never replaces an original ability mapping.
-export const spellFamilyFlags = [
+export type SpellFamilyFlag = {
+  familyId: number;
+  className: string;
+  bitIndex: number;
+  ability: string;
+  comment: string;
+};
+
+// Immutable baseline from the original vMaNGOS ClassFlag definitions.
+// Comments are intentionally retained only for original MISC entries.
+export const spellFamilyFlags: readonly SpellFamilyFlag[] = [
   {
     "familyId": 3,
     "className": "Mage",
@@ -76,7 +84,7 @@ export const spellFamilyFlags = [
     "className": "Mage",
     "bitIndex": 10,
     "ability": "CF_MAGE_ARCANE_INT",
-    "comment": "Arcane Intellect & Arcane Brilliance"
+    "comment": ""
   },
   {
     "familyId": 3,
@@ -97,7 +105,7 @@ export const spellFamilyFlags = [
     "className": "Mage",
     "bitIndex": 13,
     "ability": "CF_MAGE_D_A_MAGIC",
-    "comment": "Dampen Magic & Amplify Magic"
+    "comment": ""
   },
   {
     "familyId": 3,
@@ -132,7 +140,7 @@ export const spellFamilyFlags = [
     "className": "Mage",
     "bitIndex": 18,
     "ability": "CF_MAGE_UNK18",
-    "comment": "Sleep, Polymorph, Counterspell, Arcane Missiles, Arcane Explosion, Lesser Invisibility, Slow Fall"
+    "comment": ""
   },
   {
     "familyId": 3,
@@ -146,7 +154,7 @@ export const spellFamilyFlags = [
     "className": "Mage",
     "bitIndex": 20,
     "ability": "CF_MAGE_CHILLED",
-    "comment": "Frost spells with SPELL_AURA_MOD_DECREASE_SPEED"
+    "comment": ""
   },
   {
     "familyId": 3,
@@ -181,7 +189,7 @@ export const spellFamilyFlags = [
     "className": "Mage",
     "bitIndex": 25,
     "ability": "CF_MAGE_ELEMENTAL_ARMOR",
-    "comment": "Frost Armor & Ice Armor"
+    "comment": ""
   },
   {
     "familyId": 3,
@@ -405,7 +413,7 @@ export const spellFamilyFlags = [
     "className": "Warrior",
     "bitIndex": 25,
     "ability": "CF_WARRIOR_MORTAL_STRIKE",
-    "comment": "Bloodthirst"
+    "comment": ""
   },
   {
     "familyId": 4,
@@ -503,7 +511,7 @@ export const spellFamilyFlags = [
     "className": "Warlock",
     "bitIndex": 6,
     "ability": "CF_WARLOCK_HELLFIRE",
-    "comment": "Soul Fire"
+    "comment": ""
   },
   {
     "familyId": 5,
@@ -552,7 +560,7 @@ export const spellFamilyFlags = [
     "className": "Warlock",
     "bitIndex": 13,
     "ability": "CF_WARLOCK_SUCCUBUS_LASH_OF_PAIN",
-    "comment": "Lash of Pain, Shadow Charge"
+    "comment": ""
   },
   {
     "familyId": 5,
@@ -573,14 +581,14 @@ export const spellFamilyFlags = [
     "className": "Warlock",
     "bitIndex": 16,
     "ability": "CF_WARLOCK_HEALTHSTONE",
-    "comment": "Torment"
+    "comment": ""
   },
   {
     "familyId": 5,
     "className": "Warlock",
     "bitIndex": 17,
     "ability": "CF_WARLOCK_SPELLSTONE",
-    "comment": "Demon Skin"
+    "comment": ""
   },
   {
     "familyId": 5,
@@ -601,14 +609,14 @@ export const spellFamilyFlags = [
     "className": "Warlock",
     "bitIndex": 20,
     "ability": "CF_WARLOCK_CREATE_STONES",
-    "comment": "Tamed Pet Passive Hit Chance"
+    "comment": ""
   },
   {
     "familyId": 5,
     "className": "Warlock",
     "bitIndex": 21,
     "ability": "CF_WARLOCK_FIRESTONE_ATTACK",
-    "comment": "Tamed Pet Passive Critical Strike"
+    "comment": ""
   },
   {
     "familyId": 5,
@@ -622,14 +630,14 @@ export const spellFamilyFlags = [
     "className": "Warlock",
     "bitIndex": 23,
     "ability": "CF_WARLOCK_IMP_BUFFS",
-    "comment": "All Pet Abilities"
+    "comment": ""
   },
   {
     "familyId": 5,
     "className": "Warlock",
     "bitIndex": 24,
     "ability": "CF_WARLOCK_HEALTH_FUNNEL",
-    "comment": "Tame Pet Passive Speed Increase"
+    "comment": ""
   },
   {
     "familyId": 5,
@@ -832,7 +840,7 @@ export const spellFamilyFlags = [
     "className": "Priest",
     "bitIndex": 19,
     "ability": "CF_PRIEST_TOUCH_OF_WEAKNESS",
-    "comment": "Shadowguard"
+    "comment": ""
   },
   {
     "familyId": 6,
@@ -881,7 +889,7 @@ export const spellFamilyFlags = [
     "className": "Priest",
     "bitIndex": 26,
     "ability": "CF_PRIEST_MIND_VISION",
-    "comment": "Also Silence"
+    "comment": ""
   },
   {
     "familyId": 6,
@@ -916,7 +924,7 @@ export const spellFamilyFlags = [
     "className": "Priest",
     "bitIndex": 31,
     "ability": "CF_PRIEST_MISC2",
-    "comment": "Silence, Power Infusion, Shadowform, Divine Spirit, Levitate, Prayer of Spirit"
+    "comment": ""
   },
   {
     "familyId": 6,
@@ -1014,7 +1022,7 @@ export const spellFamilyFlags = [
     "className": "Druid",
     "bitIndex": 12,
     "ability": "CF_DRUID_RAKE_CLAW",
-    "comment": "Claw"
+    "comment": ""
   },
   {
     "familyId": 7,
@@ -1091,21 +1099,21 @@ export const spellFamilyFlags = [
     "className": "Druid",
     "bitIndex": 23,
     "ability": "CF_DRUID_RIP_BITE",
-    "comment": "Rip & Ferocious Bite"
+    "comment": ""
   },
   {
     "familyId": 7,
     "className": "Druid",
     "bitIndex": 24,
     "ability": "CF_DRUID_SOOTHE_HIBERNATE",
-    "comment": "Soothe Animal & Hibernate"
+    "comment": ""
   },
   {
     "familyId": 7,
     "className": "Druid",
     "bitIndex": 25,
     "ability": "CF_DRUID_TREE_FORM",
-    "comment": "Innervate"
+    "comment": ""
   },
   {
     "familyId": 7,
@@ -1413,14 +1421,14 @@ export const spellFamilyFlags = [
     "className": "Hunter",
     "bitIndex": 1,
     "ability": "CF_HUNTER_MONGOOSE_RAPTOR",
-    "comment": "Mongoose Bite & Raptor Strike & Silent Hunt"
+    "comment": ""
   },
   {
     "familyId": 9,
     "className": "Hunter",
     "bitIndex": 2,
     "ability": "CF_HUNTER_FIRE_TRAP_EFFECTS",
-    "comment": "Immolation/Explosive Trap effects"
+    "comment": ""
   },
   {
     "familyId": 9,
@@ -1483,7 +1491,7 @@ export const spellFamilyFlags = [
     "className": "Hunter",
     "bitIndex": 11,
     "ability": "CF_HUNTER_ARCANE_SHOT",
-    "comment": "Quick Shot"
+    "comment": ""
   },
   {
     "familyId": 9,
@@ -1511,7 +1519,7 @@ export const spellFamilyFlags = [
     "className": "Hunter",
     "bitIndex": 15,
     "ability": "CF_HUNTER_SCORPID_STING",
-    "comment": "Disengage"
+    "comment": ""
   },
   {
     "familyId": 9,
@@ -1553,14 +1561,14 @@ export const spellFamilyFlags = [
     "className": "Hunter",
     "bitIndex": 21,
     "ability": "CF_HUNTER_ASPECT_OF_THE_CHEETAH",
-    "comment": "Aspect of the Cheetah & Aspect of the Pack"
+    "comment": ""
   },
   {
     "familyId": 9,
     "className": "Hunter",
     "bitIndex": 22,
     "ability": "CF_HUNTER_EYES_OF_THE_BEAST",
-    "comment": "Tamed Pet Passive Hit Chance"
+    "comment": ""
   },
   {
     "familyId": 9,
@@ -1637,7 +1645,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 1,
     "ability": "CF_PALADIN_BLESSING_OF_MIGHT",
-    "comment": "Blessing of Might & Greater Blessing of Might"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1665,7 +1673,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 5,
     "ability": "CF_PALADIN_CONSECRATION",
-    "comment": "Consecration + Exorcism"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1679,7 +1687,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 7,
     "ability": "CF_PALADIN_BLESSING_OF_PROTECTION",
-    "comment": "Blessing of Protection, Divine Protection, Divine Shield"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1700,7 +1708,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 10,
     "ability": "CF_PALADIN_JUDGEMENT_OF_RIGHTEOUSNESS",
-    "comment": "It is Seal AND Judgement"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1735,14 +1743,14 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 15,
     "ability": "CF_PALADIN_LAY_ON_HANDS",
-    "comment": "Lay on Hands, Divine Intervention"
+    "comment": ""
   },
   {
     "familyId": 10,
     "className": "Paladin",
     "bitIndex": 16,
     "ability": "CF_PALADIN_BLESSING_OF_WISDOM",
-    "comment": "Blessing of Wisdom & Greater Blessing of Wisdom"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1756,14 +1764,14 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 18,
     "ability": "CF_PALADIN_SEAL_OF_WISDOM_LIGHT",
-    "comment": "Seal of Wisdom & Seal of Light"
+    "comment": ""
   },
   {
     "familyId": 10,
     "className": "Paladin",
     "bitIndex": 19,
     "ability": "CF_PALADIN_JUDGEMENT_OF_WISDOM_LIGHT",
-    "comment": "Judgement of Wisdom & Judgement of Light"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1798,7 +1806,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 24,
     "ability": "CF_PALADIN_BLESSING_OF_KINGS",
-    "comment": "Blessing of Kings & Greater Blessing of Kings"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1812,7 +1820,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 26,
     "ability": "CF_PALADIN_AURAS",
-    "comment": "Shadow/Fire/Frost Resistance Auras & Sanctity Aura"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1826,7 +1834,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 28,
     "ability": "CF_PALADIN_BLESSINGS",
-    "comment": "Most of them aren't used anymore by players"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1861,7 +1869,7 @@ export const spellFamilyFlags = [
     "className": "Paladin",
     "bitIndex": 33,
     "ability": "CF_PALADIN_PURIFY_CLEANSE",
-    "comment": "Purify & Cleanse"
+    "comment": ""
   },
   {
     "familyId": 10,
@@ -1889,7 +1897,7 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 2,
     "ability": "CF_SHAMAN_MAGMA_TOTEM_ATTACK",
-    "comment": "Magma Totem Spell"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -1903,14 +1911,14 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 4,
     "ability": "CF_SHAMAN_SEARING_TOTEM",
-    "comment": "Searing Totem"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 5,
     "ability": "CF_SHAMAN_FIRE_NOVA",
-    "comment": "Fire Nova Passive (Trigger + Amplitude)"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -1980,7 +1988,7 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 15,
     "ability": "CF_SHAMAN_STONESKIN_WINDWALL",
-    "comment": "Stoneskin & Windwall · Only Stoneskin Effect"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -1994,21 +2002,21 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 17,
     "ability": "CF_SHAMAN_GRACE_OF_AIR",
-    "comment": "Tranquil Air and Grace of Air Effects"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 18,
     "ability": "CF_SHAMAN_UNK18",
-    "comment": "Grounding Totem Passive"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 19,
     "ability": "CF_SHAMAN_HEALING_MANA_TOTEM",
-    "comment": "Healing Stream Totem & Mana Spring Totem"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -2022,7 +2030,7 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 21,
     "ability": "CF_SHAMAN_FLAMETONGUE_WEAPON",
-    "comment": "Windcaller Weapon"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -2057,7 +2065,7 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 26,
     "ability": "CF_SHAMAN_TOTEM_EFFECTS",
-    "comment": "Fire Resistance, Frost Resistance, Shadow Resistance Totems"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -2078,14 +2086,14 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 29,
     "ability": "CF_SHAMAN_TOTEMS",
-    "comment": "Non-attacking totems · Fire Resistance Totem, Frost Resistance Totem, Shadow Resistance Totem, Stoneskin Totem, Strength of Earth Totem, Windcaller Totem, Windfury Totem, Fire Nova Totem"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 30,
     "ability": "CF_SHAMAN_FIRE_TOTEM_ATTACK",
-    "comment": "Fire Nova Spell, Magma Totem Spell, Searing Totem Spell"
+    "comment": ""
   },
   {
     "familyId": 11,
@@ -2106,20 +2114,20 @@ export const spellFamilyFlags = [
     "className": "Shaman",
     "bitIndex": 33,
     "ability": "CF_SHAMAN_WINDFURY_TOTEM",
-    "comment": "Windfury Totem Effect"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 34,
     "ability": "CF_SHAMAN_FLAMETONGUE_TOTEM",
-    "comment": "Windcaller Totem Effect"
+    "comment": ""
   },
   {
     "familyId": 11,
     "className": "Shaman",
     "bitIndex": 35,
     "ability": "CF_SHAMAN_CURES",
-    "comment": "Cure Poison & Cure Disease"
+    "comment": ""
   }
 ] as const;

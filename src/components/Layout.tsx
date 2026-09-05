@@ -1,38 +1,36 @@
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useProfiles } from '../context/ProfileContext';
 import { GlobalSearch } from './GlobalSearch';
 
 const sections = [
   {
-    label: 'Masks',
+    label: 'Core',
     links: [
       ['Overview', '/'],
+      ['Generic Mask', '/mask-calculator'],
       ['Spell Family Flags', '/spell-family-flags'],
-      ['Spell Flags', '/spell-flags'],
+    ],
+  },
+  {
+    label: 'Spell Flags',
+    links: [
+      ['School Mask', '/spell-flags?group=school-mask'],
+      ['SpellAttributes', '/spell-flags?group=spell-attributes'],
+      ['SpellAttributesEx', '/spell-flags?group=spell-attributes-ex'],
+      ['SpellAttributesEx2', '/spell-flags?group=spell-attributes-ex2'],
+      ['SpellAttributesEx3', '/spell-flags?group=spell-attributes-ex3'],
+      ['SpellAttributesEx4', '/spell-flags?group=spell-attributes-ex4'],
+      ['Proc Flags', '/spell-flags?group=proc-flags'],
+      ['Proc Flags EX', '/spell-flags?group=proc-flags-ex'],
+    ],
+  },
+  {
+    label: 'Masks',
+    links: [
       ['Shapeshift', '/shapeshift'],
       ['Weapons', '/weapons'],
-      ['Generic Mask', '/mask-calculator'],
-    ],
-  },
-  {
-    label: 'Spell Attributes',
-    links: [
-      ['SpellAttributes', '/spell-attributes'],
-      ['SpellAttributesEx', '/spell-attributes-ex'],
-      ['SpellAttributesEx2', '/spell-attributes-ex2'],
-      ['SpellAttributesEx3', '/spell-attributes-ex3'],
-      ['SpellAttributesEx4', '/spell-attributes-ex4'],
-    ],
-  },
-  {
-    label: 'Spell Defines',
-    links: [
-      ['SpellAttributesCustom', '/spell-attributes-custom'],
-      ['SpellAttributesInternal', '/spell-attributes-internal'],
-      ['SpellCategories', '/spell-categories'],
-      ['SpellCategoryFlags', '/spell-category-flags'],
-      ['SpellSpecific', '/spell-specific'],
+      ['Creatures', '/creatures'],
     ],
   },
   {
@@ -49,6 +47,7 @@ export function Layout() {
   const p = useProfiles();
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const create = () => {
     const name = prompt('New profile name', 'My Profile');
     if (name) p.newProfile(name);
@@ -87,7 +86,11 @@ export function Layout() {
       <nav>
         {sections.map((section) => <div className="nav-section" key={section.label}>
           <div className="nav-section-label">{section.label}</div>
-          {section.links.map(([label, path]) => <NavLink key={path} to={path} end={path === '/' ? true : undefined}>{label}</NavLink>)}
+          {section.links.map(([label, path]) => {
+            const current = `${location.pathname}${location.search}`;
+            const active = path === '/' ? location.pathname === '/' : current === path;
+            return <Link key={path} to={path} className={active ? 'active' : undefined}>{label}</Link>;
+          })}
         </div>)}
       </nav>
       <div className="local-note">localStorage only<br />No cloud sync</div>

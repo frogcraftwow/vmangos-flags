@@ -56,8 +56,11 @@ export function ProfileProvider({children}:{children:React.ReactNode}) {
     const profiles=s.profiles.filter(p=>p.id!==id); return {profiles,activeProfileId:s.activeProfileId===id?profiles[0].id:s.activeProfileId};
   });
   const setFamilyOverride=(key:string,patch:FamilyOverride)=>update(activeProfile.id,p=>{
-    const clean:FamilyOverride={}; if (patch.customAbility?.trim()) clean.customAbility=patch.customAbility; if (patch.comment?.trim()) clean.comment=patch.comment;
-    const next={...p.overrides.spellFamilyFlags}; if (Object.keys(clean).length) next[key]=clean; else delete next[key];
+    const clean:FamilyOverride={};
+    if (Object.prototype.hasOwnProperty.call(patch,'customAbility')) clean.customAbility=patch.customAbility ?? '';
+    if (Object.prototype.hasOwnProperty.call(patch,'comment')) clean.comment=patch.comment ?? '';
+    const next={...p.overrides.spellFamilyFlags};
+    if (Object.keys(clean).length) next[key]=clean; else delete next[key];
     return {...p,overrides:{...p.overrides,spellFamilyFlags:next}};
   });
   const resetFamilyOverride=(key:string)=>update(activeProfile.id,p=>{ const next={...p.overrides.spellFamilyFlags}; delete next[key]; return {...p,overrides:{...p.overrides,spellFamilyFlags:next}}; });

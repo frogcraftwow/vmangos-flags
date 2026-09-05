@@ -4,6 +4,7 @@ import { spellFamilyFlags } from '../data/spellFamilyFlags';
 import { useProfiles } from '../context/ProfileContext';
 import { hasBit, parseMask, setBit, toHex } from '../lib/masks';
 import { useQueryParam } from '../lib/url';
+import type { FamilyOverride } from '../lib/profiles';
 
 const families = [
   ['Mage', 3],
@@ -19,6 +20,7 @@ const families = [
 
 const CLIENT_MAX_BIT_INDEX = 50;
 const visibleBits = Array.from({ length: CLIENT_MAX_BIT_INDEX + 1 }, (_, bitIndex) => bitIndex);
+const owns = (value: object, key: string) => Object.prototype.hasOwnProperty.call(value, key);
 
 export default function SpellFamilyFlagsPage() {
   const requested = Number(useQueryParam('family'));
@@ -49,6 +51,20 @@ export default function SpellFamilyFlagsPage() {
   const removed = original & ~working;
   const xor = original ^ working;
 
+  const updateAbility = (key: string, baseline: string, override: FamilyOverride, value: string) => {
+    const next: FamilyOverride = { ...override };
+    if (value === baseline) delete next.customAbility;
+    else next.customAbility = value;
+    p.setFamilyOverride(key, next);
+  };
+
+  const updateComment = (key: string, baseline: string, override: FamilyOverride, value: string) => {
+    const next: FamilyOverride = { ...override };
+    if (value === baseline) delete next.comment;
+    else next.comment = value;
+    p.setFamilyOverride(key, next);
+  };
+
   return <>
     <PageHeader title="Spell Family Flags" />
 
@@ -72,7 +88,6 @@ export default function SpellFamilyFlagsPage() {
     <section className="panel">
       <div className="section-head">
         <h2>{className} — family {familyId}</h2>
-        <span className="badge">{baselineRows.length} original mappings</span>
       </div>
 
       <div className="mask-input-row">
@@ -116,16 +131,20 @@ export default function SpellFamilyFlagsPage() {
             <th>Bit</th>
             <th>Decimal</th>
             <th>Hex</th>
-            <th>Original Ability / Description</th>
-            <th>Custom Ability</th>
-            <th>Custom Comment</th>
-            <th>Status</th>
+            <th>Ability</th>
+            <th>Comment</th>
           </tr></thead>
           <tbody>{visibleBits.map((bitIndex) => {
             const row = baselineByBit.get(bitIndex);
             const key = `${familyId}:${bitIndex}`;
             const override = p.activeProfile.overrides.spellFamilyFlags[key] || {};
-            const overridden = Boolean(override.customAbility || override.comment);
+            const baselineAbility = row?.ability ?? '';
+            const baselineComment = row?.comment ?? '';
+            const abilityOverridden = owns(override, 'customAbility');
+            const commentOverridden = owns(override, 'comment');
+            const overridden = abilityOverridden || commentOverridden;
+            const effectiveAbility = abilityOverridden ? (override.customAbility ?? '') : baselineAbility;
+            const effectiveComment = commentOverridden ? (override.comment ?? '') : baselineComment;
             const bitMask = 1n << BigInt(bitIndex);
 
             return <tr key={key} className={overridden ? 'overridden' : ''}>
@@ -136,17 +155,31 @@ export default function SpellFamilyFlagsPage() {
               <td className="mono bit-cell">{bitIndex}</td>
               <td className="mono">{bitMask.toString()}</td>
               <td className="mono">{toHex(bitMask, 16)}</td>
-              <td className="definition-cell">
-                {row ? <>
-                  <code className="enum">{row.ability}</code>
-                  {row.comment && <div className="comment">{row.comment}</div>}
-                </> : <span className="unassigned">—</span>}
+              <td className="editable-cell">
+                <div className="inline-edit">
+                  <input
+                    className={`mono enum-input${abilityOverridden ? ' edited' : ''}`}
+                    aria-label={`Ability for ${key}`}
+                    value={effectiveAbility}
+                    placeholder="Unassigned"
+                    title={abilityOverridden ? `Original: ${baselineAbility || 'unassigned'}` : undefined}
+                    onChange={(e) => updateAbility(key, baselineAbility, override, e.target.value)}
+                  />
+                  {abilityOverridden && <button className="reset-inline" title={`Restore ${baselineAbility || 'unassigned'}`} aria-label={`Reset ability for ${key}`} onClick={() => updateAbility(key, baselineAbility, override, baselineAbility)}>↺</button>}
+                </div>
               </td>
-              <td><input aria-label={`Custom ability for ${key}`} value={override.customAbility || ''} onChange={(e) => p.setFamilyOverride(key, { ...override, customAbility: e.target.value })} /></td>
-              <td><input aria-label={`Custom comment for ${key}`} value={override.comment || ''} onChange={(e) => p.setFamilyOverride(key, { ...override, comment: e.target.value })} /></td>
-              <td>
-                <span className={`badge ${overridden ? 'warn' : 'subtle'}`}>{overridden ? 'Overridden' : row ? 'Inherited' : 'Unassigned'}</span>
-                {overridden && <button className="link-btn" onClick={() => p.resetFamilyOverride(key)}>Reset Override</button>}
+              <td className="editable-cell comment-edit-cell">
+                <div className="inline-edit">
+                  <input
+                    className={commentOverridden ? 'edited' : ''}
+                    aria-label={`Comment for ${key}`}
+                    value={effectiveComment}
+                    placeholder=""
+                    title={commentOverridden ? `Original: ${baselineComment || 'empty'}` : undefined}
+                    onChange={(e) => updateComment(key, baselineComment, override, e.target.value)}
+                  />
+                  {commentOverridden && <button className="reset-inline" title="Restore original comment" aria-label={`Reset comment for ${key}`} onClick={() => updateComment(key, baselineComment, override, baselineComment)}>↺</button>}
+                </div>
               </td>
             </tr>;
           })}</tbody>
