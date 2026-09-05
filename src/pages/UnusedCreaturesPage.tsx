@@ -1,0 +1,7 @@
+import { useMemo, useState } from 'react';
+import { PageHeader } from '../components/PageHeader';
+import { creatures } from '../data/creatures';
+import { Pager } from '../components/Pager';
+import { useQueryParam } from '../lib/url';
+const columns=['entry','name','subname','display_id1','display_id2','display_id3','display_id4','unit_class','rank','beast_family','type','type_flags','level_min','level_max','faction'] as const;
+export default function UnusedCreaturesPage(){const [q,setQ]=useState(useQueryParam('q'));const [page,setPage]=useState(1);const rows=useMemo(()=>creatures.filter(r=>!q||Object.values(r).join(' ').toLowerCase().includes(q.toLowerCase())),[q]);const size=75,pages=Math.max(1,Math.ceil(rows.length/size)),safe=Math.min(page,pages);return <><PageHeader title="Unused Creatures" description="Performant paginated search over the supplied UNUSED_CREATURES worksheet."/><div className="table-toolbar"><input placeholder="Search entry, name, faction, level…" value={q} onChange={e=>{setQ(e.target.value);setPage(1)}}/><span>{rows.length.toLocaleString()} rows</span></div><div className="panel table-wrap wide-table"><table><thead><tr>{columns.map(c=><th key={c}>{c}</th>)}</tr></thead><tbody>{rows.slice((safe-1)*size,safe*size).map(r=><tr key={r.entry}>{columns.map(c=><td key={c} className={c==='name'||c==='subname'?'':'mono'}>{r[c]}</td>)}</tr>)}</tbody></table></div><Pager page={safe} pages={pages} onPage={setPage}/></>}

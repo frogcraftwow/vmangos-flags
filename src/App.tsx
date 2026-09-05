@@ -1,0 +1,20 @@
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import Dashboard from './pages/Dashboard';
+import SpellFamilyFlagsPage from './pages/SpellFamilyFlagsPage';
+import SpellAttributesPage from './pages/SpellAttributesPage';
+import SpellDefinesPage from './pages/SpellDefinesPage';
+import SpellFlagsPage from './pages/SpellFlagsPage';
+import ShapeshiftPage from './pages/ShapeshiftPage';
+import GenericMaskPage from './pages/GenericMaskPage';
+import DbcPage from './pages/DbcPage';
+import SpellEffectsPage from './pages/SpellEffectsPage';
+import AurasPage from './pages/AurasPage';
+import CoordinatesPage from './pages/CoordinatesPage';
+import ClsCalculatorPage from './pages/ClsCalculatorPage';
+import SkillLinesPage from './pages/SkillLinesPage';
+import WeaponsPage from './pages/WeaponsPage';
+import UnusedCreaturesPage from './pages/UnusedCreaturesPage';
+import HpComparePage from './pages/HpComparePage';
+import ProfileManagerPage from './pages/ProfileManagerPage';
+export default function App(){return <Routes><Route element={<Layout/>}><Route path="/" element={<Dashboard/>}/><Route path="/spell-family-flags" element={<SpellFamilyFlagsPage/>}/><Route path="/spell-attributes" element={<SpellAttributesPage/>}/><Route path="/spell-defines" element={<SpellDefinesPage/>}/><Route path="/spell-flags" element={<SpellFlagsPage/>}/><Route path="/shapeshift" element={<ShapeshiftPage/>}/><Route path="/mask-calculator" element={<GenericMaskPage/>}/><Route path="/dbc" element={<DbcPage/>}/><Route path="/spell-effects" element={<SpellEffectsPage/>}/><Route path="/auras" element={<AurasPage/>}/><Route path="/coordinates" element={<CoordinatesPage/>}/><Route path="/cls-calculator" element={<ClsCalculatorPage/>}/><Route path="/skill-lines" element={<SkillLinesPage/>}/><Route path="/weapons" element={<WeaponsPage/>}/><Route path="/unused-creatures" element={<UnusedCreaturesPage/>}/><Route path="/hp-compare" element={<HpComparePage/>}/><Route path="/profiles" element={<ProfileManagerPage/>}/></Route></Routes>}
