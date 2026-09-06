@@ -1,4 +1,4 @@
-# Spell Dev Toolkit
+# vMangos Flag Dev Tookit
 
 Static React + TypeScript + Vite developer toolkit for Vanilla 1.12.1 spell/template work.
 
