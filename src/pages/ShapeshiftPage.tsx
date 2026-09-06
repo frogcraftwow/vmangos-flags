@@ -12,7 +12,6 @@ export default function ShapeshiftPage() {
         bitIndex: row.bitIndex,
         decimal: row.decimal,
         hex: row.hex,
-        description: row.form === '—' ? 'Unnamed / reserved' : '',
       }))}
       presetScope="shapeshift"
       maxBits={32}

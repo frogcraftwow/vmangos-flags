@@ -1,4 +1,4 @@
-// Generated once from the supplied source files. Runtime does not read XLSX/TXT.
+// Runtime data is hardcoded. User edits are profile deltas only.
 export const creatureImmunities = [
   { name: 'root/snare', bitIndex: 0, decimal: '1', hex: '0x1' },
   { name: 'taunt(pushacbk?)', bitIndex: 1, decimal: '2', hex: '0x2' },
@@ -11,4 +11,18 @@ export const creatureImmunities = [
   { name: 'unk', bitIndex: 8, decimal: '256', hex: '0x100' },
   { name: 'fear', bitIndex: 9, decimal: '512', hex: '0x200' },
   { name: 'stun', bitIndex: 10, decimal: '1024', hex: '0x400' },
+] as const;
+
+export const targetCreatureTypes = [
+  { name: 'CREATURE_TYPE_BEAST', bitIndex: 0 },
+  { name: 'CREATURE_TYPE_DRAGONKIN', bitIndex: 1 },
+  { name: 'CREATURE_TYPE_DEMON', bitIndex: 2 },
+  { name: 'CREATURE_TYPE_ELEMENTAL', bitIndex: 3 },
+  { name: 'CREATURE_TYPE_GIANT', bitIndex: 4 },
+  { name: 'CREATURE_TYPE_UNDEAD', bitIndex: 5 },
+  { name: 'CREATURE_TYPE_HUMANOID', bitIndex: 6 },
+  { name: 'CREATURE_TYPE_CRITTER', bitIndex: 7 },
+  { name: 'CREATURE_TYPE_MECHANICAL', bitIndex: 8 },
+  { name: 'CREATURE_TYPE_NOT_SPECIFIED', bitIndex: 9 },
+  { name: 'CREATURE_TYPE_TOTEM', bitIndex: 10 },
 ] as const;

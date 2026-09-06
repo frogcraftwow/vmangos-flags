@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { ALL_PROFILES_FORMAT, SCHEMA_VERSION, downloadJson, emptyProfile, exportProfile, fromExport, type FamilyOverride, type Profile, type ProfileExport, slugify, uuid } from '../lib/profiles';
+import { ALL_PROFILES_FORMAT, SCHEMA_VERSION, downloadJson, emptyProfile, exportProfile, fromExport, type DefinitionOverride, type FamilyOverride, type Profile, type ProfileExport, slugify, uuid } from '../lib/profiles';
 
 type StoreState = { activeProfileId: string; profiles: Profile[] };
 type ContextValue = {
@@ -14,6 +14,8 @@ type ContextValue = {
   deleteProfile: (id: string) => void;
   setFamilyOverride: (key: string, patch: FamilyOverride) => void;
   resetFamilyOverride: (key: string) => void;
+  setMaskDefinitionOverride: (key: string, patch: DefinitionOverride) => void;
+  resetMaskDefinitionOverride: (key: string) => void;
   resetAllOverrides: () => void;
   savePreset: (scope: string, name: string, mask: bigint) => void;
   deletePreset: (scope: string, presetId: string) => void;
@@ -30,7 +32,10 @@ function loadStore(): StoreState {
     const raw=localStorage.getItem(KEY);
     if (raw) {
       const parsed=JSON.parse(raw) as StoreState;
-      if (Array.isArray(parsed.profiles) && parsed.profiles.length && parsed.profiles.some(p=>p.id===parsed.activeProfileId)) return parsed;
+      if (Array.isArray(parsed.profiles) && parsed.profiles.length && parsed.profiles.some(p=>p.id===parsed.activeProfileId)) {
+        const current = parsed.profiles.every(p => p?.overrides?.spellFamilyFlags && p?.overrides?.maskDefinitions && p?.presets);
+        if (current) return parsed;
+      }
     }
   } catch { /* start clean */ }
   const p=emptyProfile('Default'); return {activeProfileId:p.id,profiles:[p]};
@@ -64,7 +69,16 @@ export function ProfileProvider({children}:{children:React.ReactNode}) {
     return {...p,overrides:{...p.overrides,spellFamilyFlags:next}};
   });
   const resetFamilyOverride=(key:string)=>update(activeProfile.id,p=>{ const next={...p.overrides.spellFamilyFlags}; delete next[key]; return {...p,overrides:{...p.overrides,spellFamilyFlags:next}}; });
-  const resetAllOverrides=()=>update(activeProfile.id,p=>({...p,overrides:{spellFamilyFlags:{}}}));
+  const setMaskDefinitionOverride=(key:string,patch:DefinitionOverride)=>update(activeProfile.id,p=>{
+    const clean:DefinitionOverride={};
+    if (Object.prototype.hasOwnProperty.call(patch,'name')) clean.name=patch.name ?? '';
+    if (Object.prototype.hasOwnProperty.call(patch,'comment')) clean.comment=patch.comment ?? '';
+    const next={...p.overrides.maskDefinitions};
+    if (Object.keys(clean).length) next[key]=clean; else delete next[key];
+    return {...p,overrides:{...p.overrides,maskDefinitions:next}};
+  });
+  const resetMaskDefinitionOverride=(key:string)=>update(activeProfile.id,p=>{ const next={...p.overrides.maskDefinitions}; delete next[key]; return {...p,overrides:{...p.overrides,maskDefinitions:next}}; });
+  const resetAllOverrides=()=>update(activeProfile.id,p=>({...p,overrides:{spellFamilyFlags:{},maskDefinitions:{}}}));
   const savePreset=(scope:string,name:string,mask:bigint)=>update(activeProfile.id,p=>({...p,presets:{...p.presets,[scope]:[...(p.presets[scope]||[]),{id:uuid(),name:name.trim()||'Preset',mask:mask.toString(),createdAt:new Date().toISOString()}]}}));
   const deletePreset=(scope:string,presetId:string)=>update(activeProfile.id,p=>({...p,presets:{...p.presets,[scope]:(p.presets[scope]||[]).filter(x=>x.id!==presetId)}}));
   const downloadActiveProfile=()=>downloadJson(`spell-toolkit-profile-${slugify(activeProfile.name)}.json`,exportProfile(activeProfile));
@@ -76,7 +90,7 @@ export function ProfileProvider({children}:{children:React.ReactNode}) {
     }
     return {profiles:[...s.profiles,incoming],activeProfileId:incoming.id};
   });
-  const value=useMemo<ContextValue>(()=>({activeProfile,profiles:store.profiles,saveState,setActiveProfile:(id)=>setStore(s=>({...s,activeProfileId:id})),newProfile,duplicateProfile,renameProfile,updateProfileMeta,deleteProfile,setFamilyOverride,resetFamilyOverride,resetAllOverrides,savePreset,deletePreset,downloadActiveProfile,exportAllProfiles,importProfile}),[activeProfile,store.profiles,saveState]);
+  const value=useMemo<ContextValue>(()=>({activeProfile,profiles:store.profiles,saveState,setActiveProfile:(id)=>setStore(s=>({...s,activeProfileId:id})),newProfile,duplicateProfile,renameProfile,updateProfileMeta,deleteProfile,setFamilyOverride,resetFamilyOverride,setMaskDefinitionOverride,resetMaskDefinitionOverride,resetAllOverrides,savePreset,deletePreset,downloadActiveProfile,exportAllProfiles,importProfile}),[activeProfile,store.profiles,saveState]);
   return <ProfileContext.Provider value={value}>{children}</ProfileContext.Provider>;
 }
 export function useProfiles(){ const ctx=useContext(ProfileContext); if(!ctx) throw new Error('ProfileProvider missing'); return ctx; }

@@ -24,11 +24,12 @@ export function GlobalSearch() {
 
   return <>
     <button className="global-search-trigger" onClick={() => setOpen(true)}>Search… <kbd>Ctrl K</kbd></button>
+    <button className="mobile-search-trigger" aria-label="Search" onClick={() => setOpen(true)}>⌕</button>
     {open && <div className="modal-backdrop" onMouseDown={() => setOpen(false)}>
       <div className="search-modal" role="dialog" aria-modal="true" onMouseDown={(e) => e.stopPropagation()}>
         <div className="search-input-wrap">
           <span>⌕</span>
-          <input ref={input} autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="FIREBALL, WAND, 228, SPELL_ATTR_EX_DISMISS_PET_FIRST, Proc…" />
+          <input ref={input} autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="FIREBALL, WAND, 228, SPELL_ATTR_EX_DISMISS_PET_FIRST, SPELLMOD_DAMAGE, Proc…" />
           <button onClick={() => setOpen(false)}>Esc</button>
         </div>
         <div className="search-results">

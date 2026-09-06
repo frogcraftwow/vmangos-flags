@@ -1,4 +1,6 @@
-// Canonical spell attribute enums from the supplied spelldefines.txt.
+// Vanilla 1.12.x spell attribute bit definitions.
+// Names/bit positions are cross-checked against the vanilla 1.12 external spell definitions used by wowdev-aligned tooling.
+// Source comments from the supplied core definitions are preserved where they remain applicable.
 export const spellAttributes = {
   "SpellAttributes": [
     {
@@ -160,11 +162,6 @@ export const spellAttributes = {
       "name": "SPELL_ATTR_NO_AURA_CANCEL",
       "value": "0x80000000",
       "comment": "31 Positive aura can't be canceled"
-    },
-    {
-      "name": "SPELL_ATTR_CAN_BREAK_ON_DAMAGE",
-      "value": "0x80000000",
-      "comment": "31 Taking damage has chance to remove the aura"
     }
   ],
   "SpellAttributesEx": [
@@ -371,14 +368,14 @@ export const spellAttributes = {
       "comment": "7"
     },
     {
-      "name": "SPELL_ATTR_EX2_UNK8",
+      "name": "SPELL_ATTR_EX2_INCLUDE_IN_ADVANCED_COMBAT_LOG",
       "value": "0x00000100",
-      "comment": "8 Unused"
+      "comment": ""
     },
     {
-      "name": "SPELL_ATTR_EX2_UNK9",
+      "name": "SPELL_ATTR_EX2_ALWAYS_CAST_AS_UNIT",
       "value": "0x00000200",
-      "comment": "9 Unused"
+      "comment": ""
     },
     {
       "name": "SPELL_ATTR_EX2_SPECIAL_TAMING_FLAG",
@@ -406,9 +403,9 @@ export const spellAttributes = {
       "comment": "14"
     },
     {
-      "name": "SPELL_ATTR_EX2_ENABLE_AFTER_PARRY",
+      "name": "SPELL_ATTR_EX2_UNK15",
       "value": "0x00008000",
-      "comment": "15 Deprecated in patch 1.8 and moved to CasterAuraState"
+      "comment": ""
     },
     {
       "name": "SPELL_ATTR_EX2_NO_ACTIVE_PETS",
@@ -655,9 +652,9 @@ export const spellAttributes = {
   ],
   "SpellAttributesEx4": [
     {
-      "name": "SPELL_ATTR_EX4_IGNORE_RESISTANCES",
+      "name": "SPELL_ATTR_EX4_NO_CAST_LOG",
       "value": "0x00000001",
-      "comment": "0 From TC 3.3.5, but not present in 1.12 native DBCs. Add it with spell_mod to prevent a spell from being resisted."
+      "comment": ""
     },
     {
       "name": "SPELL_ATTR_EX4_CLASS_TRIGGER_ONLY_ON_TARGET",
@@ -703,6 +700,16 @@ export const spellAttributes = {
       "name": "SPELL_ATTR_EX4_COMBAT_FEEDBACK_WHEN_USABLE",
       "value": "0x00000200",
       "comment": "9 Initially disabled / Trigger activate from event (Execute, Riposte, Deep Freeze...)"
+    },
+    {
+      "name": "SPELL_ATTR_EX4_WEAPON_SPEED_COST_SCALING",
+      "value": "0x00000400",
+      "comment": ""
+    },
+    {
+      "name": "SPELL_ATTR_EX4_NO_PARTIAL_IMMUNITY",
+      "value": "0x00000800",
+      "comment": ""
     }
   ]
 } as const;

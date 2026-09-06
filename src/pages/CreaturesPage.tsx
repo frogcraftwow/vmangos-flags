@@ -5,11 +5,6 @@ import { creatureImmunities } from '../data/creatures';
 export default function CreaturesPage() {
   return <>
     <PageHeader title="Creatures" />
-    <MaskTool
-      title="Creature Immunities"
-      flags={creatureImmunities}
-      presetScope="creatures:immunities"
-      maxBits={32}
-    />
+    <MaskTool title="Creature Immunities" flags={creatureImmunities} presetScope="creatures:immunities" definitionScope="creatures:immunities" maxBits={32} />
   </>;
 }

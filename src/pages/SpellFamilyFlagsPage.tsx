@@ -7,15 +7,15 @@ import { useQueryParam } from '../lib/url';
 import type { FamilyOverride } from '../lib/profiles';
 
 const families = [
-  ['Mage', 3],
-  ['Warrior', 4],
-  ['Warlock', 5],
-  ['Priest', 6],
   ['Druid', 7],
-  ['Rogue', 8],
   ['Hunter', 9],
+  ['Mage', 3],
   ['Paladin', 10],
+  ['Priest', 6],
+  ['Rogue', 8],
   ['Shaman', 11],
+  ['Warlock', 5],
+  ['Warrior', 4],
 ] as const;
 
 const CLIENT_MAX_BIT_INDEX = 50;
@@ -24,7 +24,7 @@ const owns = (value: object, key: string) => Object.prototype.hasOwnProperty.cal
 
 export default function SpellFamilyFlagsPage() {
   const requested = Number(useQueryParam('family'));
-  const [familyId, setFamilyId] = useState(families.some((x) => x[1] === requested) ? requested : 3);
+  const [familyId, setFamilyId] = useState(families.some((x) => x[1] === requested) ? requested : 7);
   const [input, setInput] = useState('0');
   const [original, setOriginal] = useState(0n);
   const [working, setWorking] = useState(0n);
@@ -47,9 +47,6 @@ export default function SpellFamilyFlagsPage() {
     }
   };
 
-  const added = working & ~original;
-  const removed = original & ~working;
-  const xor = original ^ working;
 
   const updateAbility = (key: string, baseline: string, override: FamilyOverride, value: string) => {
     const next: FamilyOverride = { ...override };
@@ -68,12 +65,6 @@ export default function SpellFamilyFlagsPage() {
   return <>
     <PageHeader title="Spell Family Flags" />
 
-    <div className="source-strip">
-      <span>Baseline</span>
-      <code>vMaNGOS SpellClassMask.h</code>
-      <span>Bits</span>
-      <code>0–50</code>
-    </div>
 
     <div className="family-tabs">
       {families.map(([name, id]) => <button className={id === familyId ? 'active' : ''} key={id} onClick={() => {
@@ -82,12 +73,12 @@ export default function SpellFamilyFlagsPage() {
         setOriginal(0n);
         setWorking(0n);
         setError('');
-      }}>{name} <span>{id}</span></button>)}
+      }}>{name}</button>)}
     </div>
 
     <section className="panel">
       <div className="section-head">
-        <h2>{className} — family {familyId}</h2>
+        <h2>{className} — SpellFamily {familyId}</h2>
       </div>
 
       <div className="mask-input-row">
@@ -112,9 +103,6 @@ export default function SpellFamilyFlagsPage() {
       <div className="mask-results compact-results">
         <Metric label="Input Decimal" value={original.toString()} />
         <Metric label="Input Hex" value={toHex(original, 16)} />
-        <Metric label="Added" value={`${added} / ${toHex(added, 16)}`} />
-        <Metric label="Removed" value={`${removed} / ${toHex(removed, 16)}`} />
-        <Metric label="XOR" value={`${xor} / ${toHex(xor, 16)}`} />
       </div>
 
       {presets.length > 0 && <div className="preset-row">
@@ -167,6 +155,7 @@ export default function SpellFamilyFlagsPage() {
                   />
                   {abilityOverridden && <button className="reset-inline" title={`Restore ${baselineAbility || 'unassigned'}`} aria-label={`Reset ability for ${key}`} onClick={() => updateAbility(key, baselineAbility, override, baselineAbility)}>↺</button>}
                 </div>
+                <div className="original-value"><span>Original</span><code>{baselineAbility || '—'}</code></div>
               </td>
               <td className="editable-cell comment-edit-cell">
                 <div className="inline-edit">
@@ -180,6 +169,7 @@ export default function SpellFamilyFlagsPage() {
                   />
                   {commentOverridden && <button className="reset-inline" title="Restore original comment" aria-label={`Reset comment for ${key}`} onClick={() => updateComment(key, baselineComment, override, baselineComment)}>↺</button>}
                 </div>
+                <div className="original-value"><span>Original</span><code>{baselineComment || '—'}</code></div>
               </td>
             </tr>;
           })}</tbody>

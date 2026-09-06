@@ -1,24 +1,28 @@
 import { useMemo, useState } from 'react';
 import { activeBits, hasBit, parseMask, setBit, toHex } from '../lib/masks';
 import { useProfiles } from '../context/ProfileContext';
+import type { DefinitionOverride } from '../lib/profiles';
 
 export type MaskFlag = {
   name: string;
   bitIndex: number;
-  description?: string;
+  comment?: string;
   decimal?: string;
   hex?: string;
 };
 
-export function MaskTool({ title, flags, presetScope, maxBits = 64, bitLabel = 'Bit', nameLabel = 'Name / Definition' }: {
+const owns = (value: object, key: string) => Object.prototype.hasOwnProperty.call(value, key);
+
+export function MaskTool({ title, flags, presetScope, definitionScope, maxBits = 64, bitLabel = 'Bit', nameLabel = 'Name' }: {
   title: string;
   flags: readonly MaskFlag[];
   presetScope: string;
+  definitionScope?: string;
   maxBits?: number;
   bitLabel?: string;
   nameLabel?: string;
 }) {
-  const { activeProfile, savePreset, deletePreset } = useProfiles();
+  const { activeProfile, savePreset, deletePreset, setMaskDefinitionOverride } = useProfiles();
   const [input, setInput] = useState('0');
   const [original, setOriginal] = useState(0n);
   const [working, setWorking] = useState(0n);
@@ -35,9 +39,20 @@ export function MaskTool({ title, flags, presetScope, maxBits = 64, bitLabel = '
     }
   };
 
-  const added = working & ~original;
-  const removed = original & ~working;
-  const xor = original ^ working;
+  const updateName = (key: string, baseline: string, override: DefinitionOverride, value: string) => {
+    const next: DefinitionOverride = { ...override };
+    if (value === baseline) delete next.name;
+    else next.name = value;
+    setMaskDefinitionOverride(key, next);
+  };
+
+  const updateComment = (key: string, baseline: string, override: DefinitionOverride, value: string) => {
+    const next: DefinitionOverride = { ...override };
+    if (value === baseline) delete next.comment;
+    else next.comment = value;
+    setMaskDefinitionOverride(key, next);
+  };
+
   const presets = activeProfile.presets[presetScope] || [];
   const hexDigits = maxBits > 32 ? 16 : 8;
   const selectedCount = useMemo(() => flags.filter((f) => hasBit(working, f.bitIndex)).length, [flags, working]);
@@ -69,9 +84,6 @@ export function MaskTool({ title, flags, presetScope, maxBits = 64, bitLabel = '
     <div className="mask-results compact-results">
       <Metric label="Input Decimal" value={original.toString()} />
       <Metric label="Input Hex" value={toHex(original, hexDigits)} />
-      <Metric label="Added" value={`${added} / ${toHex(added, hexDigits)}`} />
-      <Metric label="Removed" value={`${removed} / ${toHex(removed, hexDigits)}`} />
-      <Metric label="XOR" value={`${xor} / ${toHex(xor, hexDigits)}`} />
     </div>
 
     <div className="preset-row">
@@ -82,22 +94,42 @@ export function MaskTool({ title, flags, presetScope, maxBits = 64, bitLabel = '
       </span>)}
     </div>
 
-    <div className="table-wrap">
+    <div className="table-wrap editable-mask-table">
       <table>
-        <thead><tr><th className="xcol">X</th><th>{bitLabel}</th><th>Decimal</th><th>Hex</th><th>{nameLabel}</th></tr></thead>
-        <tbody>{flags.map((f) => <tr key={`${f.bitIndex}:${f.name}`} className={hasBit(working, f.bitIndex) ? 'selected-row' : ''}>
-          <td className="xcol"><label className="xcheck">
-            <input aria-label={`Select ${f.name}`} type="checkbox" checked={hasBit(working, f.bitIndex)} onChange={(e) => setWorking((m) => setBit(m, f.bitIndex, e.target.checked))} />
-            <span>×</span>
-          </label></td>
-          <td className="mono bit-cell">{f.bitIndex}</td>
-          <td className="mono">{f.decimal ?? (1n << BigInt(f.bitIndex)).toString()}</td>
-          <td className="mono">{f.hex ?? toHex(1n << BigInt(f.bitIndex))}</td>
-          <td className="definition-cell">
-            <div className="mono enum">{f.name}</div>
-            {f.description && <div className="comment">{f.description}</div>}
-          </td>
-        </tr>)}</tbody>
+        <thead><tr><th className="xcol">X</th><th>{bitLabel}</th><th>Decimal</th><th>Hex</th><th>{nameLabel}</th><th>Comment</th></tr></thead>
+        <tbody>{flags.map((f) => {
+          const key = `${definitionScope ?? presetScope}:${f.bitIndex}`;
+          const override = activeProfile.overrides.maskDefinitions[key] || {};
+          const baselineName = f.name;
+          const baselineComment = f.comment || '';
+          const nameOverridden = owns(override, 'name');
+          const commentOverridden = owns(override, 'comment');
+          const effectiveName = nameOverridden ? (override.name ?? '') : baselineName;
+          const effectiveComment = commentOverridden ? (override.comment ?? '') : baselineComment;
+          return <tr key={`${f.bitIndex}:${baselineName}`} className={`${hasBit(working, f.bitIndex) ? 'selected-row ' : ''}${nameOverridden || commentOverridden ? 'overridden' : ''}`.trim()}>
+            <td className="xcol"><label className="xcheck">
+              <input aria-label={`Select ${effectiveName || baselineName}`} type="checkbox" checked={hasBit(working, f.bitIndex)} onChange={(e) => setWorking((m) => setBit(m, f.bitIndex, e.target.checked))} />
+              <span>×</span>
+            </label></td>
+            <td className="mono bit-cell">{f.bitIndex}</td>
+            <td className="mono">{f.decimal ?? (1n << BigInt(f.bitIndex)).toString()}</td>
+            <td className="mono">{f.hex ?? toHex(1n << BigInt(f.bitIndex))}</td>
+            <td className="editable-cell">
+              <div className="inline-edit">
+                <input className={`mono enum-input${nameOverridden ? ' edited' : ''}`} value={effectiveName} onChange={(e) => updateName(key, baselineName, override, e.target.value)} aria-label={`${nameLabel} for bit ${f.bitIndex}`} />
+                {nameOverridden && <button className="reset-inline" title="Restore original name" aria-label={`Reset name for bit ${f.bitIndex}`} onClick={() => updateName(key, baselineName, override, baselineName)}>↺</button>}
+              </div>
+              <div className="original-value"><span>Original</span><code>{baselineName || '—'}</code></div>
+            </td>
+            <td className="editable-cell comment-edit-cell">
+              <div className="inline-edit">
+                <input className={commentOverridden ? 'edited' : ''} value={effectiveComment} onChange={(e) => updateComment(key, baselineComment, override, e.target.value)} aria-label={`Comment for bit ${f.bitIndex}`} />
+                {commentOverridden && <button className="reset-inline" title="Restore original comment" aria-label={`Reset comment for bit ${f.bitIndex}`} onClick={() => updateComment(key, baselineComment, override, baselineComment)}>↺</button>}
+              </div>
+              <div className="original-value"><span>Original</span><code>{baselineComment || '—'}</code></div>
+            </td>
+          </tr>;
+        })}</tbody>
       </table>
     </div>
 
