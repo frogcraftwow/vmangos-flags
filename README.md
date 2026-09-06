@@ -1,5 +1,7 @@
 # vMangos Flag Dev Tookit
 
+vMangos Flag Calculator hosted here: https://frogcraftwow.github.io/vmangos-flags/
+
 Static React + TypeScript + Vite developer toolkit for Vanilla 1.12.1 spell/template work.
 
 Canonical spell enum/flag source: **https://github.com/vmangos/core** (`development` branch), especially `src/game/Spells/SpellDefines.h`, `SpellAuraDefines.h`, `SpellAuras.cpp`, `SpellEffects.cpp`, and `src/game/SharedDefines.h`.
