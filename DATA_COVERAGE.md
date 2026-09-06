@@ -1,36 +1,29 @@
 # Data coverage
 
-## Spell Family Flags
+The runtime project contains hardcoded data only; uploaded XLSX/TXT files are not required at runtime.
 
-Baseline ability mappings come from the original vMaNGOS `src/game/Spells/SpellClassMask.h`. Workbook/helper mappings and custom notes are not used to replace or expand baseline abilities.
+## Retained
 
-Only comments attached to original `MISC` class-flag entries are retained in the built-in data. Ability and comment cells are edited directly in the table; edits are stored as profile differences while the built-in baseline remains immutable. Bits 0–50 are rendered; higher rows are not shown.
+- Original spell-family mappings with stable `familyId:bitIndex` keys.
+- Spell family rows stop at zero-based bit 50 in the UI.
+- Vanilla spell attributes: `SpellAttributes`, `SpellAttributesEx`, `SpellAttributesEx2`, `SpellAttributesEx3`, `SpellAttributesEx4`.
+- Proc Flags and Proc Flags EX.
+- School/interrupt/target masks.
+- Shapeshift mask data.
+- Skill Lines sorted numerically.
+- Equipped item class/subclass/inventory requirements.
+- Useful scalar `spell_template` enum references.
+- Creature immunity mask.
+- Selective Spell Aura entries with enum/mask-backed auxiliary fields.
+- Selective Spell Effect entries with enum/mask-backed auxiliary fields.
+- SpellModOp reference for Aura 107/108.
 
-## Spell Flags
+## Intentionally excluded
 
-The Spell Flags workbench contains, in order:
-
-- School Mask
-- SpellAttributes
-- SpellAttributesEx
-- SpellAttributesEx2
-- SpellAttributesEx3
-- SpellAttributesEx4
-- Proc Flags
-- Proc Flags EX
-
-`spelldefines.txt` supplies the canonical attribute enum names used by these calculators, including `SPELL_ATTR_EX_DISMISS_PET_FIRST`. The UI does not use `Attr0`, `Attr1`, or `SPELL_ATTR1_*` naming.
-
-The separate Spell Defines section has been removed.
-
-## Other retained data
-
-- Generic BigInt mask calculator directly below Overview in navigation.
-- Shapeshift mask data from `shapeshift-bitmask.xlsx`.
-- Weapons from `weapons.txt`, exposed as a subclass bitmask calculator.
-- Creatures page with Creature Immunities as a mask calculator, directly below Weapons.
-- Skill Lines from `skilllines.txt`, sorted ascending by ID; GM command text omitted.
-
-## Removed from the current UI
-
-Spell Defines, DBC/IDs, coordinates, CLS, spell effects, aura datasets, unused creatures, and HP compare are intentionally not shipped in this version.
+- Full Spell Aura browser.
+- Full Spell Effect browser.
+- DBC/ID dump.
+- Coordinates / CLS / HP compare / unused creatures.
+- Full aura lists.
+- Runtime spreadsheet parsing.
+- User-specific Vanilla Reforged mappings.

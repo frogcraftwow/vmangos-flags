@@ -1,20 +1,6 @@
 # Spell Dev Toolkit
 
-Static React + TypeScript + Vite toolkit for vMaNGOS spell development. The deployed site uses hardcoded TypeScript data and does not read XLSX/TXT files at runtime.
-
-## Included
-
-- Generic BigInt mask calculator.
-- Spell Family Flags with authoritative vMaNGOS `SpellClassMask.h` baseline mappings, direct in-place ability/comment editing backed by local profile overrides, presets, and visible bits 0–50.
-- Spell Flags workbench in this order: School Mask, SpellAttributes, SpellAttributesEx, SpellAttributesEx2, SpellAttributesEx3, SpellAttributesEx4, Proc Flags, Proc Flags EX.
-- Shapeshift mask calculator.
-- Weapon subclass mask calculator.
-- Creatures mask page with Creature Immunities.
-- Skill Lines sorted by numeric ID.
-- Local profiles, import/export, autosave, and saved presets.
-- Global search across the included baseline/reference data.
-
-Not included in this version: Spell Defines, DBC/ID explorer, coordinates, CLS calculator, spell effects, aura explorers, unused creatures, or HP compare.
+Static React + TypeScript + Vite developer toolkit for Vanilla 1.12.1 spell/template work.
 
 ## Run
 
@@ -23,17 +9,30 @@ npm install
 npm run dev -- --host 0.0.0.0
 ```
 
-## Test / build
+## Build / deploy to GitHub Pages
 
 ```bash
-npm test
 npm run build
-```
-
-## Deploy to GitHub Pages
-
-```bash
 npm run deploy
 ```
 
-The app uses `HashRouter` and Vite `base: './'` for GitHub Pages project-directory hosting.
+The app uses `HashRouter`, `BigInt`, `localStorage`, and `gh-pages`. No runtime XLSX/TXT parsing is required.
+
+## Current structure
+
+- Generic Mask
+- Creatures
+  - Creature Immunities
+- Skill Lines
+- Spells
+  - scalar enum references and mask fields owned by `spell_template`
+  - consolidated Spell Attributes (`Attributes` through `AttributesEx4`)
+  - consolidated Proc Flags (`ProcFlags` + `ProcFlagsEx`)
+  - Equipped Item Requirements
+  - Spell Family Flags
+  - Target Creature Type
+  - selective Spell Aura and Spell Effect references
+
+Spell Aura and Spell Effect intentionally show only entries whose auxiliary fields require an enum or bitmask interpretation. They are reference tools, not complete AuraType/SpellEffect browsers.
+
+Definition names/comments are editable as profile deltas; the immutable original remains visible underneath.
