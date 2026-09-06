@@ -35,3 +35,9 @@ Primary source files checked:
 
 - Aura/Channel Interrupt flags, Interrupt flags, Proc flags, ProcFlagsEx, school mask labels, and SpellAttributesEx4 were aligned to current VMaNGOS definitions.
 - Removed non-VMaNGOS SpellAttributesEx4 bits and corrected bit 0 to `SPELL_ATTR_EX4_IGNORE_RESISTANCES`.
+
+## 2026-09-06 — Spell Aura / Spell Effect runtime fix
+
+- Fixed both curated Spell Aura and Spell Effect reference pages crashing at runtime by importing `Link` from `react-router-dom` in `SpellEnumReferencePage.tsx`.
+- Added route aliases for `/spells/spell-auras` and `/spells/spell-effects` while keeping the existing singular routes for compatibility.
+- Verified all 67 TS/TSX files transpile successfully with TypeScript and verified all four aura/effect routes are present.

@@ -28,7 +28,9 @@ export default function App() {
       <Route path="/spells/proc-flags" element={<ProcFlagsPage />} />
       <Route path="/spells/target-creature-type" element={<TargetCreatureTypePage />} />
       <Route path="/spells/spell-aura" element={<SpellAuraPage />} />
+      <Route path="/spells/spell-auras" element={<SpellAuraPage />} />
       <Route path="/spells/spell-effect" element={<SpellEffectPage />} />
+      <Route path="/spells/spell-effects" element={<SpellEffectPage />} />
       <Route path="/shapeshift" element={<ShapeshiftPage />} />
       <Route path="/creatures" element={<CreaturesPage />} />
       <Route path="/skill-lines" element={<SkillLinesPage />} />
