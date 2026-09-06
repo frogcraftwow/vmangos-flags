@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';
 
-import { navigationSections } from '../lib/navigation';
+import { navigationSections, sectionLinks } from '../lib/navigation';
 
 
 
@@ -13,11 +13,16 @@ export default function Dashboard() {
       <Link className="overview-primary-link" to="/mask-calculator">Generic Mask <span>→</span></Link>
     </section>
 
-    {navigationSections.map((group) => <section className="panel overview-group" key={group.label}>
-      <div className="section-head"><h2>{group.label}</h2></div>
-      <div className="tool-list">
-        {group.links.map(([name, path]) => <Link key={path} to={path}>{name}<span>→</span></Link>)}
-      </div>
+    {navigationSections.map((section) => <section className="panel overview-group" key={section.label}>
+      <div className="section-head"><h2>{section.label}</h2></div>
+      {section.groups ? <div className="overview-subgroups">
+        {section.groups.map((group) => <div className="overview-subgroup" key={group.label}>
+          <h3>{group.label}</h3>
+          <div className="tool-list">{group.links.map(([name, path]) => <Link key={path} to={path}>{name}<span>→</span></Link>)}</div>
+        </div>)}
+      </div> : <div className="tool-list">
+        {sectionLinks(section).map(([name, path]) => <Link key={path} to={path}>{name}<span>→</span></Link>)}
+      </div>}
     </section>)}
   </>;
 }

@@ -16,13 +16,16 @@ export const schoolValues: readonly ReferenceRow[] = [
 ] as const;
 
 export const powerTypes: readonly ReferenceRow[] = [
-  { value: -2, name: 'POWER_HEALTH' },
   { value: 0, name: 'POWER_MANA', comment: 'UNIT_FIELD_POWER1' },
   { value: 1, name: 'POWER_RAGE', comment: 'UNIT_FIELD_POWER2' },
   { value: 2, name: 'POWER_FOCUS', comment: 'UNIT_FIELD_POWER3' },
   { value: 3, name: 'POWER_ENERGY', comment: 'UNIT_FIELD_POWER4' },
   { value: 4, name: 'POWER_HAPPINESS', comment: 'UNIT_FIELD_POWER5' },
 ] as const;
+
+// Spell effect/aura resource fields are constrained to MAX_POWERS (0..4).
+// POWER_HEALTH is an internal VMaNGOS Powers sentinel (-2), not a valid resource selector here.
+export const resourcePowerTypes: readonly ReferenceRow[] = powerTypes;
 
 export const mechanics: readonly ReferenceRow[] = [
   { value: 0, name: 'MECHANIC_NONE' },
@@ -85,38 +88,11 @@ export const preventionTypes: readonly ReferenceRow[] = [
   { value: 2, name: 'SPELL_PREVENTION_TYPE_PACIFY' },
 ] as const;
 
-export const spellFamilyNames: readonly ReferenceRow[] = [
-  { value: 0, name: 'SPELLFAMILY_GENERIC' },
-  { value: 1, name: 'SPELLFAMILY_UNK1', comment: 'events, holidays' },
-  { value: 3, name: 'SPELLFAMILY_MAGE' },
-  { value: 4, name: 'SPELLFAMILY_WARRIOR' },
-  { value: 5, name: 'SPELLFAMILY_WARLOCK' },
-  { value: 6, name: 'SPELLFAMILY_PRIEST' },
-  { value: 7, name: 'SPELLFAMILY_DRUID' },
-  { value: 8, name: 'SPELLFAMILY_ROGUE' },
-  { value: 9, name: 'SPELLFAMILY_HUNTER' },
-  { value: 10, name: 'SPELLFAMILY_PALADIN' },
-  { value: 11, name: 'SPELLFAMILY_SHAMAN' },
-  { value: 12, name: 'SPELLFAMILY_UNK2' },
-  { value: 13, name: 'SPELLFAMILY_POTION' },
-] as const;
-
-export const auraStates: readonly ReferenceRow[] = [
-  { value: 1, name: 'AURA_STATE_DEFENSE', comment: 'C' },
-  { value: 2, name: 'AURA_STATE_HEALTHLESS_20_PERCENT', comment: 'C T' },
-  { value: 3, name: 'AURA_STATE_BERSERKING', comment: 'C' },
-  { value: 4, name: 'AURA_STATE_FROZEN', comment: 'frozen target (but not used for any spells in 1.12.1 at client side)' },
-  { value: 5, name: 'AURA_STATE_JUDGEMENT', comment: 'C' },
-  { key: '7:hunter-parry', value: 7, name: 'AURA_STATE_HUNTER_PARRY', comment: 'C' },
-  { key: '7:rogue-stealth', value: 7, name: 'AURA_STATE_ROGUE_ATTACK_FROM_STEALTH', comment: 'C | FIX ME: not implemented yet!' },
-] as const;
-
 export const spellReferenceGroups = {
   'damage-class': { title: 'Damage Class', rows: damageClasses, scope: 'spells:damage-class' },
   'dispel-type': { title: 'Dispel Type', rows: dispelTypes, scope: 'spells:dispel-type' },
   mechanic: { title: 'Mechanic', rows: mechanics, scope: 'spells:mechanic' },
   'power-type': { title: 'Power Type', rows: powerTypes, scope: 'spells:power-type' },
   'prevention-type': { title: 'Prevention Type', rows: preventionTypes, scope: 'spells:prevention-type' },
-  school: { title: 'School', rows: schoolValues, scope: 'spells:school' },
-  'spell-family-name': { title: 'Spell Family Name', rows: spellFamilyNames, scope: 'spells:spell-family-name' },
+  'spell-school': { title: 'Spell School', rows: schoolValues, scope: 'spells:spell-school' },
 } as const;

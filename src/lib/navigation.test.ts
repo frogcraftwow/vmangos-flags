@@ -1,24 +1,23 @@
 import { describe, expect, it } from 'vitest';
-import { navigationSections } from './navigation';
+import { navigationSections, sectionLinks } from './navigation';
 
 describe('navigation structure', () => {
-  it('keeps top-level sections alphabetically sorted by owned data', () => {
-    const labels = navigationSections.map((section) => section.label);
-    expect(labels).toEqual(['Creatures', 'Skill Lines', 'Spells']);
+  it('keeps the main domains stable', () => {
+    expect(navigationSections.map((section) => section.label)).toEqual(['Creatures', 'Skill Lines', 'Spells']);
   });
 
-  it('keeps spell tools alphabetically sorted and consolidated', () => {
+  it('groups spell tools without obsolete Aura State / Spell Family Name entries', () => {
     const spells = navigationSections.find((section) => section.label === 'Spells');
-    const labels = spells?.links.map(([label]) => label) ?? [];
-    expect(labels).toEqual([...labels].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })));
+    const labels = spells ? sectionLinks(spells).map(([label]) => label) : [];
     expect(labels).toContain('Equipped Item Requirements');
     expect(labels).toContain('Spell Attributes');
     expect(labels).toContain('Proc Flags');
-    expect(labels).toContain('Spell Aura');
-    expect(labels).toContain('Spell Effect');
-    expect(labels).toContain('Target Creature Type');
-    expect(labels).not.toContain('Proc Flags EX');
-    expect(labels).not.toContain('SpellAttributesEx');
-    expect(labels).not.toContain('Weapons');
+    expect(labels).toContain('Spell Aura References');
+    expect(labels).toContain('Spell Effect References');
+    expect(labels).toContain('Spell Family Flags');
+    expect(labels).toContain('Spell School');
+    expect(labels).toContain('Spell School Mask');
+    expect(labels).not.toContain('Aura State');
+    expect(labels).not.toContain('Spell Family Name');
   });
 });

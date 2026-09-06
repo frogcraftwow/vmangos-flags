@@ -935,3 +935,34 @@ pre { overflow: auto; }
   .enum-explanation { grid-template-columns: 1fr; }
   .enum-explanation p { grid-column: auto; }
 }
+
+
+/* 2026 VMaNGOS reference cleanup */
+:root { font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+body { font-size: 14px; line-height: 1.45; }
+.sidebar a { font-size: 13px; line-height: 1.3; }
+.nav-subsection { margin: 2px 0 8px; }
+.nav-subsection-label { padding: 5px 10px 2px 14px; color: #8a949b; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .055em; }
+.nav-subsection a { padding-left: 16px; }
+.local-note a { color: #52616a; }
+.table-wrap table { font-size: 13px; }
+.table-wrap th { font-size: 11px; }
+.reference-toolbar { margin-top: 2px; }
+.reference-toolbar input { min-height: 38px; }
+.overview-subgroups { display: grid; gap: 18px; }
+.overview-subgroup h3 { margin: 0 0 8px; color: #56636c; font-size: 12px; text-transform: uppercase; letter-spacing: .055em; }
+.attributes-workbench { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; gap: 14px; overflow: visible; padding-bottom: 0; }
+.attributes-workbench .mask-tool { min-width: 0; }
+.proc-workbench { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; gap: 14px; overflow: visible; }
+.equipment-mask-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.equipment-mask-grid .panel { min-width: 0; }
+.equipment-class-picker { display: flex; gap: 16px; align-items: end; flex-wrap: wrap; }
+.equipment-class-picker label { display: grid; gap: 6px; min-width: min(520px, 100%); color: #526069; font-size: 12px; font-weight: 700; }
+.equipment-field-strip { display: flex; gap: 22px; flex-wrap: wrap; }
+.equipment-field-strip span { color: #59666f; }
+.enum-backed-selector select { font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+@media (max-width: 1100px) {
+  .attributes-workbench, .proc-workbench, .equipment-mask-grid { grid-template-columns: 1fr; }
+}
+
+.local-note a { display: inline; padding: 0; border-left: 0; font-size: inherit; }

@@ -1,13 +1,14 @@
 import { useMemo, useState, type ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/PageHeader';
 import { MaskTool } from '../components/MaskTool';
 import { ReferenceTool } from '../components/ReferenceTool';
 import { auraModifierMiscValues } from '../data/auraModifiers';
 import { targetCreatureTypes } from '../data/creatures';
+import { skillLines } from '../data/skillLines';
+import { auraTypeRows, spellEffectRows } from '../data/coreSpellEnums';
 import { shapeshift } from '../data/shapeshift';
 import { spellFlags } from '../data/spellFlags';
-import { auraStates, dispelTypes, mechanics, powerTypes } from '../data/spellTemplateReferences';
+import { dispelTypes, mechanics, powerTypes, resourcePowerTypes, type ReferenceRow } from '../data/spellTemplateReferences';
 import { enumBackedSpellAuras, enumBackedSpellEffects, mechanicsAsMask, stats, type AuxReferenceKey, type EnumBackedEntry } from '../data/spellAuxiliaryEnums';
 
 function Selector({ entries, selected, onChange }: { entries: readonly EnumBackedEntry[]; selected: number; onChange: (id: number) => void }) {
@@ -23,18 +24,22 @@ function Selector({ entries, selected, onChange }: { entries: readonly EnumBacke
 function Reference({ entry }: { entry: EnumBackedEntry }) {
   const school = spellFlags.find((group) => group.key === 'school-mask')!;
   const mechanicMask = mechanicsAsMask(mechanics);
+  const creatureTypeRows: readonly ReferenceRow[] = targetCreatureTypes.map((row) => ({ value: row.bitIndex + 1, name: row.name }));
+  const skillLineRows: readonly ReferenceRow[] = skillLines.map((row) => ({ value: row.id, name: row.name }));
   const refs: Record<AuxReferenceKey, ReactNode> = {
-    'aura-state': <ReferenceTool title="Aura State" rows={auraStates} definitionScope="spells:aura-state" />,
+    'creature-type': <ReferenceTool title="Creature Type" rows={creatureTypeRows} definitionScope="spells:creature-type" />,
     'creature-type-mask': <MaskTool title="Creature Type Mask" flags={targetCreatureTypes} presetScope="reference:creature-type-mask" definitionScope="spells:target-creature-type" maxBits={32} />,
     'dispel-type': <ReferenceTool title="Dispel Type" rows={dispelTypes} definitionScope="spells:dispel-type" />,
     'equipped-item': <div className="panel linked-reference"><strong>Reference</strong><Link to="/spells/equipped-item-requirements">Open Equipped Item Requirements</Link></div>,
     mechanic: <ReferenceTool title="Mechanic" rows={mechanics} definitionScope="spells:mechanic" />,
     'mechanic-mask': <MaskTool title="Mechanic Mask" flags={mechanicMask} presetScope="reference:mechanic-mask" definitionScope="spells:mechanic" maxBits={32} />,
     'power-type': <ReferenceTool title="Power Type" rows={powerTypes} definitionScope="spells:power-type" />,
-    'school-mask': <MaskTool title="School Mask" flags={school.flags} presetScope="reference:school-mask" definitionScope="spellflags:school-mask" maxBits={8} />,
+    'resource-power-type': <ReferenceTool title="Power Type (resource pools)" rows={resourcePowerTypes} definitionScope="spells:resource-power-type" />,
+    'school-mask': <MaskTool title="Spell School Mask" flags={school.flags} presetScope="reference:school-mask" definitionScope="spellflags:school-mask" maxBits={8} />,
     shapeshift: <div className="panel linked-reference"><strong>Reference</strong><Link to="/shapeshift">Open Shapeshift</Link></div>,
-    'spell-aura': <div className="panel linked-reference"><strong>Reference</strong><Link to="/spells/spell-aura">Open Spell Aura</Link></div>,
-    'spell-effect': <div className="panel linked-reference"><strong>Reference</strong><Link to="/spells/spell-effect">Open Spell Effect</Link></div>,
+    'spell-aura': <ReferenceTool title="AuraType" rows={auraTypeRows} definitionScope="spells:aura-type" valueLabel="ID" />,
+    'spell-effect': <ReferenceTool title="SpellEffect" rows={spellEffectRows} definitionScope="spells:spell-effect-enum" valueLabel="ID" />,
+    'skill-line': <ReferenceTool title="SkillLine" rows={skillLineRows} definitionScope="spells:skill-line" valueLabel="ID" />,
     'spellmod-op': <ReferenceTool title="SpellModOp" rows={auraModifierMiscValues} definitionScope="spells:spellmod-op" valueLabel="MiscValue" />,
     stat: <ReferenceTool title="Stats" rows={stats} definitionScope="spells:stats" />,
   };
@@ -52,11 +57,11 @@ function Reference({ entry }: { entry: EnumBackedEntry }) {
 export function SpellAuraPage() {
   const [selected, setSelected] = useState(enumBackedSpellAuras[0].id);
   const entry = useMemo(() => enumBackedSpellAuras.find((item) => item.id === selected) ?? enumBackedSpellAuras[0], [selected]);
-  return <><PageHeader title="Spell Aura" /><Selector entries={enumBackedSpellAuras} selected={selected} onChange={setSelected} /><Reference entry={entry} /></>;
+  return <><PageHeader title="Spell Aura References" description="Only AuraTypes whose auxiliary field needs an enum, mask, or external reference." /><Selector entries={enumBackedSpellAuras} selected={selected} onChange={setSelected} /><Reference entry={entry} /></>;
 }
 
 export function SpellEffectPage() {
   const [selected, setSelected] = useState(enumBackedSpellEffects[0].id);
   const entry = useMemo(() => enumBackedSpellEffects.find((item) => item.id === selected) ?? enumBackedSpellEffects[0], [selected]);
-  return <><PageHeader title="Spell Effect" /><Selector entries={enumBackedSpellEffects} selected={selected} onChange={setSelected} /><Reference entry={entry} /></>;
+  return <><PageHeader title="Spell Effect References" description="Only SpellEffects whose auxiliary field needs an enum, mask, or external reference." /><Selector entries={enumBackedSpellEffects} selected={selected} onChange={setSelected} /><Reference entry={entry} /></>;
 }

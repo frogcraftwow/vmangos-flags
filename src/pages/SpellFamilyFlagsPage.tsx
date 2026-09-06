@@ -78,7 +78,7 @@ export default function SpellFamilyFlagsPage() {
 
     <section className="panel">
       <div className="section-head">
-        <h2>{className} — SpellFamily {familyId}</h2>
+        <h2>{className} — SpellFamilyFlag {familyId}</h2>
       </div>
 
       <div className="mask-input-row">

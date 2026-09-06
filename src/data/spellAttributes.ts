@@ -1,6 +1,5 @@
-// Vanilla 1.12.x spell attribute bit definitions.
-// Names/bit positions are cross-checked against the vanilla 1.12 external spell definitions used by wowdev-aligned tooling.
-// Source comments from the supplied core definitions are preserved where they remain applicable.
+// VMaNGOS spell attribute bit definitions from src/game/Spells/SpellDefines.h.
+// Names, bit positions, and source comments follow the current development branch.
 export const spellAttributes = {
   "SpellAttributes": [
     {
@@ -652,7 +651,7 @@ export const spellAttributes = {
   ],
   "SpellAttributesEx4": [
     {
-      "name": "SPELL_ATTR_EX4_NO_CAST_LOG",
+      "name": "SPELL_ATTR_EX4_IGNORE_RESISTANCES",
       "value": "0x00000001",
       "comment": ""
     },
@@ -700,16 +699,6 @@ export const spellAttributes = {
       "name": "SPELL_ATTR_EX4_COMBAT_FEEDBACK_WHEN_USABLE",
       "value": "0x00000200",
       "comment": "9 Initially disabled / Trigger activate from event (Execute, Riposte, Deep Freeze...)"
-    },
-    {
-      "name": "SPELL_ATTR_EX4_WEAPON_SPEED_COST_SCALING",
-      "value": "0x00000400",
-      "comment": ""
-    },
-    {
-      "name": "SPELL_ATTR_EX4_NO_PARTIAL_IMMUNITY",
-      "value": "0x00000800",
-      "comment": ""
     }
   ]
 } as const;

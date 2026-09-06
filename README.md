@@ -2,6 +2,8 @@
 
 Static React + TypeScript + Vite developer toolkit for Vanilla 1.12.1 spell/template work.
 
+Canonical spell enum/flag source: **https://github.com/vmangos/core** (`development` branch), especially `src/game/Spells/SpellDefines.h`, `SpellAuraDefines.h`, `SpellAuras.cpp`, `SpellEffects.cpp`, and `src/game/SharedDefines.h`.
+
 ## Run
 
 ```bash
@@ -16,23 +18,12 @@ npm run build
 npm run deploy
 ```
 
-The app uses `HashRouter`, `BigInt`, `localStorage`, and `gh-pages`. No runtime XLSX/TXT parsing is required.
+## Spell section
 
-## Current structure
+- Core fields: Damage Class, Dispel Type, Mechanic, Power Type, Prevention Type, Spell School
+- Flags & targeting: interrupt flags, proc flags, Spell School Mask, target fields
+- Requirements: equipped-item requirements and shapeshift
+- Effects & auras: curated references only where an enum/mask/reference is required
+- Attributes & family: Spell Attributes and Spell Family Flags
 
-- Generic Mask
-- Creatures
-  - Creature Immunities
-- Skill Lines
-- Spells
-  - scalar enum references and mask fields owned by `spell_template`
-  - consolidated Spell Attributes (`Attributes` through `AttributesEx4`)
-  - consolidated Proc Flags (`ProcFlags` + `ProcFlagsEx`)
-  - Equipped Item Requirements
-  - Spell Family Flags
-  - Target Creature Type
-  - selective Spell Aura and Spell Effect references
-
-Spell Aura and Spell Effect intentionally show only entries whose auxiliary fields require an enum or bitmask interpretation. They are reference tools, not complete AuraType/SpellEffect browsers.
-
-Definition names/comments are editable as profile deltas; the immutable original remains visible underneath.
+Spell Aura and Spell Effect are intentionally **not** complete browsers. They only show entries where an auxiliary field needs an enum, bitmask, or linked reference.

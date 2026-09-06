@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import { PageHeader } from '../components/PageHeader';
 import { MaskTool } from '../components/MaskTool';
-import { ReferenceTool } from '../components/ReferenceTool';
 import { inventoryTypes, itemClasses, itemSubclassesByClass } from '../data/equippedItems';
 
 export default function EquippedItemRequirementsPage() {
@@ -12,15 +11,12 @@ export default function EquippedItemRequirementsPage() {
   return <>
     <PageHeader title="Equipped Item Requirements" />
     <section className="panel equipment-field-strip">
-      <span><code>-1</code> any class</span>
-      <span><code>SubClassMask 0</code> any subclass</span>
-      <span><code>InventoryTypeMask 0</code> any inventory type</span>
+      <span><code>SubClassMask = 0</code> any subclass</span>
+      <span><code>InventoryTypeMask = 0</code> any inventory type</span>
     </section>
 
-    <ReferenceTool title="EquippedItemClass" rows={itemClasses} definitionScope="spells:equipped-item-class" valueLabel="Class" />
-
     <section className="panel equipment-class-picker">
-      <label>Class for EquippedItemSubClassMask
+      <label>Item class for subclass mask
         <select value={itemClass} onChange={(e) => setItemClass(Number(e.target.value))}>
           {itemClasses.map((row) => <option key={row.value} value={row.value}>{row.value} — {row.name}</option>)}
         </select>
@@ -28,22 +24,24 @@ export default function EquippedItemRequirementsPage() {
       <strong className="mono">{selectedClass?.name}</strong>
     </section>
 
-    {subclasses.length ? <MaskTool
-      title="EquippedItemSubClassMask"
-      flags={subclasses}
-      presetScope={`spells:equipped-subclass:${itemClass}`}
-      definitionScope={`spells:item-subclass:${itemClass}`}
-      maxBits={32}
-      bitLabel="SubClass"
-    /> : <section className="panel empty-mask-state"><strong>No 1.12 subclasses defined for this class.</strong></section>}
+    <div className="equipment-mask-grid">
+      {subclasses.length ? <MaskTool
+        title="EquippedItemSubClassMask"
+        flags={subclasses}
+        presetScope={`spells:equipped-subclass:${itemClass}`}
+        definitionScope={`spells:item-subclass:${itemClass}`}
+        maxBits={32}
+        bitLabel="SubClass"
+      /> : <section className="panel empty-mask-state"><strong>No 1.12 subclasses defined for this class.</strong></section>}
 
-    <MaskTool
-      title="EquippedItemInventoryTypeMask"
-      flags={inventoryTypes}
-      presetScope="spells:equipped-inventory-type"
-      definitionScope="spells:inventory-type"
-      maxBits={32}
-      bitLabel="InventoryType"
-    />
+      <MaskTool
+        title="EquippedItemInventoryTypeMask"
+        flags={inventoryTypes}
+        presetScope="spells:equipped-inventory-type"
+        definitionScope="spells:inventory-type"
+        maxBits={32}
+        bitLabel="InventoryType"
+      />
+    </div>
   </>;
 }

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useProfiles } from '../context/ProfileContext';
 import { GlobalSearch } from './GlobalSearch';
 
-import { navigationSections } from '../lib/navigation';
+import { navigationSections, sectionLinks } from '../lib/navigation';
 
 
 
@@ -30,7 +30,14 @@ export function Layout() {
     <Link to="/mask-calculator" className={location.pathname === '/mask-calculator' ? 'active nav-primary' : 'nav-primary'}>Generic Mask</Link>
     {navigationSections.map((section) => <div className="nav-section" key={section.label}>
       <div className="nav-section-label">{section.label}</div>
-      {section.links.map(([label, path]) => {
+      {section.groups ? section.groups.map((group) => <div className="nav-subsection" key={group.label}>
+        <div className="nav-subsection-label">{group.label}</div>
+        {group.links.map(([label, path]) => {
+          const current = `${location.pathname}${location.search}`;
+          const active = current === path;
+          return <Link key={path} to={path} className={active ? 'active' : undefined}>{label}</Link>;
+        })}
+      </div>) : sectionLinks(section).map(([label, path]) => {
         const current = `${location.pathname}${location.search}`;
         const active = current === path;
         return <Link key={path} to={path} className={active ? 'active' : undefined}>{label}</Link>;
@@ -67,7 +74,7 @@ export function Layout() {
 
     <aside className="sidebar">
       {nav}
-      <div className="local-note">localStorage only<br />No cloud sync</div>
+      <div className="local-note">localStorage only<br />No cloud sync<br /><a href="https://github.com/vmangos/core" target="_blank" rel="noreferrer">Source: vmangos/core</a></div>
     </aside>
 
     {mobileNav && <div className="mobile-nav-backdrop" onMouseDown={() => setMobileNav(false)}>

@@ -11,14 +11,16 @@ export const stats: readonly ReferenceRow[] = [
 ] as const;
 
 export type AuxReferenceKey =
-  | 'aura-state'
+  | 'creature-type'
   | 'creature-type-mask'
   | 'dispel-type'
   | 'equipped-item'
   | 'mechanic'
   | 'mechanic-mask'
   | 'power-type'
+  | 'resource-power-type'
   | 'school-mask'
+  | 'skill-line'
   | 'shapeshift'
   | 'spell-aura'
   | 'spell-effect'
@@ -39,17 +41,19 @@ export const enumBackedSpellAuras: readonly EnumBackedEntry[] = [
   { id: 10, name: 'SPELL_AURA_MOD_THREAT', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting the schools whose threat is modified.' },
   { id: 13, name: 'SPELL_AURA_MOD_DAMAGE_DONE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected damage schools.' },
   { id: 22, name: 'SPELL_AURA_MOD_RESISTANCE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected resistances.' },
-  { id: 24, name: 'SPELL_AURA_PERIODIC_ENERGIZE', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power type restored periodically.' },
+  { id: 24, name: 'SPELL_AURA_PERIODIC_ENERGIZE', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the power type restored periodically.' },
   { id: 29, name: 'SPELL_AURA_MOD_STAT', field: 'EffectMiscValue', reference: 'stat', explanation: 'MiscValue selects the stat modified; -1 is used for all stats where supported.' },
-  { id: 35, name: 'SPELL_AURA_MOD_INCREASE_ENERGY', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power pool increased.' },
+  { id: 30, name: 'SPELL_AURA_MOD_SKILL', field: 'EffectMiscValue', reference: 'skill-line', explanation: 'EffectMiscValue is a SkillLine ID; VMaNGOS reads it directly when modifying the player skill.' },
+  { id: 35, name: 'SPELL_AURA_MOD_INCREASE_ENERGY', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the power pool increased.' },
   { id: 36, name: 'SPELL_AURA_MOD_SHAPESHIFT', field: 'EffectMiscValue', reference: 'shapeshift', explanation: 'MiscValue selects the shapeshift form.' },
   { id: 37, name: 'SPELL_AURA_EFFECT_IMMUNITY', field: 'EffectMiscValue', reference: 'spell-effect', explanation: 'MiscValue is a SpellEffect ID made immune.' },
   { id: 38, name: 'SPELL_AURA_STATE_IMMUNITY', field: 'EffectMiscValue', reference: 'spell-aura', explanation: 'MiscValue is an AuraType ID made immune.' },
   { id: 39, name: 'SPELL_AURA_SCHOOL_IMMUNITY', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask made immune.' },
   { id: 40, name: 'SPELL_AURA_DAMAGE_IMMUNITY', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask for damage immunity.' },
   { id: 41, name: 'SPELL_AURA_DISPEL_IMMUNITY', field: 'EffectMiscValue', reference: 'dispel-type', explanation: 'MiscValue selects the DispelType made immune.' },
+  { id: 44, name: 'SPELL_AURA_TRACK_CREATURES', field: 'EffectMiscValue', reference: 'creature-type', explanation: 'MiscValue is a CreatureType ID; VMaNGOS converts it to the tracking bit with 1 << (MiscValue - 1).' },
   { id: 59, name: 'SPELL_AURA_MOD_DAMAGE_DONE_CREATURE', field: 'EffectMiscValue', reference: 'creature-type-mask', explanation: 'MiscValue is a creature-type mask selecting affected creature types.' },
-  { id: 64, name: 'SPELL_AURA_PERIODIC_MANA_LEECH', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power type drained.' },
+  { id: 64, name: 'SPELL_AURA_PERIODIC_MANA_LEECH', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the power type drained.' },
   { id: 69, name: 'SPELL_AURA_SCHOOL_ABSORB', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting absorbed schools.' },
   { id: 71, name: 'SPELL_AURA_MOD_SPELL_CRIT_CHANCE_SCHOOL', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected spell schools.' },
   { id: 72, name: 'SPELL_AURA_MOD_POWER_COST_SCHOOL_PCT', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected spell schools.' },
@@ -59,7 +63,8 @@ export const enumBackedSpellAuras: readonly EnumBackedEntry[] = [
   { id: 79, name: 'SPELL_AURA_MOD_DAMAGE_PERCENT_DONE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected damage schools.' },
   { id: 80, name: 'SPELL_AURA_MOD_PERCENT_STAT', field: 'EffectMiscValue', reference: 'stat', explanation: 'MiscValue selects the stat modified.' },
   { id: 83, name: 'SPELL_AURA_MOD_BASE_RESISTANCE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected resistances.' },
-  { id: 85, name: 'SPELL_AURA_MOD_POWER_REGEN', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the regenerated power type.' },
+  { id: 85, name: 'SPELL_AURA_MOD_POWER_REGEN', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the regenerated power type.' },
+  { id: 98, name: 'SPELL_AURA_MOD_SKILL_TALENT', field: 'EffectMiscValue', reference: 'skill-line', explanation: 'EffectMiscValue is a SkillLine ID; VMaNGOS uses the same skill handler and applies the bonus as permanent.' },
   { id: 87, name: 'SPELL_AURA_MOD_DAMAGE_PERCENT_TAKEN', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected damage schools.' },
   { id: 101, name: 'SPELL_AURA_MOD_RESISTANCE_PCT', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected resistances.' },
   { id: 102, name: 'SPELL_AURA_MOD_MELEE_ATTACK_POWER_VERSUS', field: 'EffectMiscValue', reference: 'creature-type-mask', explanation: 'MiscValue is a creature-type mask.' },
@@ -68,7 +73,7 @@ export const enumBackedSpellAuras: readonly EnumBackedEntry[] = [
   { id: 117, name: 'SPELL_AURA_MOD_MECHANIC_RESISTANCE', field: 'EffectMiscValue', reference: 'mechanic', explanation: 'MiscValue selects one Mechanic.' },
   { id: 123, name: 'SPELL_AURA_MOD_TARGET_RESISTANCE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting target resistances.' },
   { id: 131, name: 'SPELL_AURA_MOD_RANGED_ATTACK_POWER_VERSUS', field: 'EffectMiscValue', reference: 'creature-type-mask', explanation: 'MiscValue is a creature-type mask.' },
-  { id: 132, name: 'SPELL_AURA_MOD_INCREASE_ENERGY_PERCENT', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power pool increased.' },
+  { id: 132, name: 'SPELL_AURA_MOD_INCREASE_ENERGY_PERCENT', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the power pool increased.' },
   { id: 137, name: 'SPELL_AURA_MOD_TOTAL_STAT_PERCENTAGE', field: 'EffectMiscValue', reference: 'stat', explanation: 'MiscValue selects the stat modified.' },
   { id: 142, name: 'SPELL_AURA_MOD_BASE_RESISTANCE_PCT', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected resistances.' },
   { id: 143, name: 'SPELL_AURA_MOD_RESISTANCE_EXCLUSIVE', field: 'EffectMiscValue', reference: 'school-mask', explanation: 'MiscValue is a SpellSchoolMask selecting affected resistances.' },
@@ -83,23 +88,25 @@ export const enumBackedSpellAuras: readonly EnumBackedEntry[] = [
 // Only SpellEffects whose auxiliary fields reference another enum/bitmask.
 // IDs are Vanilla-era SpellEffects; this is intentionally not a complete SpellEffect browser.
 export const enumBackedSpellEffects: readonly EnumBackedEntry[] = [
-  { id: 6, name: 'SPELL_EFFECT_APPLY_AURA', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType. Use Spell Aura to choose and interpret enum-backed auras.' },
-  { id: 8, name: 'SPELL_EFFECT_POWER_DRAIN', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power type drained.' },
+  { id: 6, name: 'SPELL_EFFECT_APPLY_AURA', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType.' },
+  { id: 8, name: 'SPELL_EFFECT_POWER_DRAIN', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects a power pool. VMaNGOS rejects values outside 0..MAX_POWERS-1.' },
   { id: 27, name: 'SPELL_EFFECT_PERSISTENT_AREA_AURA', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied by the persistent area aura.' },
-  { id: 30, name: 'SPELL_EFFECT_ENERGIZE', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power type restored.' },
+  { id: 30, name: 'SPELL_EFFECT_ENERGIZE', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects a power pool. VMaNGOS rejects values outside 0..MAX_POWERS-1.' },
   { id: 35, name: 'SPELL_EFFECT_APPLY_AREA_AURA_PARTY', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to party targets.' },
   { id: 38, name: 'SPELL_EFFECT_DISPEL', field: 'EffectMiscValue', reference: 'dispel-type', explanation: 'MiscValue selects the DispelType removed.' },
-  { id: 60, name: 'SPELL_EFFECT_PROFICIENCY', field: 'EffectMiscValue', reference: 'equipped-item', explanation: 'MiscValue uses the item-class enum; the equipped-item reference contains the Vanilla item-class names.' },
-  { id: 62, name: 'SPELL_EFFECT_POWER_BURN', field: 'EffectMiscValue', reference: 'power-type', explanation: 'MiscValue selects the power type burned.' },
-  { id: 65, name: 'SPELL_EFFECT_APPLY_AREA_AURA_RAID', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to raid targets.' },
+  { id: 62, name: 'SPELL_EFFECT_POWER_BURN', field: 'EffectMiscValue', reference: 'resource-power-type', explanation: 'MiscValue selects the power pool burned.' },
   { id: 108, name: 'SPELL_EFFECT_DISPEL_MECHANIC', field: 'EffectMiscValue', reference: 'mechanic', explanation: 'MiscValue selects the Mechanic to dispel.' },
   { id: 119, name: 'SPELL_EFFECT_APPLY_AREA_AURA_PET', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to pet targets.' },
+  { id: 128, name: 'SPELL_EFFECT_APPLY_AREA_AURA_FRIEND', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to friendly targets.' },
+  { id: 129, name: 'SPELL_EFFECT_APPLY_AREA_AURA_ENEMY', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to enemy targets.' },
+  { id: 132, name: 'SPELL_EFFECT_APPLY_AREA_AURA_RAID', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to raid targets.' },
+  { id: 133, name: 'SPELL_EFFECT_APPLY_AREA_AURA_OWNER', field: 'EffectApplyAuraName', reference: 'spell-aura', explanation: 'EffectApplyAuraName is an AuraType applied to the owner.' },
 ] as const;
 
 export function mechanicsAsMask(rows: readonly ReferenceRow[]): readonly MaskFlag[] {
   return rows.filter((row) => row.value > 0).map((row) => ({
     name: row.name,
-    bitIndex: row.value,
+    bitIndex: row.value - 1,
     comment: row.comment ?? '',
   }));
 }
