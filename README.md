@@ -1,6 +1,6 @@
 # vMangos Flag Dev Tookit
 
-vMangos Flag Calculator hosted here: https://vanilla-reforged.github.io/vmangos-flags/
+vMangos Flag Calculator hosted here: https://frogcraftwow.github.io/vmangos-flags/
 
 Static React + TypeScript + Vite developer toolkit for Vanilla 1.12.1 spell/template work.
 
