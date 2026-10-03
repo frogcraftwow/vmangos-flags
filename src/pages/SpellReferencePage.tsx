@@ -10,8 +10,9 @@ export default function SpellReferencePage() {
   if (!config) return <Navigate to="/" replace />;
   const dbcConfig = 'fields' in config ? config : null;
   return <>
-    <PageHeader title={config.title} description={dbcConfig ? `spell_template: ${dbcConfig.fields.join(', ')}. IDs from ${dbcConfig.source}.` : undefined} />
-    {dbcConfig && <DbcReferencePicker key={group} rows={dbcConfig.rows} fields={dbcConfig.fields} selectorLabel={dbcConfig.selectorLabel} />}
-    <ReferenceTool key={group} title={config.title} rows={config.rows} definitionScope={config.scope} />
+    <PageHeader title={config.title} />
+    {dbcConfig
+      ? <DbcReferencePicker key={`dbc:${group}`} rows={dbcConfig.rows} selectorLabel={dbcConfig.selectorLabel} />
+      : <ReferenceTool key={`reference:${group}`} title={config.title} rows={config.rows} definitionScope={config.scope} />}
   </>;
 }
