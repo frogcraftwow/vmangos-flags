@@ -34,7 +34,7 @@ export default function SpellAttributePage({ enumName }: { enumName: SpellAttrib
       bitIndex,
       decimal: BigInt(row.value).toString(),
       hex: row.value,
-      description: cleanComment(row.comment),
+      comment: cleanComment(row.comment),
     });
   }
 

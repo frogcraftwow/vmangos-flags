@@ -6,261 +6,365 @@
                                           {
                                               "value":  1,
                                               "name":  "Base 0 ms (minimum 0 ms)",
+                                              "selectionLabel":  "0 seconds (0 ms)",
+                                              "sortValue":  0.0,
                                               "comment":  "Base = 0; PerLevel = 0; Minimum = 0"
                                           },
                                           {
                                               "value":  2,
                                               "name":  "Base 250 ms (minimum 250 ms)",
+                                              "selectionLabel":  "0.25 seconds (250 ms)",
+                                              "sortValue":  250.0,
                                               "comment":  "Base = 250; PerLevel = 0; Minimum = 250"
                                           },
                                           {
                                               "value":  3,
                                               "name":  "Base 500 ms (minimum 500 ms)",
+                                              "selectionLabel":  "0.5 seconds (500 ms)",
+                                              "sortValue":  500.0,
                                               "comment":  "Base = 500; PerLevel = 0; Minimum = 500"
                                           },
                                           {
                                               "value":  4,
                                               "name":  "Base 1000 ms (minimum 1000 ms)",
+                                              "selectionLabel":  "1 second (1000 ms)",
+                                              "sortValue":  1000.0,
                                               "comment":  "Base = 1000; PerLevel = 0; Minimum = 1000"
                                           },
                                           {
                                               "value":  5,
                                               "name":  "Base 2000 ms (minimum 2000 ms)",
+                                              "selectionLabel":  "2 seconds (2000 ms)",
+                                              "sortValue":  2000.0,
                                               "comment":  "Base = 2000; PerLevel = 0; Minimum = 2000"
                                           },
                                           {
                                               "value":  6,
                                               "name":  "Base 5000 ms (minimum 5000 ms)",
+                                              "selectionLabel":  "5 seconds (5000 ms)",
+                                              "sortValue":  5000.0,
                                               "comment":  "Base = 5000; PerLevel = 0; Minimum = 5000"
                                           },
                                           {
                                               "value":  7,
                                               "name":  "Base 10000 ms (minimum 10000 ms)",
+                                              "selectionLabel":  "10 seconds (10000 ms)",
+                                              "sortValue":  10000.0,
                                               "comment":  "Base = 10000; PerLevel = 0; Minimum = 10000"
                                           },
                                           {
                                               "value":  8,
                                               "name":  "Base 20000 ms (minimum 20000 ms)",
+                                              "selectionLabel":  "20 seconds (20000 ms)",
+                                              "sortValue":  20000.0,
                                               "comment":  "Base = 20000; PerLevel = 0; Minimum = 20000"
                                           },
                                           {
                                               "value":  9,
                                               "name":  "Base 30000 ms (minimum 30000 ms)",
+                                              "selectionLabel":  "30 seconds (30000 ms)",
+                                              "sortValue":  30000.0,
                                               "comment":  "Base = 30000; PerLevel = 0; Minimum = 30000"
                                           },
                                           {
                                               "value":  10,
                                               "name":  "Base 1000 ms (minimum 500 ms)",
+                                              "selectionLabel":  "1 second (1000 ms); -100 ms per level; minimum 500 ms",
+                                              "sortValue":  1000.0,
                                               "comment":  "Base = 1000; PerLevel = -100; Minimum = 500"
                                           },
                                           {
                                               "value":  11,
                                               "name":  "Base 2000 ms (minimum 1000 ms)",
+                                              "selectionLabel":  "2 seconds (2000 ms); -100 ms per level; minimum 1000 ms",
+                                              "sortValue":  2000.0,
                                               "comment":  "Base = 2000; PerLevel = -100; Minimum = 1000"
                                           },
                                           {
                                               "value":  12,
                                               "name":  "Base 5000 ms (minimum 2500 ms)",
+                                              "selectionLabel":  "5 seconds (5000 ms); -100 ms per level; minimum 2500 ms",
+                                              "sortValue":  5000.0,
                                               "comment":  "Base = 5000; PerLevel = -100; Minimum = 2500"
                                           },
                                           {
                                               "value":  13,
                                               "name":  "Base 30000 ms (minimum 10000 ms)",
+                                              "selectionLabel":  "30 seconds (30000 ms); -1000 ms per level; minimum 10000 ms",
+                                              "sortValue":  30000.0,
                                               "comment":  "Base = 30000; PerLevel = -1000; Minimum = 10000"
                                           },
                                           {
                                               "value":  14,
                                               "name":  "Base 3000 ms (minimum 3000 ms)",
+                                              "selectionLabel":  "3 seconds (3000 ms)",
+                                              "sortValue":  3000.0,
                                               "comment":  "Base = 3000; PerLevel = 0; Minimum = 3000"
                                           },
                                           {
                                               "value":  15,
                                               "name":  "Base 4000 ms (minimum 4000 ms)",
+                                              "selectionLabel":  "4 seconds (4000 ms)",
+                                              "sortValue":  4000.0,
                                               "comment":  "Base = 4000; PerLevel = 0; Minimum = 4000"
                                           },
                                           {
                                               "value":  16,
                                               "name":  "Base 1500 ms (minimum 1500 ms)",
+                                              "selectionLabel":  "1.5 seconds (1500 ms)",
+                                              "sortValue":  1500.0,
                                               "comment":  "Base = 1500; PerLevel = 0; Minimum = 1500"
                                           },
                                           {
                                               "value":  18,
                                               "name":  "Base -1000000 ms (minimum -1000000 ms)",
+                                              "selectionLabel":  "-1000 seconds (-1000000 ms)",
+                                              "sortValue":  -1000000.0,
                                               "comment":  "Base = -1000000; PerLevel = 0; Minimum = -1000000"
                                           },
                                           {
                                               "value":  19,
                                               "name":  "Base 2500 ms (minimum 2500 ms)",
+                                              "selectionLabel":  "2.5 seconds (2500 ms)",
+                                              "sortValue":  2500.0,
                                               "comment":  "Base = 2500; PerLevel = 0; Minimum = 2500"
                                           },
                                           {
                                               "value":  20,
                                               "name":  "Base 2500 ms (minimum 2500 ms)",
+                                              "selectionLabel":  "2.5 seconds (2500 ms)",
+                                              "sortValue":  2500.0,
                                               "comment":  "Base = 2500; PerLevel = 0; Minimum = 2500"
                                           },
                                           {
                                               "value":  21,
                                               "name":  "Base 2600 ms (minimum 2600 ms)",
+                                              "selectionLabel":  "2.6 seconds (2600 ms)",
+                                              "sortValue":  2600.0,
                                               "comment":  "Base = 2600; PerLevel = 0; Minimum = 2600"
                                           },
                                           {
                                               "value":  22,
                                               "name":  "Base 3500 ms (minimum 3500 ms)",
+                                              "selectionLabel":  "3.5 seconds (3500 ms)",
+                                              "sortValue":  3500.0,
                                               "comment":  "Base = 3500; PerLevel = 0; Minimum = 3500"
                                           },
                                           {
                                               "value":  23,
                                               "name":  "Base 1800 ms (minimum 1800 ms)",
+                                              "selectionLabel":  "1.8 seconds (1800 ms)",
+                                              "sortValue":  1800.0,
                                               "comment":  "Base = 1800; PerLevel = 0; Minimum = 1800"
                                           },
                                           {
                                               "value":  24,
                                               "name":  "Base 2200 ms (minimum 2200 ms)",
+                                              "selectionLabel":  "2.2 seconds (2200 ms)",
+                                              "sortValue":  2200.0,
                                               "comment":  "Base = 2200; PerLevel = 0; Minimum = 2200"
                                           },
                                           {
                                               "value":  25,
                                               "name":  "Base 2900 ms (minimum 2900 ms)",
+                                              "selectionLabel":  "2.9 seconds (2900 ms)",
+                                              "sortValue":  2900.0,
                                               "comment":  "Base = 2900; PerLevel = 0; Minimum = 2900"
                                           },
                                           {
                                               "value":  26,
                                               "name":  "Base 3700 ms (minimum 3700 ms)",
+                                              "selectionLabel":  "3.7 seconds (3700 ms)",
+                                              "sortValue":  3700.0,
                                               "comment":  "Base = 3700; PerLevel = 0; Minimum = 3700"
                                           },
                                           {
                                               "value":  27,
                                               "name":  "Base 4100 ms (minimum 4100 ms)",
+                                              "selectionLabel":  "4.1 seconds (4100 ms)",
+                                              "sortValue":  4100.0,
                                               "comment":  "Base = 4100; PerLevel = 0; Minimum = 4100"
                                           },
                                           {
                                               "value":  28,
                                               "name":  "Base 3200 ms (minimum 3200 ms)",
+                                              "selectionLabel":  "3.2 seconds (3200 ms)",
+                                              "sortValue":  3200.0,
                                               "comment":  "Base = 3200; PerLevel = 0; Minimum = 3200"
                                           },
                                           {
                                               "value":  29,
                                               "name":  "Base 4700 ms (minimum 4700 ms)",
+                                              "selectionLabel":  "4.7 seconds (4700 ms)",
+                                              "sortValue":  4700.0,
                                               "comment":  "Base = 4700; PerLevel = 0; Minimum = 4700"
                                           },
                                           {
                                               "value":  30,
                                               "name":  "Base 4500 ms (minimum 4500 ms)",
+                                              "selectionLabel":  "4.5 seconds (4500 ms)",
+                                              "sortValue":  4500.0,
                                               "comment":  "Base = 4500; PerLevel = 0; Minimum = 4500"
                                           },
                                           {
                                               "value":  31,
                                               "name":  "Base 2300 ms (minimum 2300 ms)",
+                                              "selectionLabel":  "2.3 seconds (2300 ms)",
+                                              "sortValue":  2300.0,
                                               "comment":  "Base = 2300; PerLevel = 0; Minimum = 2300"
                                           },
                                           {
                                               "value":  32,
                                               "name":  "Base 7000 ms (minimum 7000 ms)",
+                                              "selectionLabel":  "7 seconds (7000 ms)",
+                                              "sortValue":  7000.0,
                                               "comment":  "Base = 7000; PerLevel = 0; Minimum = 7000"
                                           },
                                           {
                                               "value":  33,
                                               "name":  "Base 5125 ms (minimum 3000 ms)",
+                                              "selectionLabel":  "5.125 seconds (5125 ms); -125 ms per level; minimum 3000 ms",
+                                              "sortValue":  5125.0,
                                               "comment":  "Base = 5125; PerLevel = -125; Minimum = 3000"
                                           },
                                           {
                                               "value":  34,
                                               "name":  "Base 8000 ms (minimum 4000 ms)",
+                                              "selectionLabel":  "8 seconds (8000 ms); -175 ms per level; minimum 4000 ms",
+                                              "sortValue":  8000.0,
                                               "comment":  "Base = 8000; PerLevel = -175; Minimum = 4000"
                                           },
                                           {
                                               "value":  35,
                                               "name":  "Base 12500 ms (minimum 5000 ms)",
+                                              "selectionLabel":  "12.5 seconds (12500 ms); -250 ms per level; minimum 5000 ms",
+                                              "sortValue":  12500.0,
                                               "comment":  "Base = 12500; PerLevel = -250; Minimum = 5000"
                                           },
                                           {
                                               "value":  36,
                                               "name":  "Base 600 ms (minimum 600 ms)",
+                                              "selectionLabel":  "0.6 seconds (600 ms)",
+                                              "sortValue":  600.0,
                                               "comment":  "Base = 600; PerLevel = 0; Minimum = 600"
                                           },
                                           {
                                               "value":  37,
                                               "name":  "Base 25000 ms (minimum 10000 ms)",
+                                              "selectionLabel":  "25 seconds (25000 ms); -400 ms per level; minimum 10000 ms",
+                                              "sortValue":  25000.0,
                                               "comment":  "Base = 25000; PerLevel = -400; Minimum = 10000"
                                           },
                                           {
                                               "value":  38,
                                               "name":  "Base 45000 ms (minimum 15000 ms)",
+                                              "selectionLabel":  "45 seconds (45000 ms); -500 ms per level; minimum 15000 ms",
+                                              "sortValue":  45000.0,
                                               "comment":  "Base = 45000; PerLevel = -500; Minimum = 15000"
                                           },
                                           {
                                               "value":  39,
                                               "name":  "Base 60000 ms (minimum 30000 ms)",
+                                              "selectionLabel":  "60 seconds (60000 ms); -500 ms per level; minimum 30000 ms",
+                                              "sortValue":  60000.0,
                                               "comment":  "Base = 60000; PerLevel = -500; Minimum = 30000"
                                           },
                                           {
                                               "value":  50,
                                               "name":  "Base 1300 ms (minimum 1300 ms)",
+                                              "selectionLabel":  "1.3 seconds (1300 ms)",
+                                              "sortValue":  1300.0,
                                               "comment":  "Base = 1300; PerLevel = 0; Minimum = 1300"
                                           },
                                           {
                                               "value":  70,
                                               "name":  "Base 300000 ms (minimum 300000 ms)",
+                                              "selectionLabel":  "300 seconds (300000 ms)",
+                                              "sortValue":  300000.0,
                                               "comment":  "Base = 300000; PerLevel = 0; Minimum = 300000"
                                           },
                                           {
                                               "value":  90,
                                               "name":  "Base 1700 ms (minimum 1700 ms)",
+                                              "selectionLabel":  "1.7 seconds (1700 ms)",
+                                              "sortValue":  1700.0,
                                               "comment":  "Base = 1700; PerLevel = 0; Minimum = 1700"
                                           },
                                           {
                                               "value":  91,
                                               "name":  "Base 2800 ms (minimum 2800 ms)",
+                                              "selectionLabel":  "2.8 seconds (2800 ms)",
+                                              "sortValue":  2800.0,
                                               "comment":  "Base = 2800; PerLevel = 0; Minimum = 2800"
                                           },
                                           {
                                               "value":  110,
                                               "name":  "Base 750 ms (minimum 750 ms)",
+                                              "selectionLabel":  "0.75 seconds (750 ms)",
+                                              "sortValue":  750.0,
                                               "comment":  "Base = 750; PerLevel = 0; Minimum = 750"
                                           },
                                           {
                                               "value":  130,
                                               "name":  "Base 1600 ms (minimum 1600 ms)",
+                                              "selectionLabel":  "1.6 seconds (1600 ms)",
+                                              "sortValue":  1600.0,
                                               "comment":  "Base = 1600; PerLevel = 0; Minimum = 1600"
                                           },
                                           {
                                               "value":  150,
                                               "name":  "Base 3800 ms (minimum 3800 ms)",
+                                              "selectionLabel":  "3.8 seconds (3800 ms)",
+                                              "sortValue":  3800.0,
                                               "comment":  "Base = 3800; PerLevel = 0; Minimum = 3800"
                                           },
                                           {
                                               "value":  151,
                                               "name":  "Base 2700 ms (minimum 2700 ms)",
+                                              "selectionLabel":  "2.7 seconds (2700 ms)",
+                                              "sortValue":  2700.0,
                                               "comment":  "Base = 2700; PerLevel = 0; Minimum = 2700"
                                           },
                                           {
                                               "value":  152,
                                               "name":  "Base 3100 ms (minimum 3100 ms)",
+                                              "selectionLabel":  "3.1 seconds (3100 ms)",
+                                              "sortValue":  3100.0,
                                               "comment":  "Base = 3100; PerLevel = 0; Minimum = 3100"
                                           },
                                           {
                                               "value":  153,
                                               "name":  "Base 3400 ms (minimum 3400 ms)",
+                                              "selectionLabel":  "3.4 seconds (3400 ms)",
+                                              "sortValue":  3400.0,
                                               "comment":  "Base = 3400; PerLevel = 0; Minimum = 3400"
                                           },
                                           {
                                               "value":  170,
                                               "name":  "Base 8000 ms (minimum 8000 ms)",
+                                              "selectionLabel":  "8 seconds (8000 ms)",
+                                              "sortValue":  8000.0,
                                               "comment":  "Base = 8000; PerLevel = 0; Minimum = 8000"
                                           },
                                           {
                                               "value":  171,
                                               "name":  "Base 6000 ms (minimum 6000 ms)",
+                                              "selectionLabel":  "6 seconds (6000 ms)",
+                                              "sortValue":  6000.0,
                                               "comment":  "Base = 6000; PerLevel = 0; Minimum = 6000"
                                           },
                                           {
                                               "value":  190,
                                               "name":  "Base 100 ms (minimum 100 ms)",
+                                              "selectionLabel":  "0.1 seconds (100 ms)",
+                                              "sortValue":  100.0,
                                               "comment":  "Base = 100; PerLevel = 0; Minimum = 100"
                                           },
                                           {
                                               "value":  191,
                                               "name":  "Base 0 ms (minimum 0 ms)",
+                                              "selectionLabel":  "0 seconds (0 ms)",
+                                              "sortValue":  0.0,
                                               "comment":  "Base = 0; PerLevel = 0; Minimum = 0"
                                           }
                                       ]
@@ -272,831 +376,1163 @@
                                         {
                                             "value":  1,
                                             "name":  "Category 1",
+                                            "selectionLabel":  "Category 1 (flags 0)",
+                                            "sortValue":  1,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  2,
                                             "name":  "Category 2",
+                                            "selectionLabel":  "Category 2 (flags 0)",
+                                            "sortValue":  2,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  4,
                                             "name":  "Category 4",
+                                            "selectionLabel":  "Category 4 (flags 0)",
+                                            "sortValue":  4,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  11,
                                             "name":  "Category 11",
+                                            "selectionLabel":  "Category 11 (flags 0)",
+                                            "sortValue":  11,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  12,
                                             "name":  "Category 12",
+                                            "selectionLabel":  "Category 12 (flags 0)",
+                                            "sortValue":  12,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  17,
                                             "name":  "Category 17",
+                                            "selectionLabel":  "Category 17 (flags 0)",
+                                            "sortValue":  17,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  18,
                                             "name":  "Category 18",
+                                            "selectionLabel":  "Category 18 (flags 0)",
+                                            "sortValue":  18,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  19,
                                             "name":  "Category 19",
+                                            "selectionLabel":  "Category 19 (flags 0)",
+                                            "sortValue":  19,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  20,
                                             "name":  "Category 20",
+                                            "selectionLabel":  "Category 20 (flags 0)",
+                                            "sortValue":  20,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  21,
                                             "name":  "Category 21",
+                                            "selectionLabel":  "Category 21 (flags 0)",
+                                            "sortValue":  21,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  22,
                                             "name":  "Category 22",
+                                            "selectionLabel":  "Category 22 (flags 0)",
+                                            "sortValue":  22,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  23,
                                             "name":  "Category 23",
+                                            "selectionLabel":  "Category 23 (flags 0)",
+                                            "sortValue":  23,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  24,
                                             "name":  "Category 24",
+                                            "selectionLabel":  "Category 24 (flags 0)",
+                                            "sortValue":  24,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  25,
                                             "name":  "Category 25",
+                                            "selectionLabel":  "Category 25 (flags 0)",
+                                            "sortValue":  25,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  26,
                                             "name":  "Category 26",
+                                            "selectionLabel":  "Category 26 (flags 0)",
+                                            "sortValue":  26,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  27,
                                             "name":  "Category 27",
+                                            "selectionLabel":  "Category 27 (flags 0)",
+                                            "sortValue":  27,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  28,
                                             "name":  "Category 28",
+                                            "selectionLabel":  "Category 28 (flags 0)",
+                                            "sortValue":  28,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  29,
                                             "name":  "Category 29",
+                                            "selectionLabel":  "Category 29 (flags 0)",
+                                            "sortValue":  29,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  30,
                                             "name":  "Category 30",
+                                            "selectionLabel":  "Category 30 (flags 0)",
+                                            "sortValue":  30,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  31,
                                             "name":  "Category 31",
+                                            "selectionLabel":  "Category 31 (flags 0)",
+                                            "sortValue":  31,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  32,
                                             "name":  "Category 32",
+                                            "selectionLabel":  "Category 32 (flags 0)",
+                                            "sortValue":  32,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  33,
                                             "name":  "Category 33",
+                                            "selectionLabel":  "Category 33 (flags 0)",
+                                            "sortValue":  33,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  34,
                                             "name":  "Category 34",
+                                            "selectionLabel":  "Category 34 (flags 0)",
+                                            "sortValue":  34,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  35,
                                             "name":  "Category 35",
+                                            "selectionLabel":  "Category 35 (flags 0)",
+                                            "sortValue":  35,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  36,
                                             "name":  "Category 36",
+                                            "selectionLabel":  "Category 36 (flags 0)",
+                                            "sortValue":  36,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  37,
                                             "name":  "Category 37",
+                                            "selectionLabel":  "Category 37 (flags 0)",
+                                            "sortValue":  37,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  38,
                                             "name":  "Category 38",
+                                            "selectionLabel":  "Category 38 (flags 0)",
+                                            "sortValue":  38,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  39,
                                             "name":  "Category 39",
+                                            "selectionLabel":  "Category 39 (flags 0)",
+                                            "sortValue":  39,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  40,
                                             "name":  "Category 40",
+                                            "selectionLabel":  "Category 40 (flags 0)",
+                                            "sortValue":  40,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  41,
                                             "name":  "Category 41",
+                                            "selectionLabel":  "Category 41 (flags 0)",
+                                            "sortValue":  41,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  42,
                                             "name":  "Category 42",
+                                            "selectionLabel":  "Category 42 (flags 0)",
+                                            "sortValue":  42,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  43,
                                             "name":  "Category 43",
+                                            "selectionLabel":  "Category 43 (flags 0)",
+                                            "sortValue":  43,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  44,
                                             "name":  "Category 44",
+                                            "selectionLabel":  "Category 44 (flags 0)",
+                                            "sortValue":  44,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  45,
                                             "name":  "Category 45",
+                                            "selectionLabel":  "Category 45 (flags 0)",
+                                            "sortValue":  45,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  46,
                                             "name":  "Category 46",
+                                            "selectionLabel":  "Category 46 (flags 0)",
+                                            "sortValue":  46,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  47,
                                             "name":  "Category 47",
+                                            "selectionLabel":  "Category 47 (flags 0)",
+                                            "sortValue":  47,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  49,
                                             "name":  "Category 49",
+                                            "selectionLabel":  "Category 49 (flags 0)",
+                                            "sortValue":  49,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  50,
                                             "name":  "Category 50",
+                                            "selectionLabel":  "Category 50 (flags 0)",
+                                            "sortValue":  50,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  51,
                                             "name":  "Category 51",
+                                            "selectionLabel":  "Category 51 (flags 0)",
+                                            "sortValue":  51,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  52,
                                             "name":  "Category 52",
+                                            "selectionLabel":  "Category 52 (flags 0)",
+                                            "sortValue":  52,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  54,
                                             "name":  "Category 54",
+                                            "selectionLabel":  "Category 54 (flags 0)",
+                                            "sortValue":  54,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  55,
                                             "name":  "Category 55",
+                                            "selectionLabel":  "Category 55 (flags 0)",
+                                            "sortValue":  55,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  56,
                                             "name":  "Category 56",
+                                            "selectionLabel":  "Category 56 (flags 0)",
+                                            "sortValue":  56,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  57,
                                             "name":  "Category 57",
+                                            "selectionLabel":  "Category 57 (flags 0)",
+                                            "sortValue":  57,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  58,
                                             "name":  "Category 58",
+                                            "selectionLabel":  "Category 58 (flags 0)",
+                                            "sortValue":  58,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  59,
                                             "name":  "Category 59",
+                                            "selectionLabel":  "Category 59 (flags 0)",
+                                            "sortValue":  59,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  60,
                                             "name":  "Category 60",
+                                            "selectionLabel":  "Category 60 (flags 0)",
+                                            "sortValue":  60,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  61,
                                             "name":  "Category 61",
+                                            "selectionLabel":  "Category 61 (flags 0)",
+                                            "sortValue":  61,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  62,
                                             "name":  "Category 62",
+                                            "selectionLabel":  "Category 62 (flags 0)",
+                                            "sortValue":  62,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  63,
                                             "name":  "Category 63",
+                                            "selectionLabel":  "Category 63 (flags 0)",
+                                            "sortValue":  63,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  64,
                                             "name":  "Category 64",
+                                            "selectionLabel":  "Category 64 (flags 0)",
+                                            "sortValue":  64,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  65,
                                             "name":  "Category 65",
+                                            "selectionLabel":  "Category 65 (flags 0)",
+                                            "sortValue":  65,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  66,
                                             "name":  "Category 66",
+                                            "selectionLabel":  "Category 66 (flags 0)",
+                                            "sortValue":  66,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  67,
                                             "name":  "Category 67",
+                                            "selectionLabel":  "Category 67 (flags 0)",
+                                            "sortValue":  67,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  68,
                                             "name":  "Category 68",
+                                            "selectionLabel":  "Category 68 (flags 0)",
+                                            "sortValue":  68,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  72,
                                             "name":  "Category 72",
+                                            "selectionLabel":  "Category 72 (flags 0)",
+                                            "sortValue":  72,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  73,
                                             "name":  "Category 73",
+                                            "selectionLabel":  "Category 73 (flags 0)",
+                                            "sortValue":  73,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  74,
                                             "name":  "Category 74",
+                                            "selectionLabel":  "Category 74 (flags 0)",
+                                            "sortValue":  74,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  75,
                                             "name":  "Category 75",
+                                            "selectionLabel":  "Category 75 (flags 0)",
+                                            "sortValue":  75,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  76,
                                             "name":  "Category 76",
+                                            "selectionLabel":  "Category 76 (flags 0)",
+                                            "sortValue":  76,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  77,
                                             "name":  "Category 77",
+                                            "selectionLabel":  "Category 77 (flags 0)",
+                                            "sortValue":  77,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  78,
                                             "name":  "Category 78",
+                                            "selectionLabel":  "Category 78 (flags 0)",
+                                            "sortValue":  78,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  79,
                                             "name":  "Category 79",
+                                            "selectionLabel":  "Category 79 (flags 0)",
+                                            "sortValue":  79,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  82,
                                             "name":  "Category 82",
+                                            "selectionLabel":  "Category 82 (flags 0)",
+                                            "sortValue":  82,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  83,
                                             "name":  "Category 83",
+                                            "selectionLabel":  "Category 83 (flags 0)",
+                                            "sortValue":  83,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  84,
                                             "name":  "Category 84",
+                                            "selectionLabel":  "Category 84 (flags 0)",
+                                            "sortValue":  84,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  85,
                                             "name":  "Category 85",
+                                            "selectionLabel":  "Category 85 (flags 0)",
+                                            "sortValue":  85,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  86,
                                             "name":  "Category 86",
+                                            "selectionLabel":  "Category 86 (flags 0)",
+                                            "sortValue":  86,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  87,
                                             "name":  "Category 87",
+                                            "selectionLabel":  "Category 87 (flags 0)",
+                                            "sortValue":  87,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  88,
                                             "name":  "Category 88",
+                                            "selectionLabel":  "Category 88 (flags 0)",
+                                            "sortValue":  88,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  89,
                                             "name":  "Category 89",
+                                            "selectionLabel":  "Category 89 (flags 0)",
+                                            "sortValue":  89,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  93,
                                             "name":  "Category 93",
+                                            "selectionLabel":  "Category 93 (flags 0)",
+                                            "sortValue":  93,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  94,
                                             "name":  "Category 94",
+                                            "selectionLabel":  "Category 94 (flags 0)",
+                                            "sortValue":  94,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  95,
                                             "name":  "Category 95",
+                                            "selectionLabel":  "Category 95 (flags 0)",
+                                            "sortValue":  95,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  96,
                                             "name":  "Category 96",
+                                            "selectionLabel":  "Category 96 (flags 0)",
+                                            "sortValue":  96,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  97,
                                             "name":  "Category 97",
+                                            "selectionLabel":  "Category 97 (flags 0)",
+                                            "sortValue":  97,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  98,
                                             "name":  "Category 98",
+                                            "selectionLabel":  "Category 98 (flags 0)",
+                                            "sortValue":  98,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  99,
                                             "name":  "Category 99",
+                                            "selectionLabel":  "Category 99 (flags 0)",
+                                            "sortValue":  99,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  100,
                                             "name":  "Category 100",
+                                            "selectionLabel":  "Category 100 (flags 0)",
+                                            "sortValue":  100,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  101,
                                             "name":  "Category 101",
+                                            "selectionLabel":  "Category 101 (flags 0)",
+                                            "sortValue":  101,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  102,
                                             "name":  "Category 102",
+                                            "selectionLabel":  "Category 102 (flags 0)",
+                                            "sortValue":  102,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  103,
                                             "name":  "Category 103",
+                                            "selectionLabel":  "Category 103 (flags 0)",
+                                            "sortValue":  103,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  104,
                                             "name":  "Category 104",
+                                            "selectionLabel":  "Category 104 (flags 0)",
+                                            "sortValue":  104,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  105,
                                             "name":  "Category 105",
+                                            "selectionLabel":  "Category 105 (flags 0)",
+                                            "sortValue":  105,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  106,
                                             "name":  "Category 106",
+                                            "selectionLabel":  "Category 106 (flags 0)",
+                                            "sortValue":  106,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  107,
                                             "name":  "Category 107",
+                                            "selectionLabel":  "Category 107 (flags 0)",
+                                            "sortValue":  107,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  108,
                                             "name":  "Category 108",
+                                            "selectionLabel":  "Category 108 (flags 0)",
+                                            "sortValue":  108,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  109,
                                             "name":  "Category 109",
+                                            "selectionLabel":  "Category 109 (flags 0)",
+                                            "sortValue":  109,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  132,
                                             "name":  "Category 132",
+                                            "selectionLabel":  "Category 132 (flags 0)",
+                                            "sortValue":  132,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  133,
                                             "name":  "Category 133",
+                                            "selectionLabel":  "Category 133 (flags 0)",
+                                            "sortValue":  133,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  150,
                                             "name":  "Category 150",
+                                            "selectionLabel":  "Category 150 (flags 0)",
+                                            "sortValue":  150,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  170,
                                             "name":  "Category 170",
+                                            "selectionLabel":  "Category 170 (flags 1)",
+                                            "sortValue":  170,
                                             "comment":  "Flags = 1"
                                         },
                                         {
                                             "value":  190,
                                             "name":  "Category 190",
+                                            "selectionLabel":  "Category 190 (flags 0)",
+                                            "sortValue":  190,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  230,
                                             "name":  "Category 230",
+                                            "selectionLabel":  "Category 230 (flags 0)",
+                                            "sortValue":  230,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  250,
                                             "name":  "Category 250",
+                                            "selectionLabel":  "Category 250 (flags 0)",
+                                            "sortValue":  250,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  270,
                                             "name":  "Category 270",
+                                            "selectionLabel":  "Category 270 (flags 0)",
+                                            "sortValue":  270,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  290,
                                             "name":  "Category 290",
+                                            "selectionLabel":  "Category 290 (flags 0)",
+                                            "sortValue":  290,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  310,
                                             "name":  "Category 310",
+                                            "selectionLabel":  "Category 310 (flags 0)",
+                                            "sortValue":  310,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  330,
                                             "name":  "Category 330",
+                                            "selectionLabel":  "Category 330 (flags 0)",
+                                            "sortValue":  330,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  350,
                                             "name":  "Category 350",
+                                            "selectionLabel":  "Category 350 (flags 0)",
+                                            "sortValue":  350,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  351,
                                             "name":  "Category 351",
+                                            "selectionLabel":  "Category 351 (flags 2)",
+                                            "sortValue":  351,
                                             "comment":  "Flags = 2"
                                         },
                                         {
                                             "value":  371,
                                             "name":  "Category 371",
+                                            "selectionLabel":  "Category 371 (flags 0)",
+                                            "sortValue":  371,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  391,
                                             "name":  "Category 391",
+                                            "selectionLabel":  "Category 391 (flags 0)",
+                                            "sortValue":  391,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  411,
                                             "name":  "Category 411",
+                                            "selectionLabel":  "Category 411 (flags 0)",
+                                            "sortValue":  411,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  431,
                                             "name":  "Category 431",
+                                            "selectionLabel":  "Category 431 (flags 0)",
+                                            "sortValue":  431,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  451,
                                             "name":  "Category 451",
+                                            "selectionLabel":  "Category 451 (flags 0)",
+                                            "sortValue":  451,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  471,
                                             "name":  "Category 471",
+                                            "selectionLabel":  "Category 471 (flags 0)",
+                                            "sortValue":  471,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  511,
                                             "name":  "Category 511",
+                                            "selectionLabel":  "Category 511 (flags 0)",
+                                            "sortValue":  511,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  531,
                                             "name":  "Category 531",
+                                            "selectionLabel":  "Category 531 (flags 0)",
+                                            "sortValue":  531,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  551,
                                             "name":  "Category 551",
+                                            "selectionLabel":  "Category 551 (flags 0)",
+                                            "sortValue":  551,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  571,
                                             "name":  "Category 571",
+                                            "selectionLabel":  "Category 571 (flags 0)",
+                                            "sortValue":  571,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  591,
                                             "name":  "Category 591",
+                                            "selectionLabel":  "Category 591 (flags 0)",
+                                            "sortValue":  591,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  611,
                                             "name":  "Category 611",
+                                            "selectionLabel":  "Category 611 (flags 0)",
+                                            "sortValue":  611,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  631,
                                             "name":  "Category 631",
+                                            "selectionLabel":  "Category 631 (flags 0)",
+                                            "sortValue":  631,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  633,
                                             "name":  "Category 633",
+                                            "selectionLabel":  "Category 633 (flags 0)",
+                                            "sortValue":  633,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  634,
                                             "name":  "Category 634",
+                                            "selectionLabel":  "Category 634 (flags 0)",
+                                            "sortValue":  634,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  651,
                                             "name":  "Category 651",
+                                            "selectionLabel":  "Category 651 (flags 0)",
+                                            "sortValue":  651,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  671,
                                             "name":  "Category 671",
+                                            "selectionLabel":  "Category 671 (flags 0)",
+                                            "sortValue":  671,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  672,
                                             "name":  "Category 672",
+                                            "selectionLabel":  "Category 672 (flags 0)",
+                                            "sortValue":  672,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  691,
                                             "name":  "Category 691",
+                                            "selectionLabel":  "Category 691 (flags 0)",
+                                            "sortValue":  691,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  731,
                                             "name":  "Category 731",
+                                            "selectionLabel":  "Category 731 (flags 0)",
+                                            "sortValue":  731,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  751,
                                             "name":  "Category 751",
+                                            "selectionLabel":  "Category 751 (flags 0)",
+                                            "sortValue":  751,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  791,
                                             "name":  "Category 791",
+                                            "selectionLabel":  "Category 791 (flags 0)",
+                                            "sortValue":  791,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  811,
                                             "name":  "Category 811",
+                                            "selectionLabel":  "Category 811 (flags 0)",
+                                            "sortValue":  811,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  831,
                                             "name":  "Category 831",
+                                            "selectionLabel":  "Category 831 (flags 0)",
+                                            "sortValue":  831,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  851,
                                             "name":  "Category 851",
+                                            "selectionLabel":  "Category 851 (flags 0)",
+                                            "sortValue":  851,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  871,
                                             "name":  "Category 871",
+                                            "selectionLabel":  "Category 871 (flags 0)",
+                                            "sortValue":  871,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  872,
                                             "name":  "Category 872",
+                                            "selectionLabel":  "Category 872 (flags 0)",
+                                            "sortValue":  872,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  891,
                                             "name":  "Category 891",
+                                            "selectionLabel":  "Category 891 (flags 0)",
+                                            "sortValue":  891,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  892,
                                             "name":  "Category 892",
+                                            "selectionLabel":  "Category 892 (flags 0)",
+                                            "sortValue":  892,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  911,
                                             "name":  "Category 911",
+                                            "selectionLabel":  "Category 911 (flags 0)",
+                                            "sortValue":  911,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  931,
                                             "name":  "Category 931",
+                                            "selectionLabel":  "Category 931 (flags 0)",
+                                            "sortValue":  931,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  932,
                                             "name":  "Category 932",
+                                            "selectionLabel":  "Category 932 (flags 0)",
+                                            "sortValue":  932,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  951,
                                             "name":  "Category 951",
+                                            "selectionLabel":  "Category 951 (flags 0)",
+                                            "sortValue":  951,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  971,
                                             "name":  "Category 971",
+                                            "selectionLabel":  "Category 971 (flags 0)",
+                                            "sortValue":  971,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  991,
                                             "name":  "Category 991",
+                                            "selectionLabel":  "Category 991 (flags 0)",
+                                            "sortValue":  991,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1011,
                                             "name":  "Category 1011",
+                                            "selectionLabel":  "Category 1011 (flags 0)",
+                                            "sortValue":  1011,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1031,
                                             "name":  "Category 1031",
+                                            "selectionLabel":  "Category 1031 (flags 0)",
+                                            "sortValue":  1031,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1051,
                                             "name":  "Category 1051",
+                                            "selectionLabel":  "Category 1051 (flags 0)",
+                                            "sortValue":  1051,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1071,
                                             "name":  "Category 1071",
+                                            "selectionLabel":  "Category 1071 (flags 0)",
+                                            "sortValue":  1071,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1091,
                                             "name":  "Category 1091",
+                                            "selectionLabel":  "Category 1091 (flags 0)",
+                                            "sortValue":  1091,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1111,
                                             "name":  "Category 1111",
+                                            "selectionLabel":  "Category 1111 (flags 0)",
+                                            "sortValue":  1111,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1131,
                                             "name":  "Category 1131",
+                                            "selectionLabel":  "Category 1131 (flags 0)",
+                                            "sortValue":  1131,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1132,
                                             "name":  "Category 1132",
+                                            "selectionLabel":  "Category 1132 (flags 0)",
+                                            "sortValue":  1132,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1133,
                                             "name":  "Category 1133",
+                                            "selectionLabel":  "Category 1133 (flags 0)",
+                                            "sortValue":  1133,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1134,
                                             "name":  "Category 1134",
+                                            "selectionLabel":  "Category 1134 (flags 0)",
+                                            "sortValue":  1134,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1135,
                                             "name":  "Category 1135",
+                                            "selectionLabel":  "Category 1135 (flags 0)",
+                                            "sortValue":  1135,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1136,
                                             "name":  "Category 1136",
+                                            "selectionLabel":  "Category 1136 (flags 0)",
+                                            "sortValue":  1136,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1137,
                                             "name":  "Category 1137",
+                                            "selectionLabel":  "Category 1137 (flags 0)",
+                                            "sortValue":  1137,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1138,
                                             "name":  "Category 1138",
+                                            "selectionLabel":  "Category 1138 (flags 0)",
+                                            "sortValue":  1138,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1139,
                                             "name":  "Category 1139",
+                                            "selectionLabel":  "Category 1139 (flags 0)",
+                                            "sortValue":  1139,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1140,
                                             "name":  "Category 1140",
+                                            "selectionLabel":  "Category 1140 (flags 0)",
+                                            "sortValue":  1140,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1141,
                                             "name":  "Category 1141",
+                                            "selectionLabel":  "Category 1141 (flags 0)",
+                                            "sortValue":  1141,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1142,
                                             "name":  "Category 1142",
+                                            "selectionLabel":  "Category 1142 (flags 0)",
+                                            "sortValue":  1142,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1143,
                                             "name":  "Category 1143",
+                                            "selectionLabel":  "Category 1143 (flags 0)",
+                                            "sortValue":  1143,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1144,
                                             "name":  "Category 1144",
+                                            "selectionLabel":  "Category 1144 (flags 0)",
+                                            "sortValue":  1144,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1145,
                                             "name":  "Category 1145",
+                                            "selectionLabel":  "Category 1145 (flags 0)",
+                                            "sortValue":  1145,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1149,
                                             "name":  "Category 1149",
+                                            "selectionLabel":  "Category 1149 (flags 0)",
+                                            "sortValue":  1149,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1150,
                                             "name":  "Category 1150",
+                                            "selectionLabel":  "Category 1150 (flags 0)",
+                                            "sortValue":  1150,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1151,
                                             "name":  "Category 1151",
+                                            "selectionLabel":  "Category 1151 (flags 0)",
+                                            "sortValue":  1151,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1152,
                                             "name":  "Category 1152",
+                                            "selectionLabel":  "Category 1152 (flags 0)",
+                                            "sortValue":  1152,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1153,
                                             "name":  "Category 1153",
+                                            "selectionLabel":  "Category 1153 (flags 0)",
+                                            "sortValue":  1153,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1155,
                                             "name":  "Category 1155",
+                                            "selectionLabel":  "Category 1155 (flags 0)",
+                                            "sortValue":  1155,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1159,
                                             "name":  "Category 1159",
+                                            "selectionLabel":  "Category 1159 (flags 0)",
+                                            "sortValue":  1159,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1160,
                                             "name":  "Category 1160",
+                                            "selectionLabel":  "Category 1160 (flags 0)",
+                                            "sortValue":  1160,
                                             "comment":  "Flags = 0"
                                         },
                                         {
                                             "value":  1161,
                                             "name":  "Category 1161",
+                                            "selectionLabel":  "Category 1161 (flags 0)",
+                                            "sortValue":  1161,
                                             "comment":  "Flags = 0"
                                         }
                                     ]
@@ -1108,411 +1544,575 @@
                                         {
                                             "value":  1,
                                             "name":  "Duration 10000 ms (max 10000 ms)",
+                                            "selectionLabel":  "10 seconds (10000 ms)",
+                                            "sortValue":  10000.0,
                                             "comment":  "Duration = 10000; DurationPerLevel = 0; MaxDuration = 10000"
                                         },
                                         {
                                             "value":  2,
                                             "name":  "Duration 30000 ms (max 30000 ms)",
+                                            "selectionLabel":  "30 seconds (30000 ms)",
+                                            "sortValue":  30000.0,
                                             "comment":  "Duration = 30000; DurationPerLevel = 0; MaxDuration = 30000"
                                         },
                                         {
                                             "value":  3,
                                             "name":  "Duration 60000 ms (max 60000 ms)",
+                                            "selectionLabel":  "60 seconds (60000 ms)",
+                                            "sortValue":  60000.0,
                                             "comment":  "Duration = 60000; DurationPerLevel = 0; MaxDuration = 60000"
                                         },
                                         {
                                             "value":  4,
                                             "name":  "Duration 120000 ms (max 120000 ms)",
+                                            "selectionLabel":  "120 seconds (120000 ms)",
+                                            "sortValue":  120000.0,
                                             "comment":  "Duration = 120000; DurationPerLevel = 0; MaxDuration = 120000"
                                         },
                                         {
                                             "value":  5,
                                             "name":  "Duration 300000 ms (max 300000 ms)",
+                                            "selectionLabel":  "300 seconds (300000 ms)",
+                                            "sortValue":  300000.0,
                                             "comment":  "Duration = 300000; DurationPerLevel = 0; MaxDuration = 300000"
                                         },
                                         {
                                             "value":  6,
                                             "name":  "Duration 600000 ms (max 600000 ms)",
+                                            "selectionLabel":  "600 seconds (600000 ms)",
+                                            "sortValue":  600000.0,
                                             "comment":  "Duration = 600000; DurationPerLevel = 0; MaxDuration = 600000"
                                         },
                                         {
                                             "value":  7,
                                             "name":  "Duration 5000 ms (max 5000 ms)",
+                                            "selectionLabel":  "5 seconds (5000 ms)",
+                                            "sortValue":  5000.0,
                                             "comment":  "Duration = 5000; DurationPerLevel = 0; MaxDuration = 5000"
                                         },
                                         {
                                             "value":  8,
                                             "name":  "Duration 15000 ms (max 15000 ms)",
+                                            "selectionLabel":  "15 seconds (15000 ms)",
+                                            "sortValue":  15000.0,
                                             "comment":  "Duration = 15000; DurationPerLevel = 0; MaxDuration = 15000"
                                         },
                                         {
                                             "value":  9,
                                             "name":  "Duration 30000 ms (max 30000 ms)",
+                                            "selectionLabel":  "30 seconds (30000 ms)",
+                                            "sortValue":  30000.0,
                                             "comment":  "Duration = 30000; DurationPerLevel = 0; MaxDuration = 30000"
                                         },
                                         {
                                             "value":  10,
                                             "name":  "Duration 60000 ms (max 60000 ms)",
+                                            "selectionLabel":  "60 seconds (60000 ms)",
+                                            "sortValue":  60000.0,
                                             "comment":  "Duration = 60000; DurationPerLevel = 0; MaxDuration = 60000"
                                         },
                                         {
                                             "value":  11,
                                             "name":  "Duration 10000 ms (max 15000 ms)",
+                                            "selectionLabel":  "10 seconds (10000 ms); 200 ms per level; max 15000 ms",
+                                            "sortValue":  10000.0,
                                             "comment":  "Duration = 10000; DurationPerLevel = 200; MaxDuration = 15000"
                                         },
                                         {
                                             "value":  12,
                                             "name":  "Duration 30000 ms (max 40000 ms)",
+                                            "selectionLabel":  "30 seconds (30000 ms); 200 ms per level; max 40000 ms",
+                                            "sortValue":  30000.0,
                                             "comment":  "Duration = 30000; DurationPerLevel = 200; MaxDuration = 40000"
                                         },
                                         {
                                             "value":  13,
                                             "name":  "Duration 60000 ms (max 80000 ms)",
+                                            "selectionLabel":  "60 seconds (60000 ms); 200 ms per level; max 80000 ms",
+                                            "sortValue":  60000.0,
                                             "comment":  "Duration = 60000; DurationPerLevel = 200; MaxDuration = 80000"
                                         },
                                         {
                                             "value":  14,
                                             "name":  "Duration 120000 ms (max 180000 ms)",
+                                            "selectionLabel":  "120 seconds (120000 ms); 10000 ms per level; max 180000 ms",
+                                            "sortValue":  120000.0,
                                             "comment":  "Duration = 120000; DurationPerLevel = 10000; MaxDuration = 180000"
                                         },
                                         {
                                             "value":  15,
                                             "name":  "Duration 300000 ms (max 420000 ms)",
+                                            "selectionLabel":  "300 seconds (300000 ms); 10000 ms per level; max 420000 ms",
+                                            "sortValue":  300000.0,
                                             "comment":  "Duration = 300000; DurationPerLevel = 10000; MaxDuration = 420000"
                                         },
                                         {
                                             "value":  16,
                                             "name":  "Duration 230000 ms (max 230000 ms)",
+                                            "selectionLabel":  "230 seconds (230000 ms)",
+                                            "sortValue":  230000.0,
                                             "comment":  "Duration = 230000; DurationPerLevel = 0; MaxDuration = 230000"
                                         },
                                         {
                                             "value":  17,
                                             "name":  "Duration 5000 ms (max 7000 ms)",
+                                            "selectionLabel":  "5 seconds (5000 ms); 100 ms per level; max 7000 ms",
+                                            "sortValue":  5000.0,
                                             "comment":  "Duration = 5000; DurationPerLevel = 100; MaxDuration = 7000"
                                         },
                                         {
                                             "value":  18,
                                             "name":  "Duration 20000 ms (max 20000 ms)",
+                                            "selectionLabel":  "20 seconds (20000 ms)",
+                                            "sortValue":  20000.0,
                                             "comment":  "Duration = 20000; DurationPerLevel = 0; MaxDuration = 20000"
                                         },
                                         {
                                             "value":  19,
                                             "name":  "Duration 30000 ms (max 40000 ms)",
+                                            "selectionLabel":  "30 seconds (30000 ms); 500 ms per level; max 40000 ms",
+                                            "sortValue":  30000.0,
                                             "comment":  "Duration = 30000; DurationPerLevel = 500; MaxDuration = 40000"
                                         },
                                         {
                                             "value":  20,
                                             "name":  "Duration 60000 ms (max 80000 ms)",
+                                            "selectionLabel":  "60 seconds (60000 ms); 1000 ms per level; max 80000 ms",
+                                            "sortValue":  60000.0,
                                             "comment":  "Duration = 60000; DurationPerLevel = 1000; MaxDuration = 80000"
                                         },
                                         {
                                             "value":  21,
                                             "name":  "Duration -1 ms (max -1 ms)",
+                                            "selectionLabel":  "Special duration (-1)",
+                                            "sortValue":  -1.0,
                                             "comment":  "Duration = -1; DurationPerLevel = 0; MaxDuration = -1"
                                         },
                                         {
                                             "value":  22,
                                             "name":  "Duration 45000 ms (max 45000 ms)",
+                                            "selectionLabel":  "45 seconds (45000 ms)",
+                                            "sortValue":  45000.0,
                                             "comment":  "Duration = 45000; DurationPerLevel = 0; MaxDuration = 45000"
                                         },
                                         {
                                             "value":  23,
                                             "name":  "Duration 90000 ms (max 90000 ms)",
+                                            "selectionLabel":  "90 seconds (90000 ms)",
+                                            "sortValue":  90000.0,
                                             "comment":  "Duration = 90000; DurationPerLevel = 0; MaxDuration = 90000"
                                         },
                                         {
                                             "value":  24,
                                             "name":  "Duration 160000 ms (max 160000 ms)",
+                                            "selectionLabel":  "160 seconds (160000 ms)",
+                                            "sortValue":  160000.0,
                                             "comment":  "Duration = 160000; DurationPerLevel = 0; MaxDuration = 160000"
                                         },
                                         {
                                             "value":  25,
                                             "name":  "Duration 180000 ms (max 180000 ms)",
+                                            "selectionLabel":  "180 seconds (180000 ms)",
+                                            "sortValue":  180000.0,
                                             "comment":  "Duration = 180000; DurationPerLevel = 0; MaxDuration = 180000"
                                         },
                                         {
                                             "value":  26,
                                             "name":  "Duration 240000 ms (max 240000 ms)",
+                                            "selectionLabel":  "240 seconds (240000 ms)",
+                                            "sortValue":  240000.0,
                                             "comment":  "Duration = 240000; DurationPerLevel = 0; MaxDuration = 240000"
                                         },
                                         {
                                             "value":  27,
                                             "name":  "Duration 3000 ms (max 3000 ms)",
+                                            "selectionLabel":  "3 seconds (3000 ms)",
+                                            "sortValue":  3000.0,
                                             "comment":  "Duration = 3000; DurationPerLevel = 0; MaxDuration = 3000"
                                         },
                                         {
                                             "value":  28,
                                             "name":  "Duration 5000 ms (max 5000 ms)",
+                                            "selectionLabel":  "5 seconds (5000 ms)",
+                                            "sortValue":  5000.0,
                                             "comment":  "Duration = 5000; DurationPerLevel = 0; MaxDuration = 5000"
                                         },
                                         {
                                             "value":  29,
                                             "name":  "Duration 12000 ms (max 12000 ms)",
+                                            "selectionLabel":  "12 seconds (12000 ms)",
+                                            "sortValue":  12000.0,
                                             "comment":  "Duration = 12000; DurationPerLevel = 0; MaxDuration = 12000"
                                         },
                                         {
                                             "value":  30,
                                             "name":  "Duration 1800000 ms (max 1800000 ms)",
+                                            "selectionLabel":  "1800 seconds (1800000 ms)",
+                                            "sortValue":  1800000.0,
                                             "comment":  "Duration = 1800000; DurationPerLevel = 0; MaxDuration = 1800000"
                                         },
                                         {
                                             "value":  31,
                                             "name":  "Duration 8000 ms (max 8000 ms)",
+                                            "selectionLabel":  "8 seconds (8000 ms)",
+                                            "sortValue":  8000.0,
                                             "comment":  "Duration = 8000; DurationPerLevel = 0; MaxDuration = 8000"
                                         },
                                         {
                                             "value":  32,
                                             "name":  "Duration 6000 ms (max 6000 ms)",
+                                            "selectionLabel":  "6 seconds (6000 ms)",
+                                            "sortValue":  6000.0,
                                             "comment":  "Duration = 6000; DurationPerLevel = 0; MaxDuration = 6000"
                                         },
                                         {
                                             "value":  35,
                                             "name":  "Duration 4000 ms (max 4000 ms)",
+                                            "selectionLabel":  "4 seconds (4000 ms)",
+                                            "sortValue":  4000.0,
                                             "comment":  "Duration = 4000; DurationPerLevel = 0; MaxDuration = 4000"
                                         },
                                         {
                                             "value":  36,
                                             "name":  "Duration 1000 ms (max 1000 ms)",
+                                            "selectionLabel":  "1 second (1000 ms)",
+                                            "sortValue":  1000.0,
                                             "comment":  "Duration = 1000; DurationPerLevel = 0; MaxDuration = 1000"
                                         },
                                         {
                                             "value":  37,
                                             "name":  "Duration 1 ms (max 1 ms)",
+                                            "selectionLabel":  "0.001 seconds (1 ms)",
+                                            "sortValue":  1.0,
                                             "comment":  "Duration = 1; DurationPerLevel = 0; MaxDuration = 1"
                                         },
                                         {
                                             "value":  38,
                                             "name":  "Duration 11000 ms (max 11000 ms)",
+                                            "selectionLabel":  "11 seconds (11000 ms)",
+                                            "sortValue":  11000.0,
                                             "comment":  "Duration = 11000; DurationPerLevel = 0; MaxDuration = 11000"
                                         },
                                         {
                                             "value":  39,
                                             "name":  "Duration 2000 ms (max 2000 ms)",
+                                            "selectionLabel":  "2 seconds (2000 ms)",
+                                            "sortValue":  2000.0,
                                             "comment":  "Duration = 2000; DurationPerLevel = 0; MaxDuration = 2000"
                                         },
                                         {
                                             "value":  40,
                                             "name":  "Duration 1200000 ms (max 1200000 ms)",
+                                            "selectionLabel":  "1200 seconds (1200000 ms)",
+                                            "sortValue":  1200000.0,
                                             "comment":  "Duration = 1200000; DurationPerLevel = 0; MaxDuration = 1200000"
                                         },
                                         {
                                             "value":  41,
                                             "name":  "Duration 360000 ms (max 360000 ms)",
+                                            "selectionLabel":  "360 seconds (360000 ms)",
+                                            "sortValue":  360000.0,
                                             "comment":  "Duration = 360000; DurationPerLevel = 0; MaxDuration = 360000"
                                         },
                                         {
                                             "value":  42,
                                             "name":  "Duration 3600000 ms (max 3600000 ms)",
+                                            "selectionLabel":  "3600 seconds (3600000 ms)",
+                                            "sortValue":  3600000.0,
                                             "comment":  "Duration = 3600000; DurationPerLevel = 0; MaxDuration = 3600000"
                                         },
                                         {
                                             "value":  62,
                                             "name":  "Duration 75000 ms (max 75000 ms)",
+                                            "selectionLabel":  "75 seconds (75000 ms)",
+                                            "sortValue":  75000.0,
                                             "comment":  "Duration = 75000; DurationPerLevel = 0; MaxDuration = 75000"
                                         },
                                         {
                                             "value":  63,
                                             "name":  "Duration 25000 ms (max 25000 ms)",
+                                            "selectionLabel":  "25 seconds (25000 ms)",
+                                            "sortValue":  25000.0,
                                             "comment":  "Duration = 25000; DurationPerLevel = 0; MaxDuration = 25000"
                                         },
                                         {
                                             "value":  64,
                                             "name":  "Duration 40000 ms (max 40000 ms)",
+                                            "selectionLabel":  "40 seconds (40000 ms)",
+                                            "sortValue":  40000.0,
                                             "comment":  "Duration = 40000; DurationPerLevel = 0; MaxDuration = 40000"
                                         },
                                         {
                                             "value":  65,
                                             "name":  "Duration 1500 ms (max 1500 ms)",
+                                            "selectionLabel":  "1.5 seconds (1500 ms)",
+                                            "sortValue":  1500.0,
                                             "comment":  "Duration = 1500; DurationPerLevel = 0; MaxDuration = 1500"
                                         },
                                         {
                                             "value":  66,
                                             "name":  "Duration 2500 ms (max 2500 ms)",
+                                            "selectionLabel":  "2.5 seconds (2500 ms)",
+                                            "sortValue":  2500.0,
                                             "comment":  "Duration = 2500; DurationPerLevel = 0; MaxDuration = 2500"
                                         },
                                         {
                                             "value":  85,
                                             "name":  "Duration 18000 ms (max 18000 ms)",
+                                            "selectionLabel":  "18 seconds (18000 ms)",
+                                            "sortValue":  18000.0,
                                             "comment":  "Duration = 18000; DurationPerLevel = 0; MaxDuration = 18000"
                                         },
                                         {
                                             "value":  86,
                                             "name":  "Duration 21000 ms (max 21000 ms)",
+                                            "selectionLabel":  "21 seconds (21000 ms)",
+                                            "sortValue":  21000.0,
                                             "comment":  "Duration = 21000; DurationPerLevel = 0; MaxDuration = 21000"
                                         },
                                         {
                                             "value":  105,
                                             "name":  "Duration 9000 ms (max 9000 ms)",
+                                            "selectionLabel":  "9 seconds (9000 ms)",
+                                            "sortValue":  9000.0,
                                             "comment":  "Duration = 9000; DurationPerLevel = 0; MaxDuration = 9000"
                                         },
                                         {
                                             "value":  106,
                                             "name":  "Duration 24000 ms (max 24000 ms)",
+                                            "selectionLabel":  "24 seconds (24000 ms)",
+                                            "sortValue":  24000.0,
                                             "comment":  "Duration = 24000; DurationPerLevel = 0; MaxDuration = 24000"
                                         },
                                         {
                                             "value":  125,
                                             "name":  "Duration 35000 ms (max 35000 ms)",
+                                            "selectionLabel":  "35 seconds (35000 ms)",
+                                            "sortValue":  35000.0,
                                             "comment":  "Duration = 35000; DurationPerLevel = 0; MaxDuration = 35000"
                                         },
                                         {
                                             "value":  145,
                                             "name":  "Duration 2700000 ms (max 2700000 ms)",
+                                            "selectionLabel":  "2700 seconds (2700000 ms)",
+                                            "sortValue":  2700000.0,
                                             "comment":  "Duration = 2700000; DurationPerLevel = 0; MaxDuration = 2700000"
                                         },
                                         {
                                             "value":  165,
                                             "name":  "Duration 7000 ms (max 7000 ms)",
+                                            "selectionLabel":  "7 seconds (7000 ms)",
+                                            "sortValue":  7000.0,
                                             "comment":  "Duration = 7000; DurationPerLevel = 0; MaxDuration = 7000"
                                         },
                                         {
                                             "value":  185,
                                             "name":  "Duration 6000 ms (max 21000 ms)",
+                                            "selectionLabel":  "6 seconds (6000 ms); max 21000 ms",
+                                            "sortValue":  6000.0,
                                             "comment":  "Duration = 6000; DurationPerLevel = 0; MaxDuration = 21000"
                                         },
                                         {
                                             "value":  186,
                                             "name":  "Duration 2000 ms (max 22000 ms)",
+                                            "selectionLabel":  "2 seconds (2000 ms); max 22000 ms",
+                                            "sortValue":  2000.0,
                                             "comment":  "Duration = 2000; DurationPerLevel = 0; MaxDuration = 22000"
                                         },
                                         {
                                             "value":  187,
                                             "name":  "Duration 0 ms (max 5000 ms)",
+                                            "selectionLabel":  "0 seconds (0 ms); max 5000 ms",
+                                            "sortValue":  0.0,
                                             "comment":  "Duration = 0; DurationPerLevel = 0; MaxDuration = 5000"
                                         },
                                         {
                                             "value":  205,
                                             "name":  "Duration 27000 ms (max 27000 ms)",
+                                            "selectionLabel":  "27 seconds (27000 ms)",
+                                            "sortValue":  27000.0,
                                             "comment":  "Duration = 27000; DurationPerLevel = 0; MaxDuration = 27000"
                                         },
                                         {
                                             "value":  225,
                                             "name":  "Duration 604800000 ms (max 604800000 ms)",
+                                            "selectionLabel":  "604800 seconds (604800000 ms)",
+                                            "sortValue":  604800000.0,
                                             "comment":  "Duration = 604800000; DurationPerLevel = 0; MaxDuration = 604800000"
                                         },
                                         {
                                             "value":  245,
                                             "name":  "Duration 50000 ms (max 50000 ms)",
+                                            "selectionLabel":  "50 seconds (50000 ms)",
+                                            "sortValue":  50000.0,
                                             "comment":  "Duration = 50000; DurationPerLevel = 0; MaxDuration = 50000"
                                         },
                                         {
                                             "value":  265,
                                             "name":  "Duration 55000 ms (max 55000 ms)",
+                                            "selectionLabel":  "55 seconds (55000 ms)",
+                                            "sortValue":  55000.0,
                                             "comment":  "Duration = 55000; DurationPerLevel = 0; MaxDuration = 55000"
                                         },
                                         {
                                             "value":  285,
                                             "name":  "Duration 1000 ms (max 6000 ms)",
+                                            "selectionLabel":  "1 second (1000 ms); max 6000 ms",
+                                            "sortValue":  1000.0,
                                             "comment":  "Duration = 1000; DurationPerLevel = 0; MaxDuration = 6000"
                                         },
                                         {
                                             "value":  305,
                                             "name":  "Duration 14000 ms (max 14000 ms)",
+                                            "selectionLabel":  "14 seconds (14000 ms)",
+                                            "sortValue":  14000.0,
                                             "comment":  "Duration = 14000; DurationPerLevel = 0; MaxDuration = 14000"
                                         },
                                         {
                                             "value":  325,
                                             "name":  "Duration 36000 ms (max 36000 ms)",
+                                            "selectionLabel":  "36 seconds (36000 ms)",
+                                            "sortValue":  36000.0,
                                             "comment":  "Duration = 36000; DurationPerLevel = 0; MaxDuration = 36000"
                                         },
                                         {
                                             "value":  326,
                                             "name":  "Duration 44000 ms (max 44000 ms)",
+                                            "selectionLabel":  "44 seconds (44000 ms)",
+                                            "sortValue":  44000.0,
                                             "comment":  "Duration = 44000; DurationPerLevel = 0; MaxDuration = 44000"
                                         },
                                         {
                                             "value":  327,
                                             "name":  "Duration 500 ms (max 500 ms)",
+                                            "selectionLabel":  "0.5 seconds (500 ms)",
+                                            "sortValue":  500.0,
                                             "comment":  "Duration = 500; DurationPerLevel = 0; MaxDuration = 500"
                                         },
                                         {
                                             "value":  328,
                                             "name":  "Duration 250 ms (max 250 ms)",
+                                            "selectionLabel":  "0.25 seconds (250 ms)",
+                                            "sortValue":  250.0,
                                             "comment":  "Duration = 250; DurationPerLevel = 0; MaxDuration = 250"
                                         },
                                         {
                                             "value":  347,
                                             "name":  "Duration 900000 ms (max 900000 ms)",
+                                            "selectionLabel":  "900 seconds (900000 ms)",
+                                            "sortValue":  900000.0,
                                             "comment":  "Duration = 900000; DurationPerLevel = 0; MaxDuration = 900000"
                                         },
                                         {
                                             "value":  367,
                                             "name":  "Duration 7200000 ms (max 7200000 ms)",
+                                            "selectionLabel":  "7200 seconds (7200000 ms)",
+                                            "sortValue":  7200000.0,
                                             "comment":  "Duration = 7200000; DurationPerLevel = 0; MaxDuration = 7200000"
                                         },
                                         {
                                             "value":  387,
                                             "name":  "Duration 16000 ms (max 16000 ms)",
+                                            "selectionLabel":  "16 seconds (16000 ms)",
+                                            "sortValue":  16000.0,
                                             "comment":  "Duration = 16000; DurationPerLevel = 0; MaxDuration = 16000"
                                         },
                                         {
                                             "value":  407,
                                             "name":  "Duration 100 ms (max 100 ms)",
+                                            "selectionLabel":  "0.1 seconds (100 ms)",
+                                            "sortValue":  100.0,
                                             "comment":  "Duration = 100; DurationPerLevel = 0; MaxDuration = 100"
                                         },
                                         {
                                             "value":  427,
                                             "name":  "Duration -600000 ms (max 600000 ms)",
+                                            "selectionLabel":  "-600 seconds (-600000 ms); 60000 ms per level; max 600000 ms",
+                                            "sortValue":  -600000.0,
                                             "comment":  "Duration = -600000; DurationPerLevel = 60000; MaxDuration = 600000"
                                         },
                                         {
                                             "value":  447,
                                             "name":  "Duration 2000 ms (max 6000 ms)",
+                                            "selectionLabel":  "2 seconds (2000 ms); max 6000 ms",
+                                            "sortValue":  2000.0,
                                             "comment":  "Duration = 2000; DurationPerLevel = 0; MaxDuration = 6000"
                                         },
                                         {
                                             "value":  467,
                                             "name":  "Duration 22000 ms (max 22000 ms)",
+                                            "selectionLabel":  "22 seconds (22000 ms)",
+                                            "sortValue":  22000.0,
                                             "comment":  "Duration = 22000; DurationPerLevel = 0; MaxDuration = 22000"
                                         },
                                         {
                                             "value":  468,
                                             "name":  "Duration 26000 ms (max 26000 ms)",
+                                            "selectionLabel":  "26 seconds (26000 ms)",
+                                            "sortValue":  26000.0,
                                             "comment":  "Duration = 26000; DurationPerLevel = 0; MaxDuration = 26000"
                                         },
                                         {
                                             "value":  487,
                                             "name":  "Duration 1700 ms (max 1700 ms)",
+                                            "selectionLabel":  "1.7 seconds (1700 ms)",
+                                            "sortValue":  1700.0,
                                             "comment":  "Duration = 1700; DurationPerLevel = 0; MaxDuration = 1700"
                                         },
                                         {
                                             "value":  507,
                                             "name":  "Duration 1100 ms (max 1100 ms)",
+                                            "selectionLabel":  "1.1 seconds (1100 ms)",
+                                            "sortValue":  1100.0,
                                             "comment":  "Duration = 1100; DurationPerLevel = 0; MaxDuration = 1100"
                                         },
                                         {
                                             "value":  508,
                                             "name":  "Duration 1100 ms (max 1100 ms)",
+                                            "selectionLabel":  "1.1 seconds (1100 ms)",
+                                            "sortValue":  1100.0,
                                             "comment":  "Duration = 1100; DurationPerLevel = 0; MaxDuration = 1100"
                                         },
                                         {
                                             "value":  527,
                                             "name":  "Duration 14400000 ms (max 14400000 ms)",
+                                            "selectionLabel":  "14400 seconds (14400000 ms)",
+                                            "sortValue":  14400000.0,
                                             "comment":  "Duration = 14400000; DurationPerLevel = 0; MaxDuration = 14400000"
                                         },
                                         {
                                             "value":  547,
                                             "name":  "Duration 5400000 ms (max 5400000 ms)",
+                                            "selectionLabel":  "5400 seconds (5400000 ms)",
+                                            "sortValue":  5400000.0,
                                             "comment":  "Duration = 5400000; DurationPerLevel = 0; MaxDuration = 5400000"
                                         },
                                         {
                                             "value":  548,
                                             "name":  "Duration 10800000 ms (max 10800000 ms)",
+                                            "selectionLabel":  "10800 seconds (10800000 ms)",
+                                            "sortValue":  10800000.0,
                                             "comment":  "Duration = 10800000; DurationPerLevel = 0; MaxDuration = 10800000"
                                         },
                                         {
                                             "value":  549,
                                             "name":  "Duration 3800 ms (max 3800 ms)",
+                                            "selectionLabel":  "3.8 seconds (3800 ms)",
+                                            "sortValue":  3800.0,
                                             "comment":  "Duration = 3800; DurationPerLevel = 0; MaxDuration = 3800"
                                         },
                                         {
                                             "value":  552,
                                             "name":  "Duration 210000 ms (max 210000 ms)",
+                                            "selectionLabel":  "210 seconds (210000 ms)",
+                                            "sortValue":  210000.0,
                                             "comment":  "Duration = 210000; DurationPerLevel = 0; MaxDuration = 210000"
                                         },
                                         {
                                             "value":  553,
                                             "name":  "Duration 6000 ms (max 16000 ms)",
+                                            "selectionLabel":  "6 seconds (6000 ms); max 16000 ms",
+                                            "sortValue":  6000.0,
                                             "comment":  "Duration = 6000; DurationPerLevel = 0; MaxDuration = 16000"
                                         }
                                     ]
@@ -1524,121 +2124,169 @@
                                       {
                                           "value":  7,
                                           "name":  "Radius 2 (max 2)",
+                                          "selectionLabel":  "Radius 2 (max 2)",
+                                          "sortValue":  2.0,
                                           "comment":  "Radius = 2; RadiusPerLevel = 0; RadiusMax = 2"
                                       },
                                       {
                                           "value":  8,
                                           "name":  "Radius 5 (max 5)",
+                                          "selectionLabel":  "Radius 5 (max 5)",
+                                          "sortValue":  5.0,
                                           "comment":  "Radius = 5; RadiusPerLevel = 0; RadiusMax = 5"
                                       },
                                       {
                                           "value":  9,
                                           "name":  "Radius 20 (max 20)",
+                                          "selectionLabel":  "Radius 20 (max 20)",
+                                          "sortValue":  20.0,
                                           "comment":  "Radius = 20; RadiusPerLevel = 0; RadiusMax = 20"
                                       },
                                       {
                                           "value":  10,
                                           "name":  "Radius 30 (max 30)",
+                                          "selectionLabel":  "Radius 30 (max 30)",
+                                          "sortValue":  30.0,
                                           "comment":  "Radius = 30; RadiusPerLevel = 0; RadiusMax = 30"
                                       },
                                       {
                                           "value":  11,
                                           "name":  "Radius 45 (max 45)",
+                                          "selectionLabel":  "Radius 45 (max 45)",
+                                          "sortValue":  45.0,
                                           "comment":  "Radius = 45; RadiusPerLevel = 0; RadiusMax = 45"
                                       },
                                       {
                                           "value":  12,
                                           "name":  "Radius 100 (max 100)",
+                                          "selectionLabel":  "Radius 100 (max 100)",
+                                          "sortValue":  100.0,
                                           "comment":  "Radius = 100; RadiusPerLevel = 0; RadiusMax = 100"
                                       },
                                       {
                                           "value":  13,
                                           "name":  "Radius 10 (max 10)",
+                                          "selectionLabel":  "Radius 10 (max 10)",
+                                          "sortValue":  10.0,
                                           "comment":  "Radius = 10; RadiusPerLevel = 0; RadiusMax = 10"
                                       },
                                       {
                                           "value":  14,
                                           "name":  "Radius 8 (max 8)",
+                                          "selectionLabel":  "Radius 8 (max 8)",
+                                          "sortValue":  8.0,
                                           "comment":  "Radius = 8; RadiusPerLevel = 0; RadiusMax = 8"
                                       },
                                       {
                                           "value":  15,
                                           "name":  "Radius 3 (max 3)",
+                                          "selectionLabel":  "Radius 3 (max 3)",
+                                          "sortValue":  3.0,
                                           "comment":  "Radius = 3; RadiusPerLevel = 0; RadiusMax = 3"
                                       },
                                       {
                                           "value":  16,
                                           "name":  "Radius 1 (max 1)",
+                                          "selectionLabel":  "Radius 1 (max 1)",
+                                          "sortValue":  1.0,
                                           "comment":  "Radius = 1; RadiusPerLevel = 0; RadiusMax = 1"
                                       },
                                       {
                                           "value":  17,
                                           "name":  "Radius 13 (max 13)",
+                                          "selectionLabel":  "Radius 13 (max 13)",
+                                          "sortValue":  13.0,
                                           "comment":  "Radius = 13; RadiusPerLevel = 0; RadiusMax = 13"
                                       },
                                       {
                                           "value":  18,
                                           "name":  "Radius 15 (max 15)",
+                                          "selectionLabel":  "Radius 15 (max 15)",
+                                          "sortValue":  15.0,
                                           "comment":  "Radius = 15; RadiusPerLevel = 0; RadiusMax = 15"
                                       },
                                       {
                                           "value":  19,
                                           "name":  "Radius 18 (max 18)",
+                                          "selectionLabel":  "Radius 18 (max 18)",
+                                          "sortValue":  18.0,
                                           "comment":  "Radius = 18; RadiusPerLevel = 0; RadiusMax = 18"
                                       },
                                       {
                                           "value":  20,
                                           "name":  "Radius 25 (max 25)",
+                                          "selectionLabel":  "Radius 25 (max 25)",
+                                          "sortValue":  25.0,
                                           "comment":  "Radius = 25; RadiusPerLevel = 0; RadiusMax = 25"
                                       },
                                       {
                                           "value":  21,
                                           "name":  "Radius 35 (max 35)",
+                                          "selectionLabel":  "Radius 35 (max 35)",
+                                          "sortValue":  35.0,
                                           "comment":  "Radius = 35; RadiusPerLevel = 0; RadiusMax = 35"
                                       },
                                       {
                                           "value":  22,
                                           "name":  "Radius 200 (max 200)",
+                                          "selectionLabel":  "Radius 200 (max 200)",
+                                          "sortValue":  200.0,
                                           "comment":  "Radius = 200; RadiusPerLevel = 0; RadiusMax = 200"
                                       },
                                       {
                                           "value":  23,
                                           "name":  "Radius 40 (max 40)",
+                                          "selectionLabel":  "Radius 40 (max 40)",
+                                          "sortValue":  40.0,
                                           "comment":  "Radius = 40; RadiusPerLevel = 0; RadiusMax = 40"
                                       },
                                       {
                                           "value":  24,
                                           "name":  "Radius 65 (max 65)",
+                                          "selectionLabel":  "Radius 65 (max 65)",
+                                          "sortValue":  65.0,
                                           "comment":  "Radius = 65; RadiusPerLevel = 0; RadiusMax = 65"
                                       },
                                       {
                                           "value":  25,
                                           "name":  "Radius 70 (max 70)",
+                                          "selectionLabel":  "Radius 70 (max 70)",
+                                          "sortValue":  70.0,
                                           "comment":  "Radius = 70; RadiusPerLevel = 0; RadiusMax = 70"
                                       },
                                       {
                                           "value":  26,
                                           "name":  "Radius 4 (max 4)",
+                                          "selectionLabel":  "Radius 4 (max 4)",
+                                          "sortValue":  4.0,
                                           "comment":  "Radius = 4; RadiusPerLevel = 0; RadiusMax = 4"
                                       },
                                       {
                                           "value":  27,
                                           "name":  "Radius 50 (max 50)",
+                                          "selectionLabel":  "Radius 50 (max 50)",
+                                          "sortValue":  50.0,
                                           "comment":  "Radius = 50; RadiusPerLevel = 0; RadiusMax = 50"
                                       },
                                       {
                                           "value":  28,
                                           "name":  "Radius 50000 (max 50000)",
+                                          "selectionLabel":  "Radius 50000 (max 50000)",
+                                          "sortValue":  50000.0,
                                           "comment":  "Radius = 50000; RadiusPerLevel = 0; RadiusMax = 50000"
                                       },
                                       {
                                           "value":  29,
                                           "name":  "Radius 6 (max 6)",
+                                          "selectionLabel":  "Radius 6 (max 6)",
+                                          "sortValue":  6.0,
                                           "comment":  "Radius = 6; RadiusPerLevel = 0; RadiusMax = 6"
                                       },
                                       {
                                           "value":  31,
                                           "name":  "Radius 80 (max 80)",
+                                          "selectionLabel":  "Radius 80 (max 80)",
+                                          "sortValue":  80.0,
                                           "comment":  "Radius = 80; RadiusPerLevel = 0; RadiusMax = 80"
                                       }
                                   ]
@@ -1650,141 +2298,197 @@
                                      {
                                          "value":  1,
                                          "name":  "Self Only",
+                                         "selectionLabel":  "0\u20130 range \u2014 Self Only",
+                                         "sortValue":  0.0,
                                          "comment":  "RangeMin = 0; RangeMax = 0; Flags = 0; DisplayName_enUS = Self Only; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Self; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  2,
                                          "name":  "Combat Range",
+                                         "selectionLabel":  "0\u20135 range \u2014 Combat Range",
+                                         "sortValue":  5.0,
                                          "comment":  "RangeMin = 0; RangeMax = 5; Flags = 1; DisplayName_enUS = Combat Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Combat; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  3,
                                          "name":  "Short Range",
+                                         "selectionLabel":  "0\u201320 range \u2014 Short Range",
+                                         "sortValue":  20.0,
                                          "comment":  "RangeMin = 0; RangeMax = 20; Flags = 0; DisplayName_enUS = Short Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Short; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  4,
                                          "name":  "Medium Range",
+                                         "selectionLabel":  "0\u201330 range \u2014 Medium Range",
+                                         "sortValue":  30.0,
                                          "comment":  "RangeMin = 0; RangeMax = 30; Flags = 0; DisplayName_enUS = Medium Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Medium; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  5,
                                          "name":  "Long Range",
+                                         "selectionLabel":  "0\u201340 range \u2014 Long Range",
+                                         "sortValue":  40.0,
                                          "comment":  "RangeMin = 0; RangeMax = 40; Flags = 0; DisplayName_enUS = Long Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Long; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  6,
                                          "name":  "Vision Range",
+                                         "selectionLabel":  "0\u2013100 range \u2014 Vision Range",
+                                         "sortValue":  100.0,
                                          "comment":  "RangeMin = 0; RangeMax = 100; Flags = 0; DisplayName_enUS = Vision Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Vision; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  7,
                                          "name":  "Very Short Range",
+                                         "selectionLabel":  "0\u201310 range \u2014 Very Short Range",
+                                         "sortValue":  10.0,
                                          "comment":  "RangeMin = 0; RangeMax = 10; Flags = 0; DisplayName_enUS = Very Short Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Very Short; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  8,
                                          "name":  "Short Range",
+                                         "selectionLabel":  "10\u201320 range \u2014 Short Range",
+                                         "sortValue":  20.0,
                                          "comment":  "RangeMin = 10; RangeMax = 20; Flags = 0; DisplayName_enUS = Short Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Short; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  9,
                                          "name":  "Medium Range",
+                                         "selectionLabel":  "10\u201330 range \u2014 Medium Range",
+                                         "sortValue":  30.0,
                                          "comment":  "RangeMin = 10; RangeMax = 30; Flags = 0; DisplayName_enUS = Medium Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Medium; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  10,
                                          "name":  "Long Range",
+                                         "selectionLabel":  "10\u201340 range \u2014 Long Range",
+                                         "sortValue":  40.0,
                                          "comment":  "RangeMin = 10; RangeMax = 40; Flags = 0; DisplayName_enUS = Long Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Long; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  11,
                                          "name":  "Shorter Range",
+                                         "selectionLabel":  "0\u201315 range \u2014 Shorter Range",
+                                         "sortValue":  15.0,
                                          "comment":  "RangeMin = 0; RangeMax = 15; Flags = 0; DisplayName_enUS = Shorter Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Shorter; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  12,
                                          "name":  "Interact Range",
+                                         "selectionLabel":  "0\u20135 range \u2014 Interact Range",
+                                         "sortValue":  5.0,
                                          "comment":  "RangeMin = 0; RangeMax = 5; Flags = 0; DisplayName_enUS = Interact Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Interact; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  13,
                                          "name":  "Anywhere",
+                                         "selectionLabel":  "0\u201350000 range \u2014 Anywhere",
+                                         "sortValue":  50000.0,
                                          "comment":  "RangeMin = 0; RangeMax = 50000; Flags = 0; DisplayName_enUS = Anywhere; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Anywhere; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  14,
                                          "name":  "Extra Long Range",
+                                         "selectionLabel":  "0\u201360 range \u2014 Extra Long Range",
+                                         "sortValue":  60.0,
                                          "comment":  "RangeMin = 0; RangeMax = 60; Flags = 0; DisplayName_enUS = Extra Long Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Extra Long; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  34,
                                          "name":  "Medium-Short Range",
+                                         "selectionLabel":  "0\u201325 range \u2014 Medium-Short Range",
+                                         "sortValue":  25.0,
                                          "comment":  "RangeMin = 0; RangeMax = 25; Flags = 0; DisplayName_enUS = Medium-Short Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Medium-Short; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  35,
                                          "name":  "Medium-Long Range",
+                                         "selectionLabel":  "0\u201335 range \u2014 Medium-Long Range",
+                                         "sortValue":  35.0,
                                          "comment":  "RangeMin = 0; RangeMax = 35; Flags = 0; DisplayName_enUS = Medium-Long Range; DisplayName_Mask = 8323134; DisplayNameShort_enUS = Medium-Long; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  36,
                                          "name":  "Longer Range",
+                                         "selectionLabel":  "0\u201345 range \u2014 Longer Range",
+                                         "sortValue":  45.0,
                                          "comment":  "RangeMin = 0; RangeMax = 45; Flags = 0; DisplayName_enUS = Longer Range; DisplayName_Mask = 8323132; DisplayNameShort_enUS = Longer; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  37,
                                          "name":  "Extended Range",
+                                         "selectionLabel":  "0\u201350 range \u2014 Extended Range",
+                                         "sortValue":  50.0,
                                          "comment":  "RangeMin = 0; RangeMax = 50; Flags = 0; DisplayName_enUS = Extended Range; DisplayName_Mask = 8323132; DisplayNameShort_enUS = Extended; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  38,
                                          "name":  "Extra Medium Range",
+                                         "selectionLabel":  "10\u201325 range \u2014 Extra Medium Range",
+                                         "sortValue":  25.0,
                                          "comment":  "RangeMin = 10; RangeMax = 25; Flags = 0; DisplayName_enUS = Extra Medium Range; DisplayName_Mask = 8323132; DisplayNameShort_enUS = Extra Medium; DisplayNameShort_Mask = 8323132"
                                      },
                                      {
                                          "value":  54,
                                          "name":  "Geoff Monster Shoot",
+                                         "selectionLabel":  "5\u201330 range \u2014 Geoff Monster Shoot",
+                                         "sortValue":  30.0,
                                          "comment":  "RangeMin = 5; RangeMax = 30; Flags = 0; DisplayName_enUS = Geoff Monster Shoot; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Geoff; DisplayNameShort_Mask = 4128828"
                                      },
                                      {
                                          "value":  74,
                                          "name":  "Ranged Weapon",
+                                         "selectionLabel":  "8\u201330 range \u2014 Ranged Weapon",
+                                         "sortValue":  30.0,
                                          "comment":  "RangeMin = 8; RangeMax = 30; Flags = 0; DisplayName_enUS = Ranged Weapon; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Ranged; DisplayNameShort_Mask = 4128828"
                                      },
                                      {
                                          "value":  94,
                                          "name":  "Sting",
+                                         "selectionLabel":  "8\u201340 range \u2014 Sting",
+                                         "sortValue":  40.0,
                                          "comment":  "RangeMin = 8; RangeMax = 40; Flags = 0; DisplayName_enUS = Sting; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Sting; DisplayNameShort_Mask = 4128828"
                                      },
                                      {
                                          "value":  95,
                                          "name":  "Charge",
+                                         "selectionLabel":  "8\u201325 range \u2014 Charge",
+                                         "sortValue":  25.0,
                                          "comment":  "RangeMin = 8; RangeMax = 25; Flags = 0; DisplayName_enUS = Charge; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Charge; DisplayNameShort_Mask = 4128828"
                                      },
                                      {
                                          "value":  96,
                                          "name":  "Trap",
+                                         "selectionLabel":  "0\u20132 range \u2014 Trap",
+                                         "sortValue":  2.0,
                                          "comment":  "RangeMin = 0; RangeMax = 2; Flags = 0; DisplayName_enUS = Trap; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Trap; DisplayNameShort_Mask = 4128828"
                                      },
                                      {
                                          "value":  114,
                                          "name":  "Hunter Range",
+                                         "selectionLabel":  "8\u201335 range \u2014 Hunter Range",
+                                         "sortValue":  35.0,
                                          "comment":  "RangeMin = 8; RangeMax = 35; Flags = 0; DisplayName_enUS = Hunter Range; DisplayName_Mask = 4128828; DisplayNameShort_enUS = Hunter; DisplayNameShort_Mask = 4128820"
                                      },
                                      {
                                          "value":  134,
                                          "name":  "Tower 80",
+                                         "selectionLabel":  "0\u201380 range \u2014 Tower 80",
+                                         "sortValue":  80.0,
                                          "comment":  "RangeMin = 0; RangeMax = 80; Flags = 0; DisplayName_enUS = Tower 80; DisplayName_Mask = 4128816; DisplayNameShort_enUS = Tower; DisplayNameShort_Mask = 4128816"
                                      },
                                      {
                                          "value":  135,
                                          "name":  "Tower 100",
+                                         "selectionLabel":  "0\u2013100 range \u2014 Tower 100",
+                                         "sortValue":  100.0,
                                          "comment":  "RangeMin = 0; RangeMax = 100; Flags = 0; DisplayName_enUS = Tower 100; DisplayName_Mask = 4128816; DisplayNameShort_enUS = Tower; DisplayNameShort_Mask = 4128816"
                                      },
                                      {
                                          "value":  136,
                                          "name":  "Artillery Range",
+                                         "selectionLabel":  "30\u201380 range \u2014 Artillery Range",
+                                         "sortValue":  80.0,
                                          "comment":  "RangeMin = 30; RangeMax = 80; Flags = 0; DisplayName_enUS = Artillery Range; DisplayName_Mask = 4128800; DisplayNameShort_enUS = Artillery; DisplayNameShort_Mask = 4128800"
                                      }
                                  ]
