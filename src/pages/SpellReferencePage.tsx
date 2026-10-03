@@ -12,7 +12,7 @@ export default function SpellReferencePage() {
   return <>
     <PageHeader title={config.title} />
     {dbcConfig
-      ? <DbcReferencePicker key={`dbc:${group}`} rows={dbcConfig.rows} selectorLabel={dbcConfig.selectorLabel} />
+      ? <DbcReferencePicker key={`dbc:${group}`} rows={dbcConfig.rows} selectorLabel={dbcConfig.selectorLabel} showOptionId={group !== 'spell-category'} />
       : <ReferenceTool key={`reference:${group}`} title={config.title} rows={config.rows} definitionScope={config.scope} />}
   </>;
 }

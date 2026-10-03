@@ -9,6 +9,7 @@ export const spellDbcReferenceGroups = {
     selectorLabel: 'Cast time',
   },
   'spell-category': {
+    // Friendly option names follow SpellCategories in vmangos/core's SpellDefines.h.
     ...source['spell-category'],
     title: 'category',
     fields: ['category'],
