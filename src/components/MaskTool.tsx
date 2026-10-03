@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { activeBits, hasBit, parseMask, setBit, toHex } from '../lib/masks';
+import { hasBit, parseMask, setBit, toHex } from '../lib/masks';
 import { useProfiles } from '../context/ProfileContext';
 import type { DefinitionOverride } from '../lib/profiles';
 
@@ -13,13 +13,12 @@ export type MaskFlag = {
 
 const owns = (value: object, key: string) => Object.prototype.hasOwnProperty.call(value, key);
 
-export function MaskTool({ title, flags, presetScope, definitionScope, maxBits = 64, bitLabel = 'Bit', nameLabel = 'Name' }: {
+export function MaskTool({ title, flags, presetScope, definitionScope, maxBits = 64, nameLabel = 'Name' }: {
   title: string;
   flags: readonly MaskFlag[];
   presetScope: string;
   definitionScope?: string;
   maxBits?: number;
-  bitLabel?: string;
   nameLabel?: string;
 }) {
   const { activeProfile, savePreset, deletePreset, setMaskDefinitionOverride } = useProfiles();
@@ -96,7 +95,7 @@ export function MaskTool({ title, flags, presetScope, definitionScope, maxBits =
 
     <div className="table-wrap editable-mask-table">
       <table>
-        <thead><tr><th className="xcol">X</th><th>{bitLabel}</th><th>Decimal</th><th>Hex</th><th>{nameLabel}</th><th>Comment</th></tr></thead>
+        <thead><tr><th className="xcol">X</th><th>Decimal</th><th>Hex</th><th>{nameLabel}</th><th>Comment</th></tr></thead>
         <tbody>{flags.map((f) => {
           const key = `${definitionScope ?? presetScope}:${f.bitIndex}`;
           const override = activeProfile.overrides.maskDefinitions[key] || {};
@@ -111,20 +110,19 @@ export function MaskTool({ title, flags, presetScope, definitionScope, maxBits =
               <input aria-label={`Select ${effectiveName || baselineName}`} type="checkbox" checked={hasBit(working, f.bitIndex)} onChange={(e) => setWorking((m) => setBit(m, f.bitIndex, e.target.checked))} />
               <span>×</span>
             </label></td>
-            <td className="mono bit-cell">{f.bitIndex}</td>
             <td className="mono">{f.decimal ?? (1n << BigInt(f.bitIndex)).toString()}</td>
             <td className="mono">{f.hex ?? toHex(1n << BigInt(f.bitIndex))}</td>
             <td className="editable-cell">
               <div className="inline-edit">
-                <input className={`mono enum-input${nameOverridden ? ' edited' : ''}`} value={effectiveName} onChange={(e) => updateName(key, baselineName, override, e.target.value)} aria-label={`${nameLabel} for bit ${f.bitIndex}`} />
-                {nameOverridden && <button className="reset-inline" title="Restore original name" aria-label={`Reset name for bit ${f.bitIndex}`} onClick={() => updateName(key, baselineName, override, baselineName)}>↺</button>}
+                <input className={`mono enum-input${nameOverridden ? ' edited' : ''}`} value={effectiveName} onChange={(e) => updateName(key, baselineName, override, e.target.value)} aria-label={`${nameLabel} for ${baselineName || (1n << BigInt(f.bitIndex)).toString()}`} />
+                {nameOverridden && <button className="reset-inline" title="Restore original name" aria-label={`Reset name for ${baselineName || (1n << BigInt(f.bitIndex)).toString()}`} onClick={() => updateName(key, baselineName, override, baselineName)}>↺</button>}
               </div>
               <div className="original-value"><span>Original</span><code>{baselineName || '—'}</code></div>
             </td>
             <td className="editable-cell comment-edit-cell">
               <div className="inline-edit">
-                <input className={commentOverridden ? 'edited' : ''} value={effectiveComment} onChange={(e) => updateComment(key, baselineComment, override, e.target.value)} aria-label={`Comment for bit ${f.bitIndex}`} />
-                {commentOverridden && <button className="reset-inline" title="Restore original comment" aria-label={`Reset comment for bit ${f.bitIndex}`} onClick={() => updateComment(key, baselineComment, override, baselineComment)}>↺</button>}
+                <input className={commentOverridden ? 'edited' : ''} value={effectiveComment} onChange={(e) => updateComment(key, baselineComment, override, e.target.value)} aria-label={`Comment for ${baselineName || (1n << BigInt(f.bitIndex)).toString()}`} />
+                {commentOverridden && <button className="reset-inline" title="Restore original comment" aria-label={`Reset comment for ${baselineName || (1n << BigInt(f.bitIndex)).toString()}`} onClick={() => updateComment(key, baselineComment, override, baselineComment)}>↺</button>}
               </div>
               <div className="original-value"><span>Original</span><code>{baselineComment || '—'}</code></div>
             </td>
@@ -133,7 +131,6 @@ export function MaskTool({ title, flags, presetScope, definitionScope, maxBits =
       </table>
     </div>
 
-    <div className="active-bits">Active bits: <span className="mono">{activeBits(working, maxBits).join(', ') || 'none'}</span></div>
   </section>;
 }
 

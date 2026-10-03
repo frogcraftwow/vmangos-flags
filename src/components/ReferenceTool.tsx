@@ -9,7 +9,7 @@ function toHex32(value: number): string {
   return `0x${BigInt.asUintN(32, BigInt(value)).toString(16).toUpperCase().padStart(8, '0')}`;
 }
 
-export function ReferenceTool({ title, rows, definitionScope, valueLabel = 'Value' }: {
+export function ReferenceTool({ title, rows, definitionScope, valueLabel = 'Decimal' }: {
   title: string;
   rows: readonly ReferenceRow[];
   definitionScope: string;

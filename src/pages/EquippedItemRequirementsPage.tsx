@@ -31,7 +31,6 @@ export default function EquippedItemRequirementsPage() {
         presetScope={`spells:equipped-subclass:${itemClass}`}
         definitionScope={`spells:item-subclass:${itemClass}`}
         maxBits={32}
-        bitLabel="SubClass"
       /> : <section className="panel empty-mask-state"><strong>No 1.12 subclasses defined for this class.</strong></section>}
 
       <MaskTool
@@ -40,7 +39,6 @@ export default function EquippedItemRequirementsPage() {
         presetScope="spells:equipped-inventory-type"
         definitionScope="spells:inventory-type"
         maxBits={32}
-        bitLabel="InventoryType"
       />
     </div>
   </>;

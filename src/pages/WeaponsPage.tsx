@@ -15,7 +15,6 @@ export default function WeaponsPage() {
       }))}
       presetScope="weapons"
       maxBits={21}
-      bitLabel="VMangos SubClass"
       nameLabel="Weapon Type"
     />
   </>;

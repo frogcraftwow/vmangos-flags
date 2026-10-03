@@ -116,7 +116,6 @@ export default function SpellFamilyFlagsPage() {
         <table>
           <thead><tr>
             <th className="xcol">X</th>
-            <th>Bit</th>
             <th>Decimal</th>
             <th>Hex</th>
             <th>Ability</th>
@@ -137,10 +136,9 @@ export default function SpellFamilyFlagsPage() {
 
             return <tr key={key} className={overridden ? 'overridden' : ''}>
               <td className="xcol"><label className="xcheck">
-                <input type="checkbox" checked={hasBit(working, bitIndex)} onChange={(e) => setWorking((mask) => setBit(mask, bitIndex, e.target.checked))} aria-label={`Select bit ${bitIndex}`} />
+                <input type="checkbox" checked={hasBit(working, bitIndex)} onChange={(e) => setWorking((mask) => setBit(mask, bitIndex, e.target.checked))} aria-label={`Select ${bitMask.toString()}`} />
                 <span>×</span>
               </label></td>
-              <td className="mono bit-cell">{bitIndex}</td>
               <td className="mono">{bitMask.toString()}</td>
               <td className="mono">{toHex(bitMask, 16)}</td>
               <td className="editable-cell">
