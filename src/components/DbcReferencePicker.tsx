@@ -3,9 +3,10 @@ import { CopyButton } from './CopyButton';
 import type { ReferenceRow } from '../data/spellTemplateReferences';
 import { toHex } from '../lib/masks';
 
-export function DbcReferencePicker({ rows, selectorLabel }: {
+export function DbcReferencePicker({ rows, selectorLabel, showOptionId = true }: {
   rows: readonly ReferenceRow[];
   selectorLabel: string;
+  showOptionId?: boolean;
 }) {
   const [selectedId, setSelectedId] = useState(rows[0]?.value);
   const selected = rows.find((row) => row.value === selectedId);
@@ -17,7 +18,7 @@ export function DbcReferencePicker({ rows, selectorLabel }: {
     <label className="dbc-selector">{selectorLabel}
       <select value={selectedId ?? ''} onChange={(event) => setSelectedId(Number(event.currentTarget.value))}>
         {options.map((row) => <option key={row.value} value={row.value}>
-          {row.selectionLabel ?? row.name} — ID {row.value}
+          {row.selectionLabel ?? row.name}{showOptionId ? ` — ID ${row.value}` : ''}
         </option>)}
       </select>
     </label>
