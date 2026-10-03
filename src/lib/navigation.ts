@@ -44,6 +44,16 @@ export const navigationSections: readonly NavSection[] = [
         ),
       },
       {
+        label: 'DBC references',
+        links: links(
+          ['SpellCastTimes.dbc', '/spells/reference/spell-cast-times'],
+          ['SpellCategory.dbc', '/spells/reference/spell-category'],
+          ['SpellDuration.dbc', '/spells/reference/spell-duration'],
+          ['SpellRadius.dbc', '/spells/reference/spell-radius'],
+          ['SpellRange.dbc', '/spells/reference/spell-range'],
+        ),
+      },
+      {
         label: 'Requirements',
         links: links(
           ['Equipped Item Requirements', '/spells/equipped-item-requirements'],

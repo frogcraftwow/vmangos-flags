@@ -1,3 +1,5 @@
+import spellDbcReferences from './spellDbcReferences.json';
+
 export type ReferenceRow = {
   key?: string;
   value: number;
@@ -89,6 +91,7 @@ export const preventionTypes: readonly ReferenceRow[] = [
 ] as const;
 
 export const spellReferenceGroups = {
+  ...spellDbcReferences,
   'damage-class': { title: 'Damage Class', rows: damageClasses, scope: 'spells:damage-class' },
   'dispel-type': { title: 'Dispel Type', rows: dispelTypes, scope: 'spells:dispel-type' },
   mechanic: { title: 'Mechanic', rows: mechanics, scope: 'spells:mechanic' },

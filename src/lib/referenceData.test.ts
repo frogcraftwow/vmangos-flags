@@ -45,7 +45,8 @@ describe('reference data invariants', () => {
 
   it('has the scalar spell reference groups used by navigation', () => {
     expect(Object.keys(spellReferenceGroups).sort()).toEqual([
-      'damage-class', 'dispel-type', 'mechanic', 'power-type', 'prevention-type', 'spell-school',
+      'damage-class', 'dispel-type', 'mechanic', 'power-type', 'prevention-type',
+      'spell-cast-times', 'spell-category', 'spell-duration', 'spell-radius', 'spell-range', 'spell-school',
     ]);
   });
 });
