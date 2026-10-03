@@ -1,9 +1,11 @@
-import spellDbcReferences from './spellDbcReferences.json';
+import { spellDbcReferenceGroups } from './spellDbcReferences';
 
 export type ReferenceRow = {
   key?: string;
   value: number;
   name: string;
+  selectionLabel?: string;
+  sortValue?: number;
   comment?: string;
 };
 
@@ -91,7 +93,7 @@ export const preventionTypes: readonly ReferenceRow[] = [
 ] as const;
 
 export const spellReferenceGroups = {
-  ...spellDbcReferences,
+  ...spellDbcReferenceGroups,
   'damage-class': { title: 'Damage Class', rows: damageClasses, scope: 'spells:damage-class' },
   'dispel-type': { title: 'Dispel Type', rows: dispelTypes, scope: 'spells:dispel-type' },
   mechanic: { title: 'Mechanic', rows: mechanics, scope: 'spells:mechanic' },

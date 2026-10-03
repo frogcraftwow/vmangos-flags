@@ -31,7 +31,10 @@ export function globalSearch(query: string, limit = 80): SearchResult[] {
     add({ title: row.name, subtitle: `${group.name} · ${(1n << BigInt(row.bitIndex)).toString()} / 0x${(1n << BigInt(row.bitIndex)).toString(16).toUpperCase()}`, path, kind: group.name });
   }
 
-  for (const [groupKey, config] of Object.entries(spellReferenceGroups)) for (const row of config.rows) if (text(config.title, row.value, row.name, row.comment).includes(q)) add({ title: row.name, subtitle: `${config.title} · ${row.value}`, path: `/spells/reference/${groupKey}`, kind: config.title });
+  for (const [groupKey, config] of Object.entries(spellReferenceGroups)) {
+    const aliases = 'fields' in config ? [config.source, ...config.fields] : [];
+    for (const row of config.rows) if (text(config.title, ...aliases, row.value, row.name, row.comment).includes(q)) add({ title: row.name, subtitle: `${config.title} · ${row.value}`, path: `/spells/reference/${groupKey}`, kind: config.title });
+  }
 
   for (const row of itemClasses) if (text('Equipped Item Requirements', row.value, row.name, row.comment).includes(q)) add({ title: row.name, subtitle: `Item class · ${row.value}`, path: '/spells/equipped-item-requirements', kind: 'Equipped Item' });
   for (const row of inventoryTypes) if (text('EquippedItemInventoryTypeMask', row.bitIndex, row.name, row.comment).includes(q)) add({ title: row.name, subtitle: `InventoryTypeMask · ${(1n << BigInt(row.bitIndex)).toString()} / 0x${(1n << BigInt(row.bitIndex)).toString(16).toUpperCase()}`, path: '/spells/equipped-item-requirements', kind: 'Equipped Item' });

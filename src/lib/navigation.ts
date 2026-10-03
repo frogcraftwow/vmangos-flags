@@ -23,11 +23,16 @@ export const navigationSections: readonly NavSection[] = [
       {
         label: 'Core fields',
         links: links(
+          ['castingTimeIndex', '/spells/reference/spell-cast-times'],
+          ['category', '/spells/reference/spell-category'],
           ['Damage Class', '/spells/reference/damage-class'],
           ['Dispel Type', '/spells/reference/dispel-type'],
+          ['durationIndex', '/spells/reference/spell-duration'],
+          ['effectRadiusIndex1 / 2 / 3', '/spells/reference/spell-radius'],
           ['Mechanic', '/spells/reference/mechanic'],
           ['Power Type', '/spells/reference/power-type'],
           ['Prevention Type', '/spells/reference/prevention-type'],
+          ['rangeIndex', '/spells/reference/spell-range'],
           ['Spell School', '/spells/reference/spell-school'],
         ),
       },
@@ -41,16 +46,6 @@ export const navigationSections: readonly NavSection[] = [
           ['Spell School Mask', '/spell-flags?group=school-mask'],
           ['Target Creature Type', '/spells/target-creature-type'],
           ['Target Flags', '/spell-flags?group=target-flags'],
-        ),
-      },
-      {
-        label: 'DBC references',
-        links: links(
-          ['SpellCastTimes.dbc', '/spells/reference/spell-cast-times'],
-          ['SpellCategory.dbc', '/spells/reference/spell-category'],
-          ['SpellDuration.dbc', '/spells/reference/spell-duration'],
-          ['SpellRadius.dbc', '/spells/reference/spell-radius'],
-          ['SpellRange.dbc', '/spells/reference/spell-range'],
         ),
       },
       {

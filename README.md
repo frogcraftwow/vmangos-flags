@@ -22,7 +22,7 @@ npm run deploy
 
 ## Spell section
 
-- Core fields: Damage Class, Dispel Type, Mechanic, Power Type, Prevention Type, Spell School
+- Core fields: Damage Class, Dispel Type, Mechanic, Power Type, Prevention Type, Spell School, plus dropdown lookups for `castingTimeIndex`, `category`, `durationIndex`, `rangeIndex`, and `effectRadiusIndex1/2/3`. Select a value to view and copy its decimal or hex DBC ID.
 - Flags & targeting: interrupt flags, proc flags, Spell School Mask, target fields
 - Requirements: equipped-item requirements and shapeshift
 - Effects & auras: curated references only where an enum/mask/reference is required
