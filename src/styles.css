@@ -967,8 +967,10 @@ body { font-size: 14px; line-height: 1.45; }
 
 .local-note a { display: inline; padding: 0; border-left: 0; font-size: inherit; }
 
+.dbc-reference-picker { max-width: 720px; }
 .dbc-selector { display: grid; gap: 6px; font-weight: 600; }
 .dbc-selector select { width: 100%; min-width: 0; min-height: 40px; font-weight: 400; }
-.dbc-selected-id { margin-top: 16px; }
-.dbc-copy-actions { display: flex; flex-wrap: wrap; gap: 8px; }
-.dbc-selection-details { overflow-wrap: anywhere; color: var(--muted); line-height: 1.5; }
+.dbc-id-results { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 16px; }
+.dbc-id-value { display: flex; align-items: center; gap: 8px; }
+.dbc-id-value > span { color: var(--muted); font-size: 12px; }
+.dbc-id-value > output { font-size: 16px; font-weight: 600; }
