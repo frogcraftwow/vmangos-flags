@@ -3,7 +3,7 @@ import source from './spellDbcReferences.json';
 export const spellDbcReferenceGroups = {
   'spell-cast-times': {
     ...source['spell-cast-times'],
-    title: 'castingTimeIndex',
+    title: 'Casting Time Index',
     fields: ['castingTimeIndex'],
     source: 'SpellCastTimes.dbc',
     selectorLabel: 'Cast time',
@@ -11,28 +11,28 @@ export const spellDbcReferenceGroups = {
   'spell-category': {
     // Friendly option names follow SpellCategories in vmangos/core's SpellDefines.h.
     ...source['spell-category'],
-    title: 'category',
+    title: 'Category',
     fields: ['category'],
     source: 'SpellCategory.dbc',
     selectorLabel: 'Category',
   },
   'spell-duration': {
     ...source['spell-duration'],
-    title: 'durationIndex',
+    title: 'Duration Index',
     fields: ['durationIndex'],
     source: 'SpellDuration.dbc',
     selectorLabel: 'Duration',
   },
   'spell-radius': {
     ...source['spell-radius'],
-    title: 'effectRadiusIndex1 / 2 / 3',
+    title: 'Effect Radius Index 1 / 2 / 3',
     fields: ['effectRadiusIndex1', 'effectRadiusIndex2', 'effectRadiusIndex3'],
     source: 'SpellRadius.dbc',
     selectorLabel: 'Effect radius',
   },
   'spell-range': {
     ...source['spell-range'],
-    title: 'rangeIndex',
+    title: 'Range Index',
     fields: ['rangeIndex'],
     source: 'SpellRange.dbc',
     selectorLabel: 'Range',
